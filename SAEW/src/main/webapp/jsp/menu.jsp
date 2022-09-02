@@ -34,7 +34,7 @@
 </nav>
 <div class="corp">
     <div class="componente">
-        <div class="butao-cont">
+        <!--<div class="butao-cont">
            <div class="avaliargem">
            <div class="btn-avaliacao">
               <button>Nova Avaliação</button>
@@ -57,6 +57,83 @@
               </div>
               <div class="btn-sair">
                   <button>Logout</button>
+              </div>
+           </div>
+        </div>-->
+        <div class="butao-cont">
+           <div class="avaliargem">
+           <div class="btn-avaliacao">
+              <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-trash"></i>
+                 </div>
+                 <div class="text">
+                   <p>Nova Avaliação</p>
+                 </div>
+              </a>
+           </div>
+           <div class="btn-enfermagem">
+              <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-trash"></i>
+                 </div>
+                 <div class="text">
+                   <p>Diagnósticos</p>
+                 </div>
+              </a>
+              <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-trash"></i>
+                 </div>
+                 <div class="text">
+                   <p>Intervenções</p>
+                 </div>
+              </a>
+              <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-trash"></i>
+                 </div>
+                 <div class="text">
+                   <p>Avaliação Inter.</p>
+                 </div>
+              </a>
+              <!--<div>
+                  <button>Diagnósticos</button>
+              </div>
+              <div>
+                  <button>Intervenções</button>
+              </div>
+              <div>
+                  <button>Avaliação Intervenções</button>
+              </div>-->
+           </div>
+           </div>
+           <div>
+              <!--<div class="btn-relatorio">
+                  <button>Relatório</button>
+              </div>
+              <div class="btn-sair">
+                  <button>Logout</button>
+              </div>-->
+              <div class="btn-relatorio">
+                 <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-trash"></i>
+                 </div>
+                 <div class="text">
+                   <p>Relatório</p>
+                 </div>
+              </a>
+              </div>
+              <div class="btn-sair">
+                 <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-trash"></i>
+                 </div>
+                 <div class="text">
+                   <p>Logout</p>
+                 </div>
+              </a>
               </div>
            </div>
         </div>
@@ -106,7 +183,7 @@
                          <td>15-04-2022 12:23:45 PM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
-                         <td><a href=""><i style="color:#ea1c1c; font-size:16px;" 
+                         <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
                      </tr>
                      <tr>
@@ -120,7 +197,7 @@
                          <td>03-05-2022 10:05:11 AM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
-                         <td><a href=""><i style="color:#ea1c1c; font-size:16px;" 
+                         <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
                      </tr>
                      <tr>
@@ -134,7 +211,7 @@
                          <td>15-04-2022 12:23:45 PM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
-                         <td><a href=""><i style="color:#ea1c1c; font-size:16px;" 
+                         <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
                      </tr>
                      <tr>
@@ -148,7 +225,7 @@
                          <td>03-05-2022 10:05:11 AM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
-                         <td><a href=""><i style="color:#ea1c1c; font-size:16px;" 
+                         <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
                      </tr>
                    </tbody>

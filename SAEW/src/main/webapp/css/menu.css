@@ -95,40 +95,117 @@ body{
 	background-color:green;
 }*/
 
-.btn-avaliacao button, 
-.btn-enfermagem button, 
-.btn-relatorio button, 
-.btn-sair button{
+.btn-avaliacao .butao, 
+.btn-enfermagem .butao, 
+.btn-relatorio .butao, 
+.btn-sair .butao{
 	border-radius:5px;
 	cursor:pointer;
 	color:#eeeeee;
 	font-size:14px;
 }
 
-.btn-avaliacao button{
-	padding:25px 0px;
+/*BOTAO NOVA AVALIACAO*/
+.btn-avaliacao a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
 	background-color:#26a2bd;
 	border:1px solid #26a2bd;
 }
 
-.btn-enfermagem button{
-	padding:15px 0px;
+.btn-avaliacao a:hover{
+	background-color:#28b8d7;
+	border:1px solid #28b8d7;
+}
+
+.btn-avaliacao i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-avaliacao a .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
+}
+
+/*BOTAO DE ENFERMAGEM*/
+.btn-enfermagem a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
 	margin:5px 0px;
 	background-color:#e3ba41;
 	border:1px solid #e3ba41;
 }
 
-.btn-relatorio button{
-	padding:15px 0px;
-	margin-bottom:10px;
+.btn-enfermagem i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-enfermagem a .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
+}
+
+
+/*BOTAO DE RELATORIO*/
+.btn-relatorio a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
+	margin:5px 0px;
 	background-color:#e3ba41;
 	border:1px solid #e3ba41;
 }
 
-.btn-sair button{
-	padding:15px 0px;
+.btn-relatorio a:hover, .btn-enfermagem a:hover{
+	background-color:#ebbb2c;
+	border:1px solid #ebbb2c;
+}
+
+.btn-relatorio i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-relatorio .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
+}
+
+/*BOTAO LOGOUT*/
+.btn-sair a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
+	margin:5px 0px;
 	background-color:#eb3a3a;
 	border:1px solid #eb3a3a;
+}
+
+.btn-sair a:hover{
+	background-color:#e44848;
+	border:1px solid #e44848;
+}
+
+.btn-sair i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-sair .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
 }
 
 /*TABELA*/
