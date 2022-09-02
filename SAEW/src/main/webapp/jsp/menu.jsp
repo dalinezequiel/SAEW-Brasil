@@ -65,7 +65,7 @@
            <div class="btn-avaliacao">
               <a href="" class="butao">
                  <div class="butao-ico">
-                   <i class="fa-solid fa-trash"></i>
+                   <i class="fa-solid fa-file-circle-plus"></i>
                  </div>
                  <div class="text">
                    <p>Nova Avaliação</p>
@@ -75,7 +75,7 @@
            <div class="btn-enfermagem">
               <a href="" class="butao">
                  <div class="butao-ico">
-                   <i class="fa-solid fa-trash"></i>
+                   <i class="fa-sharp fa-solid fa-microscope"></i>
                  </div>
                  <div class="text">
                    <p>Diagnósticos</p>
@@ -83,7 +83,7 @@
               </a>
               <a href="" class="butao">
                  <div class="butao-ico">
-                   <i class="fa-solid fa-trash"></i>
+                   <i class="fa-solid fa-user-doctor"></i>
                  </div>
                  <div class="text">
                    <p>Intervenções</p>
@@ -91,7 +91,7 @@
               </a>
               <a href="" class="butao">
                  <div class="butao-ico">
-                   <i class="fa-solid fa-trash"></i>
+                   <i class="fa-solid fa-notes-medical"></i>
                  </div>
                  <div class="text">
                    <p>Avaliação Inter.</p>
@@ -118,7 +118,7 @@
               <div class="btn-relatorio">
                  <a href="" class="butao">
                  <div class="butao-ico">
-                   <i class="fa-solid fa-trash"></i>
+                   <i class="fa-solid fa-file-lines"></i>
                  </div>
                  <div class="text">
                    <p>Relatório</p>
@@ -128,7 +128,7 @@
               <div class="btn-sair">
                  <a href="" class="butao">
                  <div class="butao-ico">
-                   <i class="fa-solid fa-trash"></i>
+                   <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                  </div>
                  <div class="text">
                    <p>Logout</p>
