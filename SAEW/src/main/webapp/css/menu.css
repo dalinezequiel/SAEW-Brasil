@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,400;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+    font-family: OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+	background-color:#eeeeee;
+}
+
+
+/*ESTILIZANDO O MENU*/
+.parent nav{
+	background-color:#5D6D7E;
+	padding: 0px 50px;
+}
+
+.nav-menu{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.nav-item ul{
+	display:flex;
+	flex-direction:row;
+}
+
+.nav-item ul li{
+	padding: 10px 15px;
+	display:flex;
+	align-items:center;
+	cursor:pointer;
+}
+
+.nav-item ul li a{
+	color:black;
+}
+
+.nav-item ul li i{
+	padding-left:4px;
+}
+
+/*ESTILIZANDO CORPO*/
+.componente{
+	display:flex;
+	flex-direction:row;
+	padding:20px 50px;
+}
+
+/*AVALIACAO-HEAD*/
+
+.butao-cont{
+	width:15%;
+	height:600px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	margin-right:20px
+}
+
+.avaliargem{
+	height:300px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.avaliacao-cont{
+	width:90%;
+	height:600px;
+	background-color:#ffffff;
+	padding:10px;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+}
+
+.butao-cont div{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+}
+
+/*.butao-cont button{
+	border:none;
+	background-color:green;
+}*/
+
+.btn-avaliacao button, 
+.btn-enfermagem button, 
+.btn-relatorio button, 
+.btn-sair button{
+	border-radius:5px;
+	cursor:pointer;
+	color:#eeeeee;
+	font-size:14px;
+}
+
+.btn-avaliacao button{
+	padding:25px 0px;
+	background-color:#26a2bd;
+	border:1px solid #26a2bd;
+}
+
+.btn-enfermagem button{
+	padding:15px 0px;
+	margin:5px 0px;
+	background-color:#e3ba41;
+	border:1px solid #e3ba41;
+}
+
+.btn-relatorio button{
+	padding:15px 0px;
+	margin-bottom:10px;
+	background-color:#e3ba41;
+	border:1px solid #e3ba41;
+}
+
+.btn-sair button{
+	padding:15px 0px;
+	background-color:#eb3a3a;
+	border:1px solid #eb3a3a;
+}
+
+/*TABELA*/
+.avaliacao-cont table{
+	border-collapse:collapse;
+	border:1px solid #ffffff;
+}
+
+.avaliacao-cont td{
+	padding:5px 20px;
+	border:1px solid #f9f9f9;
+	font-size:14px;
+}
+
+.avaliacao-cont tbody tr:hover{
+	background-color:#f0f0f0;
+}
+
+
+.avaliacao-cont thead td{
+	font-weight:500;
+}
+
+
+/*FILTRO*/
+.filtro{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	padding-bottom:10px;
+}
+
+.pesquisa{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.pesquisa input{
+	font-size:14px;
+	outline:none;
+	padding:5px;
+}
+
+.paciente{
+	margin-left:20px;
+}
+
+.filter-icon {
+	margin-right:10px;
+}
+
+.filter-icon i{
+	font-size:21px;
+}
+
+/**/
+.total-item, .ordem-item, .mostra-item{
+	display:flex;
+	flex-direction:row;
+}
+
+.afasta{
+	padding-right:5px;
+}
+
+.avaliacao-footer, .ordem-mostra{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.ordem-mostra select{
+	padding:3px;
+	outline:none;
+}
+
+.ordem-item{
+	padding-right:20px;
+}
