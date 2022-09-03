@@ -36,66 +36,49 @@
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
-              <div class="btn-avaliacao">
-                  <a href="" class="butao">
-                      <div class="butao-ico">
-                         <i class="fa-solid fa-file-circle-plus"></i>
-                      </div>
-                      <div class="text">
-                         <p>Nova Avaliação</p>
-                      </div>
-                  </a>
-              </div>
-              <div class="btn-enfermagem">
-                  <a href="" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-sharp fa-solid fa-microscope"></i>
-                      </div>
-                      <div class="text">
-                          <p>Diagnósticos</p>
-                      </div>
-                  </a>
-                  <a href="" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-solid fa-user-doctor"></i>
-                      </div>
-                      <div class="text">
-                          <p>Intervenções</p>
-                      </div>
-                  </a>
-                  <a href="" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-solid fa-notes-medical"></i>
-                      </div>
-                      <div class="text">
-                          <p>Avaliação Inter.</p>
-                      </div>
-                  </a>
-              </div>
-           </div>
-      <div>
-           <div class="btn-relatorio">
+           <div class="btn-avaliacao">
               <a href="" class="butao">
                  <div class="butao-ico">
-                     <i class="fa-solid fa-file-lines"></i>
+                   <i class="fa-solid fa-file-circle-plus"></i>
+                 </div>
+                 <div class="text">
+                   <p>Salvar</p>
+                 </div>
+              </a>
+              <div class="btn-relatorio">
+                 <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-file-lines"></i>
                  </div>
                  <div class="text">
                    <p>Relatório</p>
                  </div>
               </a>
+              </div>
+              
+           </div>
+           <div class="btn-relatorio">
+                 <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-solid fa-file-lines"></i>
+                 </div>
+                 <div class="text">
+                   <p>Resetar</p>
+                 </div>
+              </a>
            </div>
            <div class="btn-sair">
-               <a href="" class="butao">
-                  <div class="butao-ico">
-                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
-                  </div>
-                 <div class="text">
-                     <p>Logout</p>
+                 <a href="" class="butao">
+                 <div class="butao-ico">
+                   <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                  </div>
-               </a>
+                 <div class="text">
+                   <p>Voltar</p>
+                 </div>
+              </a>
+          </div>
            </div>
-       </div>
-       </div>
+        </div>
         <div class="avaliacao-cont">
             <div class="avaliacao-head">
                <div class="filtro">

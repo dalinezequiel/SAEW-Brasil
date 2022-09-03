@@ -63,7 +63,7 @@ body{
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
-	margin-right:20px
+	margin-right:20px;
 }
 
 .avaliargem{
@@ -89,11 +89,6 @@ body{
 	flex-direction:column;
 	width:100%;
 }
-
-/*.butao-cont button{
-	border:none;
-	background-color:green;
-}*/
 
 .btn-avaliacao .butao, 
 .btn-enfermagem .butao, 
@@ -186,7 +181,7 @@ body{
 	display:flex;
 	flex-direction:row;
 	padding:20px 17px;
-	margin:5px 0px;
+	/*margin:5px 0px;*/
 	background-color:#eb3a3a;
 	border:1px solid #eb3a3a;
 }
