@@ -47,7 +47,7 @@
                   </a>
               </div>
               <div class="btn-enfermagem">
-                  <a href="" class="butao">
+                  <a href="diagnostico.jsp" class="butao">
                       <div class="butao-ico">
                           <i class="fa-sharp fa-solid fa-microscope"></i>
                       </div>
