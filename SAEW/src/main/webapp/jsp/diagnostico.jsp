@@ -94,9 +94,9 @@
                   <div class="avaliacao-titulo">
                       <h3>Diagnóstico de Enfermagem</h3>
                   </div>
-                  <div class="pesquisa">
+                  <!--<div class="pesquisa">
                       <input type="submit">
-                  </div>
+                  </div>-->
                </div>
                <div class="componente-item">
                    <div class="dir">

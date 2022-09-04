@@ -58,7 +58,7 @@ body{
 /*AVALIACAO-HEAD*/
 
 .butao-cont{
-	width:15%;
+	width:14.5%;
 	height:600px;
 	display:flex;
 	flex-direction:column;
@@ -85,7 +85,7 @@ body{
 }
 
 .avaliacao-titulo{
-	padding:20px;
+	padding-left:20px;
 }
 
 .butao-cont div{
