@@ -55,7 +55,7 @@
                           <p>Diagnósticos</p>
                       </div>
                   </a>
-                  <a href="" class="butao">
+                  <a href="intervencoes.jsp" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>

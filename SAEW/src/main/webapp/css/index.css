@@ -34,8 +34,11 @@ body{
 .child-login{
 	background-color:white;
 	width:402px;
-	padding:45px 40px;
+	padding:0px 40px;
+	padding-bottom:45px;
+	padding-top:30px;
 	border:0.1px solid #ECECEC;
+	box-shadow:20px 20px 20px black; /*boxshadow*/
 }
 
 .login-logo{
@@ -46,12 +49,12 @@ body{
 }
 
 .login-logo img{
-	width:105px;
+	width:120px; /*105*/
 	height:auto;
 }
 
 .login-usuario input, .login-senha input{
-	/*outline:none;*/
+	outline:none;
 	font-size:16.5px;
 	padding:9px;
 	width:100%;

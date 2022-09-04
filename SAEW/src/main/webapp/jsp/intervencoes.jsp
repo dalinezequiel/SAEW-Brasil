@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="../css/diagnostico.css">
+<link rel="stylesheet" href="../css/intervencoes.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -42,7 +42,7 @@
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
                       <div class="text">
-                         <p>Novo Diagnóstico</p>
+                         <p>Nova Intervenção</p>
                       </div>
                   </a>
               </div>
@@ -91,108 +91,115 @@
         <div class="avaliacao-cont">
             <div class="avaliacao-head">
                <div class="filtro">
-                  <div class="avaliacao-titulo">
-                      <h3>Diagnósticos de Enfermagem</h3>
-                  </div>
-                  <!--<div class="pesquisa">
-                      <input type="submit">
-                  </div>-->
+                <div class="avaliacao-titulo">
+                   <h3>Intervenções de Enfermagem</h3>
+                </div>
+                <!--<div class="pesquisa">
+                   <input type="submit">
+                </div>-->
                </div>
                <div class="componente-item">
                    <div class="dir">
                       <form>
                           <div class="check-item">
                               <div>
-                                  <label>Perfusão tíssular</label>
+                                  <label>Realizar a troca de acesso<br> venoso periférico de 72 em 72horas</label>
                               </div>
                               <div class="comboBox">
                                   <select>
-                                      <option>Renal</option>
-                                      <option>Cardíopulmonar</option>
-                                      <option>Cerebral</option>
-                                      <option>Gastrinstestínal</option>
-                                      <option>Periférica</option>
+                                      <option>Hoje Sim</option>
+                                      <option>Hoje Não</option>
                                   </select>
                               </div>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Comunicação verbal prejudicada</label>
+                             <div>
+                                 <label></label>
+                             </div>
+                             <div class="input_label">
+                                 <div class="input-vezes">
+                                    <label>N° Vezes</label>
+                                    <input type="text">
+                                 </div>
+                                 <div class="input-dia">
+                                    <label>Data</label>
+                                    <input type="date">
+                                 </div>
+                             </div>
+                             <div class="input_label">
+                                 <div class="input-vezes">
+                                    <label>Há cada</label>
+                                    <input type="text">
+                                 </div>
+                                 <div class="input-dia">
+                                    <label>Data</label>
+                                    <div>
+                                        <input type="date">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="input_label">
+                                 <div class="input-vezes">
+                                    <label>Há cada</label>
+                                    <input type="text">
+                                 </div>
+                                 <div class="input-dia">
+                                    <label>Data</label>
+                                    <div>
+                                        <input type="date">
+                                    </div>
+                                 </div>
+                             </div>
+                             <div class="input_label">
+                                 <div class="input-vezes">
+                                    <label>Há cada</label>
+                                    <input type="text">
+                                 </div>
+                                 <div class="input-dia">
+                                    <label>Data</label>
+                                    <div>
+                                        <input type="date">
+                                    </div>
+                                 </div>
+                             </div>
                           </div>
-                          <div class="check-item">
-                             <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Confusão aguda</label>
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox" disabled> Constipação intestínal
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Contusão aguda
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Deambulação prejudicada
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Débito cardíaco diminuído
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Déficit de auto cuidado
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Deglutição prejudicada
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Desobstrução ineficaz de vias aéreas
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Dor aguda
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Hipitermia
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Integridade da pele prejudicada
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Integridade tíssular prejudicada
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Intolerância a actividade
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Medo
-                          </div>
+                          
                       </form>
                    </div>
                    <div class="esq">
                        <form>
                           <div class="check-item">
-                             <input type="checkbox"> Menbrana mucosa prejudicada
+                             <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Observação no leito de 4 em 4 horas 02 06 10 14 18 22</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Mobilidade física prejudicada
+                             <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Verificar sinais vitais de 08 em 08 horas 14 22 06</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Mobilidade no leito prejudicada
+                             <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Náusea
+                             <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">Avaliar e anotar eliminações vesícais e intestínais</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Nutrição desequilibrada
+                             <input id="checkbox-5" type="checkbox"> <label for="checkbox-5">Manter a cabeceira elevada a 45graus</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Padrão respiratório ineficaz
+                             <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Avaliar sinais de febrite</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Risco para infecção
+                             <input id="checkbox-7" type="checkbox"> <label for="checkbox-7">Promover imobilização dos membros fraturados</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Risco para temperatura corporal desequilibrada
+                             <input id="checkbox-8" type="checkbox"> <label for="checkbox-8">Oferecer suporte emocional</label>
                           </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Troca de gazes prejudicada
-                          </div>
-                          <div class="check-item">
-                             <input type="checkbox"> Volume de líquidos deficiente
+                          
+                          <div class="curativo-item">
+                             <div>
+                                 <label>Realizar curativo</label>
+                             </div>
+                             <div class="input-curativo">
+                                 <input type="text">
+                             </div>
                           </div>
                           
                           <div class="observacao">
@@ -203,6 +210,7 @@
                                  <textarea rows="" cols=""></textarea>
                              </div>
                           </div>
+                          
                       </form>
                    </div>
                </div>
@@ -216,7 +224,7 @@
                           <label>Código</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" disabled>
                        </div>
                     </div>
                     <div class="input-leito">
@@ -224,7 +232,7 @@
                           <label>Leito</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" disabled>
                        </div>
                     </div>
                 </div>
@@ -233,7 +241,7 @@
                           <label>Paciente</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" disabled>
                      </div>
                 </div>
                 <div class="input-paciente">

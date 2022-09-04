@@ -239,9 +239,24 @@ body{
 
 .radio-item input{
 	margin:0px 2px;
+	cursor:pointer;
 }
 
 /**/
+
+.comboBox select{
+	padding:5px;
+	outline:none;
+	margin-bottom:10px;
+	font-size:15px;
+	display:flex;
+	flex-direction:row;
+	width:100%;
+}
+
+.comboBox select option{
+	font-size:15px;
+}
 
 .componente-item{
 	padding:20px;

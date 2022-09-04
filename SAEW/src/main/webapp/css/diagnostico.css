@@ -214,6 +214,11 @@ body{
 
 .check-item input{
 	margin:7px 0px;
+	cursor:pointer;
+}
+
+.check-item label{
+	cursor:pointer;
 }
 
 .comboBox select{

@@ -48,10 +48,6 @@ body{
 	padding-left:4px;
 }
 
-/*.nav-item i{
-	color:#ffffff;
-}*/
-
 /*ESTILIZANDO CORPO*/
 .componente{
 	display:flex;
@@ -62,7 +58,7 @@ body{
 /*AVALIACAO-HEAD*/
 
 .butao-cont{
-	width:15%;
+	width:14.5%;
 	height:600px;
 	display:flex;
 	flex-direction:column;
@@ -74,11 +70,11 @@ body{
 	height:300px;
 	display:flex;
 	flex-direction:column;
-	justify-content:space-between;
+	/*justify-content:space-between;*/
 }
 
 .avaliacao-cont{
-	width:90%;
+	width:60%;
 	height:600px;
 	background-color:#ffffff;
 	padding:10px;
@@ -86,6 +82,10 @@ body{
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
+}
+
+.avaliacao-titulo{
+	padding-left:20px;
 }
 
 .butao-cont div{
@@ -109,6 +109,7 @@ body{
 	display:flex;
 	flex-direction:row;
 	padding:20px 17px;
+	margin-bottom:5px;
 	background-color:#26a2bd;
 	border:1px solid #26a2bd;
 }
@@ -125,7 +126,7 @@ body{
 
 .btn-avaliacao a .text{
 	display:flex;
-	width:500px;
+	width:508px;
 	text-align:center;
 	color:white;
 }
@@ -211,84 +212,213 @@ body{
 	color:white;
 }
 
-/*TABELA*/
-.avaliacao-cont table{
-	border-collapse:collapse;
-	border:1px solid #ffffff;
+.check-item{
+	padding:4px 0px;
 }
 
-.avaliacao-cont td{
-	padding:5px 20px;
-	border:1px solid #f9f9f9;
-	font-size:14px;
-}
-
-.avaliacao-cont tbody tr:hover{
-	background-color:#c5dde3;
+.check-item input[type="checkbox"], .esq .check-item label{
+	cursor:pointer;
 }
 
 
-.avaliacao-cont thead td{
-	font-weight:500;
-}
+/**/
 
-
-/*FILTRO*/
-.filtro{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	align-items:center;
-	padding-bottom:10px;
-}
-
-.pesquisa{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	align-items:center;
-}
-
-.pesquisa input{
-	font-size:14px;
-	outline:none;
+.comboBox select{
 	padding:5px;
-	/*font-weight:500;*/
+	outline:none;
+	margin-bottom:10px;
+	font-size:15px;
+	display:flex;
+	flex-direction:row;
+	width:100%;
 }
 
-.paciente{
-	margin-left:20px;
+.comboBox select option{
+	font-size:15px;
 }
 
-.filter-icon {
-	margin-right:10px;
+.componente-item{
+	padding:20px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
 }
 
-.filter-icon i{
-	font-size:21px;
+.dir, .esq{
+	width:50%;
 }
 
 /**/
-.total-item, .ordem-item, .mostra-item{
+.input_label{
+	display:flex;
+	flex-direction:row;
+	border:1px solid #969696;
+	margin-bottom:20px;
+	border-radius:2px;
+}
+
+.input-vezes, .input-dia{
+	display:flex;
+	flex-direction:column;
+	padding:15px;
+}
+
+.input-vezes input, .input-dia input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.input-dia input{
+	width:100%;
+}
+
+.input-vezes input{
+	width:100px;
+}
+/**/
+
+.esq{
+	padding-left:40px;
+}
+
+/**/
+.observacao{
+	padding:5px 0px;
+}
+
+.observacao .t-area{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	width:100%;
+}
+
+.observacao .t-area textarea{
+	height:66px;
+	padding:10px;
+	outline:none;
+}
+
+/*PACIENTE*/
+.paciente{
+	width:25%;
+	background-color:#ffffff;
+	margin-left:20px;
+	padding:15px;
+}
+
+
+/**/
+.codito{
 	display:flex;
 	flex-direction:row;
 }
 
-.afasta{
-	padding-right:5px;
+.text{
+	display:flex;
+	flex-direction:row;
 }
 
-.avaliacao-footer, .ordem-mostra{
+.text input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.input-leito{
+	margin-left:90px;
+}
+
+
+.input-paciente{
+	display:flex;
+	flex-direction:column;
+}
+
+.input-paciente input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+
+.interna{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
 }
 
-.ordem-mostra select{
-	padding:3px;
-	outline:none;
+.text-interna{
+	display:flex;
+	flex-direction:row;
+	width:70px;
 }
 
-.ordem-item{
-	padding-right:20px;
+.text-interna input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.text-internacao{
+	margin-right:10px;
+}
+
+.text-internacao input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+
+.nascimento{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.text-nasc{
+	display:flex;
+	flex-direction:row;
+	width:70px;
+}
+
+.text-nasc input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.text-nascimento{
+	margin-right:10px;
+}
+
+.text-nasc input, .text-nascimento input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.codito, .input-paciente, .interna, .nascimento, .perido{
+	margin-bottom:4px;
+}
+
+.curativo-item{
+	padding-top:4px;
+}
+
+.input-curativo{
+	display:flex;
+	flex-direction:row;
+}
+
+.input-curativo input{
+	width:100%;
+	outline:none;
+	padding:5px 3px;
+	font-size:14px;
 }
