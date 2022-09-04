@@ -38,7 +38,7 @@ body{
 	padding-bottom:45px;
 	padding-top:30px;
 	border:0.1px solid #ECECEC;
-	box-shadow:20px 20px 20px black; /*boxshadow*/
+	box-shadow:20px 20px 20px red; /*boxshadow*/
 }
 
 .login-logo{
