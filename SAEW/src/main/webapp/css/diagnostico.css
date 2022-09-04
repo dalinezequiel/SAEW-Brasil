@@ -84,6 +84,10 @@ body{
 	justify-content:space-between;
 }
 
+.avaliacao-titulo{
+	padding:20px;
+}
+
 .butao-cont div{
 	display:flex;
 	flex-direction:column;

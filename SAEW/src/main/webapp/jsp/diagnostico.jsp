@@ -52,7 +52,7 @@
                           <i class="fa-sharp fa-solid fa-microscope"></i>
                       </div>
                       <div class="text">
-                          <p>Cadastrar</p>
+                          <p>Buscar Paciente</p>
                       </div>
                   </a>
                   <a href="" class="butao">
@@ -77,7 +77,7 @@
               </a>
            </div>
            <div class="btn-sair">
-               <a href="" class="butao">
+               <a href="menu.jsp" class="butao">
                   <div class="butao-ico">
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                   </div>
@@ -91,12 +91,12 @@
         <div class="avaliacao-cont">
             <div class="avaliacao-head">
                <div class="filtro">
-                <div class="avaliacao-titulo">
-                   <h3>Diagnóstico de Enfermagem</h3>
-                </div>
-                <div class="pesquisa">
-                   <!-- Pesquisa -->
-                </div>
+                  <div class="avaliacao-titulo">
+                      <h3>Diagnóstico de Enfermagem</h3>
+                  </div>
+                  <div class="pesquisa">
+                      <input type="submit">
+                  </div>
                </div>
                <div class="componente-item">
                    <div class="dir">

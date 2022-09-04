@@ -5,14 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <div class="parent">
          <form action=LoginServelet method="POST">
             <div class="child-login">
               <div class="login-logo">
-                 <img alt="" src="img/sae_logo.jpeg">
+                 <img alt="" src="../img/sae_logo.jpeg">
               </div>
               <div class="login-usuario">
                   <div class="login-label">

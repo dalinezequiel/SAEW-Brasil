@@ -63,7 +63,7 @@
                           <p>Intervenções</p>
                       </div>
                   </a>
-                  <a href="" class="butao">
+                  <a href="intervecoeslia.jsp" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-notes-medical"></i>
                       </div>
@@ -85,7 +85,7 @@
               </a>
            </div>
            <div class="btn-sair">
-               <a href="" class="butao">
+               <a href="../index.jsp" class="butao">
                   <div class="butao-ico">
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                   </div>
