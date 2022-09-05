@@ -37,7 +37,7 @@
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-avaliacao">
-                  <a href="" class="butao">
+                  <a href="#" class="butao">
                       <div class="butao-ico">
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
@@ -122,7 +122,7 @@
                              <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Confusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox" disabled> Constipação intestínal
+                             <input type="checkbox"> Constipação intestínal
                           </div>
                           <div class="check-item">
                              <input type="checkbox"> Contusão aguda
@@ -298,5 +298,6 @@
     </div>
 </div>
 </div>
+<script type="text/javascript" src="../script/diagnostico.js"></script>
 </body>
 </html>

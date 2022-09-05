@@ -119,7 +119,7 @@
                              <div class="input_label">
                                  <div class="input-vezes">
                                     <label>N° Vezes</label>
-                                    <input type="text">
+                                    <input type="text" placeholder="Ex: 04">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
@@ -129,7 +129,7 @@
                              <div class="input_label">
                                  <div class="input-vezes">
                                     <label>Há cada</label>
-                                    <input type="text">
+                                    <input type="text" placeholder="Ex: 04horas">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
@@ -141,7 +141,7 @@
                              <div class="input_label">
                                  <div class="input-vezes">
                                     <label>Há cada</label>
-                                    <input type="text">
+                                    <input type="text" placeholder="Ex: 04horas">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
@@ -153,7 +153,7 @@
                              <div class="input_label">
                                  <div class="input-vezes">
                                     <label>Há cada</label>
-                                    <input type="text">
+                                    <input type="text" placeholder="Ex: 04horas">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
