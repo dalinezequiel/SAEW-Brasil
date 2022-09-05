@@ -5,44 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="../css/avaliacoes.css">
+<link rel="stylesheet" href="../css/lista.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<div class="parent">
-<nav>
-   <div class="nav-menu">
-      <div class="nav-logo">
-         <h1>SAE</h1>
-      </div>
-      <div class="nav-item">
-          <ul>
-               <li><a href="">Enfermagem</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li>
-               <li><a href="">Utilitários</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li>
-               <li><a href="">Sistema</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li>
-          </ul>
-      </div>
-   </div>
-</nav>
 <div class="cortina">
-    <div class="cortina-cont">
-        <!--<div class="cortina-item">
-            <h1>AL</h1>
-        </div>
-        <div class="cortina-item">
-            <h1>AL</h1>
-        </div>-->
         <div class="cortina-sub">
             <div class="cortina-item">
-                <!-- <div class="cubo"></div> -->
                 <div>
                     <div class="image"></div>
                 </div>
@@ -54,7 +25,7 @@
                <div class="cortina-barra"></div>
             <div class="cortina-down">
                 <div class="image-item">
-                     <label>Image</label>
+                     <i class="fa-solid fa-user-nurse"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Autênticação</a>
@@ -63,7 +34,7 @@
                
             <div class="cortina-down">
                 <div class="image-item">
-                     <label>Image</label>
+                    <i class="fa-solid fa-list-ul"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Histórico</a>
@@ -72,7 +43,7 @@
                
             <div class="cortina-down">
                 <div class="image-item">
-                     <label>Image</label>
+                     <i class="fa-solid fa-gear"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Configurações</a>
@@ -81,7 +52,7 @@
                
             <div class="cortina-down">
                 <div class="image-item">
-                     <label>Image</label>
+                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Logout</a>
@@ -89,8 +60,110 @@
             </div>
             
         </div>
-    </div>
 </div>
+<div class="cortina-02">
+        <!-- <div class="cubo"></div> -->
+        <div class="cortina-sub">
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Autênticação</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Histórico</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Configurações</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Logout</a>
+                </div>
+            </div>
+            
+        </div>
+</div>
+<div class="cortina-03">
+        <!-- <div class="cubo"></div> -->
+        <div class="cortina-sub">
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Autênticação</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Histórico</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Configurações</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Logout</a>
+                </div>
+            </div>
+            
+        </div>
+</div>
+<div class="parent">
+<nav>
+   <div class="nav-menu">
+      <div class="nav-logo">
+         <h1>SAE</h1>
+      </div>
+      <div class="nav-item">
+          <ul>
+               <li><a class="enfermagem">Enfermagem</a>
+                   <i class="fa-solid fa-caret-down"></i>
+               </li>
+               <li><a class="utilitario">Utilitários</a>
+                   <i class="fa-solid fa-caret-down"></i>
+               </li>
+               <li><a class="sistema">Sistema</a>
+                   <i class="fa-solid fa-caret-down"></i>
+               </li>
+          </ul>
+      </div>
+   </div>
+</nav>
 <div class="corp">
     <div class="componente">
         <div class="butao-cont">
@@ -445,7 +518,7 @@
                     </div>
                     <div class="input-leito">
                        <div>
-                          <label>Registo n°</label>
+                          <label>Leito</label>
                        </div>
                        <div class="text">
                           <input type="text">
@@ -522,5 +595,6 @@
     </div>
 </div>
 </div>
+<script type="text/javascript" src="../script/lista.js"></script>
 </body>
 </html>
