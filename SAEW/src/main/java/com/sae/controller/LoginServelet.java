@@ -36,7 +36,7 @@ public class LoginServelet extends HttpServlet {
 		String usuario = request.getParameter("usuario");
 		String senha = request.getParameter("senha");
 		
-		if(usuario.equals("admin") && senha.equals("sa")) {
+		if(usuario.equals("admin@hospital.com.br") && senha.equals("admin")) {
 			response.sendRedirect("jsp/menu.jsp");
 		}else {
 			response.sendRedirect("index.jsp");
