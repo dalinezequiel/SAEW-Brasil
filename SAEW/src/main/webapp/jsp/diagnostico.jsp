@@ -122,77 +122,77 @@
                              <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Confusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Constipação intestínal
+                             <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Constipação intestínal</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Contusão aguda
+                             <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">Contusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Deambulação prejudicada
+                             <input id="checkbox-5" type="checkbox"> <label for="checkbox-5">Deambulação prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Débito cardíaco diminuído
+                             <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Débito cardíaco diminuído</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Déficit de auto cuidado
+                             <input id="checkbox-7" type="checkbox"> <label for="checkbox-7">Déficit de auto cuidado</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Deglutição prejudicada
+                             <input id="checkbox-8" type="checkbox"> <label for="checkbox-8">Deglutição prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Desobstrução ineficaz de vias aéreas
+                             <input id="checkbox-9" type="checkbox"> <label for="checkbox-9">Desobstrução ineficaz de vias aéreas</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Dor aguda
+                             <input id="checkbox-10" type="checkbox"> <label for="checkbox-10">Dor aguda</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Hipitermia
+                             <input id="checkbox-11" type="checkbox"> <label for="checkbox-11">Hipitermia</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Integridade da pele prejudicada
+                             <input id="checkbox-12" type="checkbox"> <label for="checkbox-12">Integridade da pele prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Integridade tíssular prejudicada
+                             <input id="checkbox-13" type="checkbox"> <label for="checkbox-13">Integridade tíssular prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Intolerância a actividade
+                             <input id="checkbox-14" type="checkbox"> <label for="checkbox-14">Intolerância a actividade</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Medo
+                             <input id="checkbox-15" type="checkbox"> <label for="checkbox-15">Medo</label>
                           </div>
                       </form>
                    </div>
                    <div class="esq">
                        <form>
                           <div class="check-item">
-                             <input type="checkbox"> Menbrana mucosa prejudicada
+                             <input id="checkbox-16" type="checkbox"> <label for="checkbox-16">Menbrana mucosa prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Mobilidade física prejudicada
+                             <input id="checkbox-17" type="checkbox"> <label for="checkbox-17">Mobilidade física prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Mobilidade no leito prejudicada
+                             <input id="checkbox-18" type="checkbox"> <label for="checkbox-18">Mobilidade no leito prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Náusea
+                             <input id="checkbox-19" type="checkbox"> <label for="checkbox-19">Náusea</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Nutrição desequilibrada
+                             <input id="checkbox-20" type="checkbox"> <label for="checkbox-20">Nutrição desequilibrada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Padrão respiratório ineficaz
+                             <input id="checkbox-21" type="checkbox"> <label for="checkbox-21">Padrão respiratório ineficaz</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Risco para infecção
+                             <input id="checkbox-22" type="checkbox"> <label for="checkbox-22">Risco para infecção</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Risco para temperatura corporal desequilibrada
+                             <input id="checkbox-23" type="checkbox"> <label for="checkbox-23">Risco para temperatura corporal desequilibrada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Troca de gazes prejudicada
+                             <input id="checkbox-24" type="checkbox"> <label for="checkbox-24">Troca de gazes prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input type="checkbox"> Volume de líquidos deficiente
+                             <input id="checkbox-25" type="checkbox"> <label for="checkbox-25">Volume de líquidos deficiente</label>
                           </div>
                           
                           <div class="observacao">
