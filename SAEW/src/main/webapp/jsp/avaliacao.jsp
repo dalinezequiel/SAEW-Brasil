@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="../css/control.css">
+<link rel="stylesheet" href="../css/avaliacao.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -19,13 +19,13 @@
       </div>
       <div class="nav-item">
           <ul>
-               <li><a href="">Enfermagem</a>
+               <li><a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <li><a href="">Utilitários</a>
+               <!-- <li><a href="">Utilitários</a>
                    <i class="fa-solid fa-caret-down"></i>
-               </li>
-               <li><a href="">Sistema</a>
+               </li> -->
+               <li><a>Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
           </ul>
@@ -37,7 +37,7 @@
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-avaliacao">
-                  <a href="" class="butao">
+                  <a class="butao">
                       <div class="butao-ico">
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
@@ -49,7 +49,7 @@
               <div class="btn-enfermagem">
                   <a href="" class="butao">
                       <div class="butao-ico">
-                          <i class="fa-sharp fa-solid fa-microscope"></i>
+                          <i class="fa-solid fa-floppy-disk"></i>
                       </div>
                       <div class="text">
                           <p>Salvar Avaliação</p>
@@ -69,7 +69,7 @@
            <div class="btn-relatorio">
               <a href="" class="butao">
                  <div class="butao-ico">
-                     <i class="fa-solid fa-file-lines"></i>
+                     <i class="fa-solid fa-trash-can"></i>
                  </div>
                  <div class="text">
                    <p>Resetar Avaliação</p>
@@ -95,12 +95,12 @@
                 <div class="tabe">
                      <div>
                          <div class="btn-tabe">
-                             <button style="color:#5d6d7e; font-weight:bold;">Avaliação Gastrointestinal</button>
-                             <button>Avaliação Psicológica</button>
-                             <button>Avaliação Respiratória</button>
-                             <button>Avaliação Cardiovascular</button>
-                             <button>Cutâneo-Mucosa</button>
-                             <button>Avaliação Neurológica</button>
+                             <button class="tabcontrol" style="color:#5d6d7e; font-weight:bold; border-bottom:1.5px solid #5d6d7e;">Avaliação Gastrointestinal</button>
+                             <button class="tabcontrol">Avaliação Psicológica</button>
+                             <button class="tabcontrol">Avaliação Respiratória</button>
+                             <button class="tabcontrol">Avaliação Cardiovascular</button>
+                             <button class="tabcontrol">Cutâneo-Mucosa</button>
+                             <button class="tabcontrol">Avaliação Neurológica</button>
                          </div> 
                      </div>
                 </div>
@@ -491,5 +491,6 @@
     </div>
 </div>
 </div>
+<script type="text/javascript" src="../script/avaliacao.js"></script>
 </body>
 </html>

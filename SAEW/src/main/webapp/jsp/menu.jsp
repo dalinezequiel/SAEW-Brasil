@@ -22,9 +22,9 @@
                <li><a href="">Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <li><a href="">Utilitários</a>
+               <!-- <li><a href="">Utilitários</a>
                    <i class="fa-solid fa-caret-down"></i>
-               </li>
+               </li> -->
                <li><a href="">Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
@@ -37,7 +37,7 @@
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-avaliacao">
-                  <a href="" class="butao">
+                  <a href="avaliacao.jsp" class="butao">
                       <div class="butao-ico">
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
@@ -120,12 +120,12 @@
                      <tr>
                          <td>ID</td>
                          <td>Paciente</td>
+                         <td>Leito</td>
                          <td>Genero</td>
                          <td>Idade</td>
-                         <td>Genero</td>
-                         <td>Idade</td>
-                         <td>Genero</td>
-                         <td>Data Registo</td>
+                         <td>Queixa</td>
+                         <td>Data Internação</td>
+                         <td>Data Nascimento</td>
                          <td style="padding:10px 6px;">Opção</td>
                          <td style="padding:10px 6px;">Opção</td>
                      </tr>
@@ -133,27 +133,13 @@
                    <tbody>
                      <tr>
                          <td>10104</td>
-                         <td>Maria Paulo McCart</td>
+                         <td>Nome Meio Sobrenome</td>
+                         <td>111</td>
                          <td>Femenino</td>
                          <td>24</td>
-                         <td>Masculino</td>
-                         <td>24</td>
-                         <td>Masculino</td>
+                         <td>Queixa 01</td>
                          <td>15-04-2022 12:23:45 PM</td>
-                         <td><a href=""><i style="color:#efd429; font-size:16px;" 
-                         class="fa-solid fa-edit"></i></a></td>
-                         <td><a href=""><i style="color:#e44848; font-size:16px;" 
-                         class="fa-solid fa-trash"></i></a></td>
-                     </tr>
-                     <tr>
-                         <td>10105</td>
-                         <td>Antonio Francisco Matsinhe</td>
-                         <td>Masculino</td>
-                         <td>19</td>
-                         <td>Masculino</td>
-                         <td>19</td>
-                         <td>Masculino</td>
-                         <td>03-05-2022 10:05:11 AM</td>
+                         <td>15-04-2022 12:23:45 PM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
                          <td><a href=""><i style="color:#e44848; font-size:16px;" 
@@ -161,12 +147,12 @@
                      </tr>
                      <tr>
                          <td>10104</td>
-                         <td>Maria Paulo McCart</td>
+                         <td>Nome Meio Sobrenome</td>
+                         <td>111</td>
                          <td>Femenino</td>
                          <td>24</td>
-                         <td>Femenino</td>
-                         <td>24</td>
-                         <td>Femenino</td>
+                         <td>Queixa 01</td>
+                         <td>15-04-2022 12:23:45 PM</td>
                          <td>15-04-2022 12:23:45 PM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
@@ -174,14 +160,28 @@
                          class="fa-solid fa-trash"></i></a></td>
                      </tr>
                      <tr>
-                         <td>10105</td>
-                         <td>Antonio Francisco Matsinhe</td>
-                         <td>Masculino</td>
-                         <td>19</td>
-                         <td>Masculino</td>
-                         <td>19</td>
-                         <td>Masculino</td>
-                         <td>03-05-2022 10:05:11 AM</td>
+                         <td>10104</td>
+                         <td>Nome Meio Sobrenome</td>
+                         <td>111</td>
+                         <td>Femenino</td>
+                         <td>24</td>
+                         <td>Queixa 01</td>
+                         <td>15-04-2022 12:23:45 PM</td>
+                         <td>15-04-2022 12:23:45 PM</td>
+                         <td><a href=""><i style="color:#efd429; font-size:16px;" 
+                         class="fa-solid fa-edit"></i></a></td>
+                         <td><a href=""><i style="color:#e44848; font-size:16px;" 
+                         class="fa-solid fa-trash"></i></a></td>
+                     </tr>
+                     <tr>
+                         <td>10104</td>
+                         <td>Nome Meio Sobrenome</td>
+                         <td>111</td>
+                         <td>Femenino</td>
+                         <td>24</td>
+                         <td>Queixa 01</td>
+                         <td>15-04-2022 12:23:45 PM</td>
+                         <td>15-04-2022 12:23:45 PM</td>
                          <td><a href=""><i style="color:#efd429; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
                          <td><a href=""><i style="color:#e44848; font-size:16px;" 
@@ -197,7 +197,7 @@
                       <label>Total:</label>
                    </div>
                    <div>
-                      <label>10</label>
+                      <label>04</label>
                    </div>
                 </div>
                 <div class="ordem-mostra">

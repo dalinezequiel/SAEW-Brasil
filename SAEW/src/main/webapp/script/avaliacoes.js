@@ -11,10 +11,10 @@ sistema.addEventListener('click', function(){
 	cortina_03.style.transition = "0s";
 });
 
-/*cortina.addEventListener('mouseleave', function(){
+cortina.addEventListener('mouseleave', function(){
 	cortina.style.height = "0px";
 	cortina.style.transition = "0.5s";
-});*/
+});
 
 
 /*CORTINA - O3*/

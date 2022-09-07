@@ -22,9 +22,9 @@
                <li><a href="">Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <li><a href="">Utilitários</a>
+               <!-- <li><a href="">Utilitários</a>
                    <i class="fa-solid fa-caret-down"></i>
-               </li>
+               </li> -->
                <li><a href="">Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
@@ -37,7 +37,7 @@
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-avaliacao">
-                  <a href="" class="butao">
+                  <a class="butao">
                       <div class="butao-ico">
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
@@ -49,10 +49,10 @@
               <div class="btn-enfermagem">
                   <a href="" class="butao">
                       <div class="butao-ico">
-                          <i class="fa-sharp fa-solid fa-microscope"></i>
+                          <i class="fa-solid fa-floppy-disk"></i>
                       </div>
                       <div class="text">
-                          <p>Buscar Paciente</p>
+                          <p>Salvar Intervenç.</p>
                       </div>
                   </a>
                   <a href="" class="butao">
@@ -60,7 +60,7 @@
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
                       <div class="text">
-                          <p>Intervenções</p>
+                          <p>Buscar Paciente</p>
                       </div>
                   </a>
               </div>
@@ -69,10 +69,10 @@
            <div class="btn-relatorio">
               <a href="" class="butao">
                  <div class="butao-ico">
-                     <i class="fa-solid fa-file-lines"></i>
+                     <i class="fa-solid fa-trash-can"></i>
                  </div>
                  <div class="text">
-                   <p>Resetar</p>
+                   <p>Resetar Intervenç.</p>
                  </div>
               </a>
            </div>
@@ -463,5 +463,6 @@
     </div>
 </div>
 </div>
+<script type="text/javascript" src="../script/intervencoeslia.js"></script>
 </body>
 </html>
