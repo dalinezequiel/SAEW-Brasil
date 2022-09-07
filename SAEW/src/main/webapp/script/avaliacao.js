@@ -8,20 +8,30 @@ tab[0].addEventListener('load', function(){
 });
 
 /*CLICK NA TAB CONTROL*/
-for(var i=0; i<tab.length; i++){
-	tab[i].addEventListener('click', function(){
-		//window.alert("Clicado");
-		/*if(i==0){
-			tab[i].style.color = "#5d6d7e";
-	        tab[i].style.fontWeight = "bold";
-		    tab[i].style.borderBottom = "1.5px solid #5d6d7e";
-		}else if(i==1){
-			tab[i].style.color = "#5d6d7e";
-	        tab[i].style.fontWeight = "bold";
-		    tab[i].style.borderBottom = "1.5px solid #5d6d7e";
-		}*/
-	})
-};
+function tab_click(index, tab_control){
+    tab_control[index].addEventListener('click', function(){
+	    /*ENTRANDO DA TAB CONTROL*/
+	    tab_control[index].style.color = "#5d6d7e";
+	    tab_control[index].style.fontWeight = "bold";
+	    tab_control[index].style.borderBottom = "1.5px solid #5d6d7e";
+	    
+	    /*SAINDO DA TAB CONTROL*/
+	    for(var i=0; i<tab_control.length; i++){
+	       if(i != index){
+		       tab_control[i].style.color = "initial";
+	           tab_control[i].style.fontWeight = "500";
+	           tab_control[i].style.borderBottom = "initial";
+	       }
+        }
+    });
+}
+tab_click(0, tab);
+tab_click(1, tab);
+tab_click(2, tab);
+tab_click(3, tab);
+tab_click(4, tab);
+tab_click(5, tab);
+
 
 /*CHECKBOX DE AVALIAÇÕES*/
 const check_input = document.querySelectorAll(".check-item input");

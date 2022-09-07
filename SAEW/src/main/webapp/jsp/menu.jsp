@@ -80,7 +80,7 @@
                      <i class="fa-solid fa-file-lines"></i>
                  </div>
                  <div class="text">
-                   <p>Relatório</p>
+                   <p>Relatório Geral</p>
                  </div>
               </a>
            </div>
