@@ -140,7 +140,7 @@
                          <td>Queixa 01</td>
                          <td>15-04-2022 12:23:45 PM</td>
                          <td>15-04-2022 12:23:45 PM</td>
-                         <td><a href=""><i style="color:#efd429; font-size:16px;" 
+                         <td><a href=""><i style="color:#5d6d7e; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
                          <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
@@ -154,7 +154,7 @@
                          <td>Queixa 01</td>
                          <td>15-04-2022 12:23:45 PM</td>
                          <td>15-04-2022 12:23:45 PM</td>
-                         <td><a href=""><i style="color:#efd429; font-size:16px;" 
+                         <td><a href=""><i style="color:#5d6d7e; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
                          <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
@@ -168,7 +168,7 @@
                          <td>Queixa 01</td>
                          <td>15-04-2022 12:23:45 PM</td>
                          <td>15-04-2022 12:23:45 PM</td>
-                         <td><a href=""><i style="color:#efd429; font-size:16px;" 
+                         <td><a href=""><i style="color:#5d6d7e; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
                          <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>
@@ -182,7 +182,7 @@
                          <td>Queixa 01</td>
                          <td>15-04-2022 12:23:45 PM</td>
                          <td>15-04-2022 12:23:45 PM</td>
-                         <td><a href=""><i style="color:#efd429; font-size:16px;" 
+                         <td><a href=""><i style="color:#5d6d7e; font-size:16px;" 
                          class="fa-solid fa-edit"></i></a></td>
                          <td><a href=""><i style="color:#e44848; font-size:16px;" 
                          class="fa-solid fa-trash"></i></a></td>

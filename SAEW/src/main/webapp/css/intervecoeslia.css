@@ -216,6 +216,10 @@ body{
 	padding:4px 0px;
 }
 
+.esq .check-item label{
+	cursor:pointer;
+}
+
 /*RADIO*/
 .radio-cont{
 	display:flex;

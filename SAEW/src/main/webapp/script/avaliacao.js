@@ -2,11 +2,26 @@
 /*TAB CONTROL*/
 const tab = document.querySelectorAll(".tabcontrol");
 tab[0].addEventListener('load', function(){
-	window.alert("Clicado");
 	tab[0].style.color = "#5d6d7e";
 	tab[0].style.fontWeight = "bold";
 	tab[0].style.borderBottom = "1.5px solid #5d6d7e";
 });
+
+/*CLICK NA TAB CONTROL*/
+for(var i=0; i<tab.length; i++){
+	tab[i].addEventListener('click', function(){
+		//window.alert("Clicado");
+		/*if(i==0){
+			tab[i].style.color = "#5d6d7e";
+	        tab[i].style.fontWeight = "bold";
+		    tab[i].style.borderBottom = "1.5px solid #5d6d7e";
+		}else if(i==1){
+			tab[i].style.color = "#5d6d7e";
+	        tab[i].style.fontWeight = "bold";
+		    tab[i].style.borderBottom = "1.5px solid #5d6d7e";
+		}*/
+	})
+};
 
 /*CHECKBOX DE AVALIAÇÕES*/
 const check_input = document.querySelectorAll(".check-item input");

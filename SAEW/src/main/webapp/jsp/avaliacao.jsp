@@ -95,7 +95,7 @@
                 <div class="tabe">
                      <div>
                          <div class="btn-tabe">
-                             <button class="tabcontrol" style="color:#5d6d7e; font-weight:bold; border-bottom:1.5px solid #5d6d7e;">Avaliação Gastrointestinal</button>
+                             <button class="tabcontrol">Avaliação Gastrointestinal</button> <!--  style="color:#5d6d7e; font-weight:bold; border-bottom:1.5px solid #5d6d7e;" -->
                              <button class="tabcontrol">Avaliação Psicológica</button>
                              <button class="tabcontrol">Avaliação Respiratória</button>
                              <button class="tabcontrol">Avaliação Cardiovascular</button>

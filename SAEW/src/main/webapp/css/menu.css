@@ -42,6 +42,7 @@ body{
 
 .nav-item ul li a{
 	color:black;
+	font-weight:500;
 }
 
 .nav-item ul li i{
