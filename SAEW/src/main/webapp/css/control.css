@@ -48,9 +48,6 @@ body{
 	padding-left:4px;
 }
 
-/*.nav-item i{
-	color:#ffffff;
-}*/
 
 /*ESTILIZANDO CORPO*/
 .componente{
@@ -62,7 +59,7 @@ body{
 /*AVALIACAO-HEAD*/
 
 .butao-cont{
-	width:15%;
+	width:14.5%;
 	height:600px;
 	display:flex;
 	flex-direction:column;
@@ -74,18 +71,22 @@ body{
 	height:300px;
 	display:flex;
 	flex-direction:column;
-	justify-content:space-between;
+	/*justify-content:space-between;*/
 }
 
 .avaliacao-cont{
-	width:90%;
+	width:60%;
 	height:600px;
 	background-color:#ffffff;
-	padding:10px;
+	padding:0px; /*padding:0px;*/
 	
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
+}
+
+.avaliacao-titulo{
+	padding-left:20px;
 }
 
 .butao-cont div{
@@ -109,6 +110,7 @@ body{
 	display:flex;
 	flex-direction:row;
 	padding:20px 17px;
+	margin-bottom:5px;
 	background-color:#26a2bd;
 	border:1px solid #26a2bd;
 }
@@ -125,7 +127,7 @@ body{
 
 .btn-avaliacao a .text{
 	display:flex;
-	width:500px;
+	width:508px;
 	text-align:center;
 	color:white;
 }
@@ -211,84 +213,244 @@ body{
 	color:white;
 }
 
-/*TABELA*/
-.avaliacao-cont table{
-	border-collapse:collapse;
-	border:1px solid #ffffff;
+/*PARTE PRINCIPAL, MENU DAS AVALIACOES*/
+/*TABE CONTROL*/
+.btn-tabe{
+	display:flex;
+	border-bottom:1px solid #c9c9c9;
 }
 
-.avaliacao-cont td{
-	padding:5px 20px;
-	border:1px solid #f9f9f9;
-	font-size:14px;
-}
-
-.avaliacao-cont tbody tr:hover{
-	background-color:#f7f7f7;
-}
-
-
-.avaliacao-cont thead td{
+.btn-tabe button{
+	background-color:transparent;
+	border:none;
+	outline:none;
+	cursor:pointer;
+	padding:14px 16px;
 	font-weight:500;
 }
+/**/
+.componente-item{
+	padding:20px;
+}
 
-
-/*FILTRO*/
-.filtro{
+.dir form{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
-	align-items:center;
-	padding-bottom:10px;
 }
 
-.pesquisa{
+/*PARTE ONE | PARTE TWO | PARTE THREE*/
+
+.parteone, .partetwo, .partethree{
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
 	justify-content:space-between;
-	align-items:center;
+	width:32%;
 }
 
-.pesquisa input{
-	font-size:14px;
-	outline:none;
-	padding:5px;
-	/*font-weight:500;*/
+.dir-cont{
+	border:1px solid #c9c9c9;
+	padding:15px;
 }
 
+.dir-cont-02{
+	border:1px solid #c9c9c9;
+	padding:15px;
+	margin-top:15px;
+}
+
+/*FIM PARTE PRINCIPAL, MENU DAS AVALIACOES*/
+/*DADOS DO PACIENTE*/
 .paciente{
+	width:25%;
+	background-color:#ffffff;
 	margin-left:20px;
+	padding:15px;
 }
 
-.filter-icon {
+
+/**/
+.codito{
+	display:flex;
+	flex-direction:row;
+}
+
+.text{
+	display:flex;
+	flex-direction:row;
+}
+
+.text input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.input-leito{
+	margin-left:90px;
+}
+
+
+.input-paciente{
+	display:flex;
+	flex-direction:column;
+}
+
+.input-paciente input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+
+.interna{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.text-interna{
+	display:flex;
+	flex-direction:row;
+	width:70px;
+}
+
+.text-interna input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.text-internacao{
 	margin-right:10px;
 }
 
-.filter-icon i{
-	font-size:21px;
+.text-internacao input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
 }
 
-/**/
-.total-item, .ordem-item, .mostra-item{
-	display:flex;
-	flex-direction:row;
-}
 
-.afasta{
-	padding-right:5px;
-}
-
-.avaliacao-footer, .ordem-mostra{
+.nascimento{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
 }
 
-.ordem-mostra select{
-	padding:3px;
-	outline:none;
+.text-nasc{
+	display:flex;
+	flex-direction:row;
+	width:70px;
 }
 
-.ordem-item{
-	padding-right:20px;
+.text-nasc input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.text-nascimento{
+	margin-right:10px;
+}
+
+.text-nasc input, .text-nascimento input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.codito, .input-paciente, .interna, .nascimento, .perido{
+	margin-bottom:4px;
+}
+
+/*COMBOBOX GERAL*/
+.comboBox select{
+	padding:5px;
+	outline:none;
+	margin-bottom:5px; /*margin-bottom:10px;*/
+	font-size:15px;
+	display:flex;
+	flex-direction:row;
+	width:100%;
+}
+
+.comboBox select option{
+	font-size:15px;
+}
+
+/*TEXT INPUT GERAL*/
+.drenagem{
+	display:flex;
+	flex-direction:row;
+}
+
+.drenagem input{
+	outline:none;
+	padding:4px;
+	font-size:14px;
+	width:100%;
+}
+
+/*DATA INPUT GERAL*/
+.svd-dia{
+	display:flex;
+	flex-direction:row;
+	padding-bottom:5px;
+}
+
+.svd-dia input{
+	outline:none;
+	padding:4px;
+	font-size:14px;
+	width:100%;
+}
+
+.data{
+	display:flex;
+	flex-direction:row;
+	padding-bottom:5px;
+}
+
+.data input{
+	outline:none;
+	padding:4px;
+	font-size:14px;
+	width:100%;
+}
+
+/*RADIO INPUT GERAL*/
+
+.radio-ite{
+	display:flex;
+	flex-direction:row;
+}
+
+.radio-ite input, .radio-ite label{
+	cursor:pointer;
+}
+
+.btn-radio-01, .btn-radio-02{
+	display:flex;
+	flex-direction:row;
+}
+
+.btn-radio-01{
+	padding-right:15px;
+}
+
+.il input{
+	margin-right:3px;
+}
+
+/*CHECK INPUT GERAL*/
+.check-item{
+	padding:4px 0px;
+}
+
+.check-item input, .check-item label{
+	cursor:pointer;
 }

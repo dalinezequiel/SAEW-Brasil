@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="../css/lista.css">
+<link rel="stylesheet" href="../css/avaliacoes.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -18,7 +18,7 @@
                     <div class="image"></div>
                 </div>
                 <div class="info">
-                    <label><strong>Manú Miranda</strong></label>
+                    <label><strong>Manuela Miranda</strong></label>
                     <label class="perfil">Téc. Enfermagem</label>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                      <i class="fa-solid fa-user-nurse"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Autênticação</a>
+                     <a href="">Atribuição de credênciais</a>
                 </div>
             </div>
                
@@ -40,13 +40,22 @@
                      <a href="">Histórico</a>
                 </div>
             </div>
+            
+            <div class="cortina-down">
+                <div class="image-item">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Banco de dados</a>
+                </div>
+            </div>
                
             <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-solid fa-gear"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Configurações</a>
+                     <a href="">Parâmetros gerais</a>
                 </div>
             </div>
                
@@ -61,56 +70,16 @@
             
         </div>
 </div>
-<div class="cortina-02">
-        <!-- <div class="cubo"></div> -->
-        <div class="cortina-sub">
-            <div class="cortina-down">
-                <div class="image-item">
-                     <i class="fa-solid fa-user-nurse"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Autênticação</a>
-                </div>
-            </div>
-               
-            <div class="cortina-down">
-                <div class="image-item">
-                    <i class="fa-solid fa-list-ul"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Histórico</a>
-                </div>
-            </div>
-               
-            <div class="cortina-down">
-                <div class="image-item">
-                     <i class="fa-solid fa-gear"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Configurações</a>
-                </div>
-            </div>
-               
-            <div class="cortina-down">
-                <div class="image-item">
-                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Logout</a>
-                </div>
-            </div>
-            
-        </div>
-</div>
+
 <div class="cortina-03">
         <!-- <div class="cubo"></div> -->
-        <div class="cortina-sub">
+        <div class="cortina-sub-03">
             <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-solid fa-user-nurse"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Autênticação</a>
+                     <a href="">Nova avaliação</a>
                 </div>
             </div>
                
@@ -119,7 +88,7 @@
                     <i class="fa-solid fa-list-ul"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Histórico</a>
+                     <a href="">Prontoário</a>
                 </div>
             </div>
                
@@ -128,7 +97,7 @@
                      <i class="fa-solid fa-gear"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Configurações</a>
+                     <a href="">Buscar Paciente</a>
                 </div>
             </div>
                
@@ -137,7 +106,34 @@
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Logout</a>
+                     <a href="">Diagnóstico de Enfermagem</a>
+                </div>
+            </div>
+            
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Intervenções de Enfermagem</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Avaliação das Intervenções</a>
+                </div>
+            </div>
+            
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Estatística das Avaliações</a>
                 </div>
             </div>
             
@@ -154,9 +150,9 @@
                <li><a class="enfermagem">Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <li><a class="utilitario">Utilitários</a>
+               <!-- <li><a class="utilitario">Utilitários</a>
                    <i class="fa-solid fa-caret-down"></i>
-               </li>
+               </li> -->
                <li><a class="sistema">Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
@@ -192,7 +188,7 @@
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
                       <div class="text">
-                          <p>Intervenções</p>
+                          <p>Salvar Avaliação</p>
                       </div>
                   </a>
               </div>
@@ -204,7 +200,7 @@
                      <i class="fa-solid fa-file-lines"></i>
                  </div>
                  <div class="text">
-                   <p>Resetar</p>
+                   <p>Resetar Avaliação</p>
                  </div>
               </a>
            </div>
@@ -595,6 +591,6 @@
     </div>
 </div>
 </div>
-<script type="text/javascript" src="../script/lista.js"></script>
+<script type="text/javascript" src="../script/avaliacoes.js"></script>
 </body>
 </html>
