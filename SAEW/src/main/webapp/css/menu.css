@@ -34,7 +34,8 @@ body{
 }
 
 .nav-item ul li{
-	padding: 10px 15px;
+	padding: 10px 0px;
+	padding-left:40px;
 	display:flex;
 	align-items:center;
 	cursor:pointer;
@@ -42,7 +43,6 @@ body{
 
 .nav-item ul li a{
 	color:black;
-	font-weight:500;
 }
 
 .nav-item ul li i{
