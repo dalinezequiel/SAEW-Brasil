@@ -43,7 +43,7 @@
             
             <div class="cortina-down">
                 <div class="image-item">
-                    <i class="fa-solid fa-list-ul"></i>
+                    <i class="fa-solid fa-database"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Banco de dados</a>
@@ -76,7 +76,7 @@
         <div class="cortina-sub-03">
             <div class="cortina-down">
                 <div class="image-item">
-                     <i class="fa-solid fa-user-nurse"></i>
+                     <i class="fa-solid fa-file-circle-plus"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Nova avaliação</a>
@@ -94,7 +94,7 @@
                
             <div class="cortina-down">
                 <div class="image-item">
-                     <i class="fa-solid fa-gear"></i>
+                     <i class="fa-solid fa-hospital-user"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Buscar Paciente</a>
@@ -103,7 +103,7 @@
                
             <div class="cortina-down">
                 <div class="image-item">
-                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                     <i class="fa-sharp fa-solid fa-stethoscope"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Diagnóstico de Enfermagem</a>
@@ -112,7 +112,7 @@
             
             <div class="cortina-down">
                 <div class="image-item">
-                     <i class="fa-solid fa-gear"></i>
+                     <i class="fa-solid fa-briefcase-medical"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Intervenções de Enfermagem</a>
@@ -121,7 +121,7 @@
                
             <div class="cortina-down">
                 <div class="image-item">
-                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                     <i class="fa-solid fa-microscope"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Avaliação das Intervenções</a>
@@ -130,7 +130,7 @@
             
             <div class="cortina-down">
                 <div class="image-item">
-                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                     <i class="fa-solid fa-chart-line"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Estatística das Avaliações</a>
