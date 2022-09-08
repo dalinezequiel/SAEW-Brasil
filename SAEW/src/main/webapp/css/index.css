@@ -11,7 +11,7 @@
 }
 
 body{
-	background-image:url("../img/INDEXIA.png");
+	background-image:url("../img/login.png");
 	background-size:cover;
 }
 
@@ -99,6 +99,8 @@ body{
 .login-submit input{
 	width:100%;
 	background-color:#3B81C7;
+	/*background-color:#5D6D7E;
+	border:1px solid #5D6D7E;*/
 	padding:15px 0px;
 	border:none;
 	font-weight:700;

@@ -232,15 +232,61 @@ body{
 /**/
 .componente-item{
 	padding:20px;
-	display:flex;
-	flex-direction:column;
+	/*display:flex;
+	flex-direction:row;
+	justify-content:space-between;*/
+	
+	/*position:relative;*/
+	/*height:530px;*/
+	/*width:500px;*/
+}
+
+/*AVALIAÇÃO GASTROINSTESTINAL*/
+
+.dir{
+	margin-bottom:15px;
 }
 
 .dir form{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
+	
+	/*background-color:red;*/
+	/*position:absolute;*/
+	/*top:20px;*/
+	/*width:100%;*/
 }
+
+/*AVALIAÇÃO CUTANEO*/
+/*cutaneo{
+	margin-bottom:15px;
+}
+
+.cutaneo form{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	
+	background-color:green;
+}*/
+
+/*AVALIAÇÃO RESPIRATÓRIA*/
+/*.respiratoria{
+	margin-bottom:15px;
+}
+
+.respiratoria form{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	
+	background-color:blue;
+	position:absolute;
+	top:20px;
+	
+}*/
+
 
 /*PARTE ONE | PARTE TWO | PARTE THREE*/
 

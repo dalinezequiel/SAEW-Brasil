@@ -108,7 +108,7 @@
                </div>
                <div class="componente-item">
                    <div class="dir">
-                      <form>
+                      <form style="background-color:red;">
                          <!-- PARTONE -->
                           <div class="parteone">
                               <div class="dir-cont">
@@ -399,9 +399,9 @@
                       </form>
                    </div>
                    
-                   <!-- YATT -->
+                   <!-- CUTANEO TAB -->
                    <div class="dir">
-                      <form>
+                      <form style="background-color:blue;">
                          <!-- PARTONE -->
                           <div class="parteone">
                               <div class="dir-cont">
@@ -691,6 +691,10 @@
                           
                       </form>
                    </div>
+
+                   
+                   <!-- RESPIRATÓRIA TAB-->
+               
                    
                </div>
             </div>
@@ -785,6 +789,6 @@
     </div>
 </div>
 </div>
-<script type="text/javascript" src="../script/avaliacao.js"></script>
+<script type="text/javascript" src="../script/tab.js"></script>
 </body>
 </html>
