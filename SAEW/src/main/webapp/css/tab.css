@@ -228,34 +228,21 @@ body{
 	cursor:pointer;
 	padding:14px 16px;
 	font-weight:500;
+	border-bottom:1.5px solid #ffffff;
 }
+
+
 /**/
 .componente-item{
 	padding:20px;
-	/*display:flex;
-	flex-direction:row;
-	justify-content:space-between;*/
-	
-	/*position:relative;*/
-	/*height:530px;*/
-	/*width:500px;*/
 }
 
 /*AVALIAÇÃO GASTROINSTESTINAL*/
-
-.dir{
-	margin-bottom:15px;
-}
 
 .dir form{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
-	
-	/*background-color:red;*/
-	/*position:absolute;*/
-	/*top:20px;*/
-	/*width:100%;*/
 }
 
 /*AVALIAÇÃO CUTANEO*/
@@ -500,6 +487,17 @@ body{
 	padding:4px 0px;
 }
 
-.check-item input, .check-item label{
+/*.check-item input, .check-item label{
 	cursor:pointer;
+}*/
+
+/**/
+.grau{
+	display:flex;
+	flex-direction:row;
+}
+
+.grau-input-01{
+	width:50px;
+	margin-right:25px;
 }
