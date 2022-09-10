@@ -1,9 +1,19 @@
 
 /*TAB CONTROL*/
 const tab = document.querySelectorAll(".tabcontrol");
-tab[0].addEventListener('load', function(){
+
+/*PANEL DE AVALIACAO*/
+const panel = document.querySelectorAll(".dir");
+
+window.addEventListener('load', function(){
 	tab[0].style.color = "#5d6d7e";
 	tab[0].style.borderBottom = "1.5px solid #5d6d7e";
+	
+	for(var i=0; i<panel.length; i++){
+	if(i != 0){
+		 panel[i].style.display = "none";
+	}
+}
 });
 
 /*CLICK NA TAB CONTROL*/
@@ -12,12 +22,20 @@ function tab_click(index, tab_control){
 	    /*ENTRANDO DA TAB CONTROL*/
 	    tab_control[index].style.color = "#5d6d7e";
 	    tab_control[index].style.borderBottom = "1.5px solid #5d6d7e";
-	    
+	    panel[index].style.display = "block";
+	     
 	    /*SAINDO DA TAB CONTROL*/
 	    for(var i=0; i<tab_control.length; i++){
 	       if(i != index){
 		       tab_control[i].style.color = "initial";
-	           tab_control[i].style.borderBottom = "initial";
+	           tab_control[i].style.borderBottom = "1.5px solid #ffffff";
+	       }
+        }
+        
+        /*OCULTANDO PANEL NÃO CLICADO*/
+	    for(var i=0; i<panel.length; i++){
+	       if(i != index){
+		       panel[i].style.display = "none"; 
 	       }
         }
     });

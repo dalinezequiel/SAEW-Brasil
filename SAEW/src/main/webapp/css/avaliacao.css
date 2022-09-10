@@ -61,7 +61,7 @@ body{
 
 .butao-cont{
 	width:14.5%;
-	height:600px;
+	height:auto; /*600px*/
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
@@ -228,6 +228,8 @@ body{
 	cursor:pointer;
 	padding:14px 16px;
 	font-weight:500;
+	
+	border-bottom:1.5px solid #ffffff;
 }
 /**/
 .componente-item{
@@ -455,3 +457,17 @@ body{
 .check-item input, .check-item label{
 	cursor:pointer;
 }
+
+
+
+/*GRAU INPUT*/
+.grau{
+	display:flex;
+	flex-direction:row;
+}
+
+.grau-input-01{
+	width:50px;
+	margin-right:25px;
+}
+

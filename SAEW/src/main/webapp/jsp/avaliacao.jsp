@@ -96,17 +96,18 @@
                      <div>
                          <div class="btn-tabe">
                              <button class="tabcontrol">Avaliação Gastrointestinal</button> <!--  style="color:#5d6d7e; font-weight:bold; border-bottom:1.5px solid #5d6d7e;" -->
-                             <button class="tabcontrol">Avaliação Psicológica</button>
+                             <button class="tabcontrol">Cutâneo-Mucosa</button>
                              <button class="tabcontrol">Avaliação Respiratória</button>
                              <button class="tabcontrol">Avaliação Cardiovascular</button>
-                             <button class="tabcontrol">Cutâneo-Mucosa</button>
                              <button class="tabcontrol">Avaliação Neurológica</button>
+                             <button class="tabcontrol">Avaliação Psicológica</button>
                          </div> 
                      </div>
                 </div>
                 
                </div>
                <div class="componente-item">
+                   <!-- GASTROINTESTINAL TAB -->
                    <div class="dir">
                       <form>
                          <!-- PARTONE -->
@@ -171,8 +172,10 @@
                                   </div>
                                   <div class="comboBox">
                                       <select>
-                                          <option>Positivo(+)</option>
-                                          <option>Negativo(-)</option>
+                                          <option>SNG Aberta</option>
+                                          <option>SNG Fechada</option>
+                                          <option>SNE Aberta</option>
+                                          <option>SNE Fechada</option>
                                       </select>
                                   </div>
                               </div>
@@ -373,7 +376,7 @@
                                          <input id="ileostomi" type="radio" name="radio-06">
                                      </div>
                                      <div>
-                                         <label for="ileostomi" >Ileostomi</label>
+                                         <label for="ileostomi" >Ileostom</label>
                                      </div>
                                   </div>
                               </div>
@@ -398,6 +401,682 @@
                           
                       </form>
                    </div>
+                   
+                   
+                   
+                   
+                   <!-- CUTANEO TAB -->
+                   <div class="dir">
+                      <form>
+                         <!-- PARTONE -->
+                          <div class="parteone">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <div>
+                                      <label>Hidratação</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Hidratada</option>
+                                          <option>Desidratada</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Coloração da Pele</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Pálida</option>
+                                          <option>Ictérica</option>
+                                          <option>Colorada</option>
+                                          <option>Cianótica</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Integridade da Pele</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Integra</option>
+                                          <option>Lesada</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Anasarca</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Sim</option>
+                                          <option>Não</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Edema. Local</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="text">
+                                  </div>
+                              </div>
+                              <div class="check-item">
+                                  <div>
+                                      <label>Lesão Cutânea</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="text">
+                                  </div>
+                              </div>
+                              <div class="check-item">
+                                  <div>
+                                      <label>Ferida Operatória</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="text">
+                                  </div>
+                              </div>
+                              
+                              
+                          </div>
+                         
+                          </div>
+                          
+                          <!-- PARTETWO -->
+                          <div class="partetwo">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <div>
+                                      <label>Úlcera por Pressão</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="text">
+                                  </div>
+                              </div>
+                              
+                              <div class="grau">
+                                  <div class="check-item">
+                                      <div>
+                                          <label>Grau</label>
+                                      </div>
+                                      <div class="drenagem grau-input-01">
+                                          <input type="text">
+                                      </div>
+                                  </div>
+                                  <div class="check-item">
+                                      <div>
+                                          <label>Local</label>
+                                      </div>
+                                      <div class="drenagem">
+                                          <input type="text">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="grau">
+                                  <div class="check-item">
+                                      <div>
+                                          <label>Grau</label>
+                                      </div>
+                                      <div class="drenagem grau-input-01">
+                                          <input type="text">
+                                      </div>
+                                  </div>
+                                  <div class="check-item">
+                                      <div>
+                                          <label>Local</label>
+                                      </div>
+                                      <div class="drenagem">
+                                          <input type="text">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="grau">
+                                  <div class="check-item">
+                                      <div>
+                                          <label>Grau</label>
+                                      </div>
+                                      <div class="drenagem grau-input-01">
+                                          <input type="text">
+                                      </div>
+                                  </div>
+                                  <div class="check-item">
+                                      <div>
+                                          <label>Local</label>
+                                      </div>
+                                      <div class="drenagem">
+                                          <input type="text">
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                          
+                          <div class="dir-cont-02">
+                              <label>Fraturas</label>
+                              <div class="radio-ite">
+                                  <div class="btn-radio-01">
+                                     <div class="il">
+                                         <input id="clara" type="radio" name="radio-03">
+                                     </div>
+                                     <div>
+                                         <label for="clara" >Sim</label>
+                                     </div>
+                                  </div>
+                                  <div class="btn-radio-02">
+                                     <div class="il">
+                                         <input id="limpida" type="radio" name="radio-03">
+                                     </div>
+                                     <div>
+                                         <label for="limpida" >Não</label>
+                                     </div>
+                                  </div>
+                              </div>
+                              <div>
+                                 <p>Imagens Aqui!</p>
+                                 <img src="image-placeholder.svg" alt="preview-img">
+                              </div>
+                              
+                          </div>
+                          </div>
+                          
+                          <!-- PARTETHREE -->
+                          <div class="partethree">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <div>
+                                      <label>Torácico</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Direito</option>
+                                          <option>Esquerdo</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              
+                              <div class="check-item">
+                                  <input id="checkbox-12" type="checkbox"> <label for="checkbox-12">Medlastino</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-13" type="checkbox"> <label for="checkbox-13">Penrose</label>
+                              </div>
+                              
+                              <div class="check-item">
+                                      <div>
+                                          <label>Hemovácuo</label>
+                                      </div>
+                                      <div class="drenagem">
+                                          <input type="text">
+                                      </div>
+                              </div>
+                              <div class="check-item">
+                                      <div class="drenagem">
+                                          <input type="text" placeholder="Outros..">
+                                      </div>
+                              </div>
+                          </div>
+                          
+                          <div class="dir-cont-02">
+                              <div class="check-item">
+                                  <div>
+                                       <label>Acesso Periférico</label>
+                                  </div>
+                                  <div class="drenagem">
+                                       <input type="text">
+                                  </div>
+                              </div>
+                              <div class="check-item">
+                                  <div>
+                                       <label>Acesso Central</label>
+                                  </div>
+                                  <div class="drenagem">
+                                       <input type="text">
+                                  </div>
+                              </div>
+                              <div class="check-item">
+                                  <div>
+                                       <label>Punção Arterial</label>
+                                  </div>
+                                  <div class="drenagem">
+                                       <input type="text">
+                                  </div>
+                              </div>
+   
+                          </div>
+                          </div>
+                          
+                      </form>
+                   </div>
+
+                   
+                   <!-- RESPIRATÓRIA TAB-->
+                   <div class="dir">
+                      <form>
+                         <!-- PARTONE -->
+                          <div class="parteone">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <div>
+                                      <label>Murmúrios Vesiculares</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Pulmão D</option>
+                                          <option>Pulmão E</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>COT/ TQT</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>COT</option>
+                                          <option>TQT</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                       <label>Número</label>
+                                  </div>
+                                  <div class="drenagem">
+                                       <input type="text">
+                                  </div>
+                              </div>
+                              
+                              
+                              <div class="check-item">
+                                  <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Eupenico</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Dispénico</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Respiração espontânea</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">O2 em tubo T</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">O2 em cateter nasal</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-5" type="checkbox"> <label for="checkbox-5">O2 em máscara facial</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Ventilação não-invasiva</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Ventilação mecânica</label>
+                              </div>
+                          </div>
+                          
+                          <div class="dir-cont-022">
+                              
+                          </div>
+                          </div>
+                          
+                          <!-- PARTETWO -->
+                          <div class="partetwo">
+                              <div class="dir-cont">
+                              <div class="check-item">
+                                  <div>
+                                      <label>Roncos</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>D</option>
+                                          <option>E</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="check-item">
+                                  <div>
+                                      <label>Sibilos</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>D</option>
+                                          <option>E</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Estertores</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>D</option>
+                                          <option>E</option>
+                                      </select>
+                                  </div>
+                              </div>
+
+                          </div>
+                          
+                          <!-- <div class="dir-cont-02">
+                              
+                             
+                          </div> -->
+                          </div>
+                          
+                          <!-- PARTETHREE -->
+                          <div class="partethree">
+                              <div class="dir-cont">
+                              
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Modalidade ventilatória</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">FIO2</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">PEEP</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Volume corrente</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Pressão suporte</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Saturação O2</label>
+                              </div>
+                          </div>
+                          
+                          <!-- <div class="dir-cont-02">
+                              
+                          </div> -->
+                          </div>
+                          
+                      </form>
+                   </div>
+               
+                   <!-- AVALIAÇÃO CARDIOVASCULAR -->
+                   <div class="dir">
+                      <form>
+                         <!-- PARTONE -->
+                          <div class="parteone">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <div>
+                                      <label>Ritmo cardiáco</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Regular</option>
+                                          <option>Irregular</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Perfusão periférica</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Normal</option>
+                                          <option>Lenta</option>
+                                          <option>Cianose</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Marcapasso</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Temporário</option>
+                                          <option>Permanente</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Drogas vascativas</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Sim</option>
+                                          <option>Não</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Frequência cardíaca</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Pressão arterial</label>
+                              </div>
+                          </div>
+                          
+                          <div class="dir-cont-022">
+
+                          </div>
+                          </div>
+                          
+                          <!-- PARTETWO -->
+                          <div class="partetwo">
+                          <div class="dir-contt">
+                              
+                          </div>
+                          
+                          <div class="dir-cont-022">
+                          </div>
+                          </div>
+                          
+                          <!-- PARTETHREE -->
+                          <div class="partethree">
+                          <div class="dir-contt">
+                          </div>
+                          
+                          <div class="dir-cont-022">
+                          </div>
+                          </div>
+                          
+                      </form>
+                   </div>
+                   
+                   <!-- AVALIAÇÃO NEUROLÓGICA -->
+                   <div class="dir">
+                      <form>
+                         <!-- PARTONE -->
+                          <div class="parteone-neurologica">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <div>
+                                      <label>Abertura ocular</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Nenhuma</option>
+                                          <option>A dor</option>
+                                          <option>A ordem verbal</option>
+                                          <option>Espontânea</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Resposta verbal</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Nenhuma</option>
+                                          <option>Vocaliza sons</option>
+                                          <option>Palavras desconexas</option>
+                                          <option>Confuso</option>
+                                          <option>Orientado</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Resposta motora</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Nenhuma</option>
+                                          <option>Reage com extensão patológica</option>
+                                          <option>Reage com flexão patológica</option>
+                                          <option>Reage sem localizar</option>
+                                          <option>Localiza a dor</option>
+                                          <option>Obedece a comandos</option>
+                                      </select>
+                                  </div>
+                              </div>
+                             
+                          </div>
+                          
+                          <div class="dir-cont-02">
+                                <div class="check-item">
+                                  <div>
+                                      <label>Causa da internação</label>
+                                  </div>
+                                  <div class="comboBox">
+                                      <select>
+                                          <option>Clínica</option>
+                                          <option>Traumática</option>
+                                          <option>Cirúrgica</option>
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                          
+                          
+                          
+                          <!-- PARTETHREE -->
+                          <div class="partethree">
+                          <div class="dir-contt">
+                          </div>
+                          
+                          <div class="dir-cont-022">
+                          </div>
+                          </div>
+                          
+                      </form>
+                   </div>
+                   
+                   <!-- AVALIAÇÃO PSICOLÓGICA -->
+                   <div class="dir">
+                      <form>
+                         <!-- PARTONE -->
+                          <div class="parteone">
+                              <div class="dir-cont">
+         
+                              <div class="check-item">
+                                  <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Agitado</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Confuso</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Agressivo</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Choroso</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Cooperativo</label>
+                              </div>
+
+                          </div>
+                          
+                          <div class="dir-cont-02">
+                              <div class="check-item">
+                                  <div>
+                                      <label>Alergias</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="text">
+                                  </div>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Hipertensão</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Diabetes</label>
+                              </div>
+                              <div class="check-item">
+                                  <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Cardiopatia</label>
+                              </div>
+                              
+                              <div class="check-item">
+                                  <div>
+                                      <label>Outros</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="text">
+                                  </div>
+                              </div>
+                              
+                          </div>
+                          </div>
+                          
+                          <!-- PARTETWO -->
+                          <div class="partetwo">
+                          <div class="dir-cont">
+                              <div class="check-item">
+                                  <div>
+                                      <label>Escala numérica de avaliação da dor</label>
+                                  </div>
+                                  <div class="drenagem">
+                                      <input type="range" value="100" min="0" max="200">
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <div class="dir-cont-022">
+                          </div>
+                          </div>
+                          
+                          <!-- PARTETHREE -->
+                          <div class="partethree">
+                          <div class="dir-contt">
+                          </div>
+                          
+                          <div class="dir-cont-022">
+                          </div>
+                          </div>
+                          
+                      </form>
+                   </div>
+                   
+                   
+                   
+                   
                </div>
             </div>
         </div>

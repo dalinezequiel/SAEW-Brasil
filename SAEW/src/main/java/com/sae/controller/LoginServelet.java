@@ -1,16 +1,16 @@
 package com.sae.controller;
 
 import jakarta.servlet.ServletException;
+/*import jakarta.servlet.annotation.WebServlet;*/
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * Servlet implementation class LoginServelet
  */
-//@WebServlet("/LoginServelet")
+ /*@WebServlet("/LoginServelet")*/
 public class LoginServelet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -39,7 +39,7 @@ public class LoginServelet extends HttpServlet {
 		if(usuario.equals("admin@hospital.com.br") && senha.equals("admin")) {
 			response.sendRedirect("jsp/menu.jsp");
 		}else {
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("indexa.jsp");
 		}
 	}
 
