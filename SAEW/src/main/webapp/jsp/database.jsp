@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="../css/credential.css">
+<link rel="stylesheet" href="../css/database.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -39,28 +39,36 @@
               <div class="btn-avaliacao">
                   <a href="#" class="butao">
                       <div class="butao-ico">
-                         <i class="fa-solid fa-user-plus"></i>
+                         <i class="fa-solid fa-wifi"></i>
                       </div>
                       <div class="text">
-                         <p>Criar Credêncial</p>
+                         <p>Nova Conexão</p>
                       </div>
                   </a>
               </div>
               <div class="btn-enfermagem">
                   <a href="" class="butao">
                       <div class="butao-ico">
-                          <i class="fa-solid fa-user-shield"></i>
+                          <i class="fa-solid fa-play"></i>
                       </div>
                       <div class="text">
-                          <p>Alterar Credêncial</p>
+                          <p>Testar Conexão</p>
                       </div>
                   </a>
                   <a href="" class="butao">
                       <div class="butao-ico">
-                          <i class="fa-solid fa-user-xmark"></i>
+                          <i class="fa-solid fa-floppy-disk"></i>
                       </div>
                       <div class="text">
-                          <p>Excluir Credêncial</p>
+                          <p>Salvar Conexão</p>
+                      </div>
+                  </a>
+                  <a href="" class="butao">
+                      <div class="butao-ico">
+                          <i class="fa-solid fa-database"></i>
+                      </div>
+                      <div class="text">
+                          <p>Cópia Segurança</p>
                       </div>
                   </a>
               </div>
@@ -92,7 +100,7 @@
             <div class="avaliacao-head">
                <div class="filtro">
                   <div class="avaliacao-titulo">
-                      <h3>Atribuição de credênciais</h3>
+                      <h3>Configuração do banco de dados</h3>
                   </div>
                   <!--<div class="pesquisa">
                       <input type="submit">
@@ -103,43 +111,44 @@
                       <form>
                           <div class="check-item">
                               <div>
-                                  <label>Perfil</label>
+                                  <label>Server</label>
                               </div>
                               <div class="comboBox">
                                   <select>
-                                      <option>Téc. Enfermagem</option>
-                                      <option>Enfermeiro</option>
+                                      <option>//localhost</option>
                                   </select>
                               </div>
                           </div>
                           
                           <div class="check-item">
                               <div>
-                                  <label>Email</label>
-                              </div>
-                              <div class="drenagem">
-                                  <input type="email">
-                              </div>
-                          </div>
-                          <div class="check-item">
-                              <div>
-                                  <label>Usuário</label>
+                                  <label>Database</label>
                               </div>
                               <div class="drenagem">
                                   <input type="text">
                               </div>
                           </div>
+                          
                           <div class="check-item">
                               <div>
-                                  <label>Senha</label>
+                                  <label>Port</label>
                               </div>
                               <div class="drenagem">
-                                  <input type="password">
+                                  <input type="text" placeholder="default: 5432">
+                              </div>
+                          </div>
+                          
+                          <div class="check-item">
+                              <div>
+                                  <label>Username</label>
+                              </div>
+                              <div class="drenagem">
+                                  <input type="text" placeholder="default: postgres">
                               </div>
                           </div>
                           <div class="check-item">
                               <div>
-                                  <label>Confirma Senha</label>
+                                  <label>Password</label>
                               </div>
                               <div class="drenagem">
                                   <input type="password">
@@ -150,7 +159,7 @@
                    </div>
                    <div class="esq">
                        <form>
-                          <div class="check-item">
+                          <!-- <div class="check-item">
                              <input id="checkbox-16" type="checkbox"> <label for="checkbox-16">Realizar avaliação ao paciente</label>
                           </div>
                           <div class="check-item">
@@ -161,7 +170,7 @@
                           </div>
                           <div class="check-item">
                              <input id="checkbox-19" type="checkbox"> <label for="checkbox-19">Acesso a avaliação das intervenções</label>
-                          </div>
+                          </div> -->
                           
                       </form>
                    </div>
@@ -169,25 +178,13 @@
             </div>
         </div>
         <div class="paciente">
-            <div>
-                <div class="codito">
-                    <div class="input-codigo">
-                       <div>
-                          <label>Código</label>
-                       </div>
-                       <div class="text">
-                          <input type="text">
-                       </div>
-                    </div>
-                    <div class="input-leito">
-                       <div>
-                          <label>Registo n°</label>
-                       </div>
-                       <div class="text">
-                          <input type="text">
-                       </div>
-                    </div>
+             <div>
+                <div class="input-paciente">
+                     <div>
+                          <label><strong>Administrador</strong></label>
+                     </div>
                 </div>
+
                 <div class="input-paciente">
                      <div>
                           <label>Usuário</label>
@@ -198,37 +195,27 @@
                 </div>
                 <div class="input-paciente">
                      <div>
-                          <label>Perfil</label>
+                          <label>Senha</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="password">
                      </div>
                 </div>
-                <div class="interna">
-                    <div class="input-interna">
-                       <div>
-                          <label>Data de Adimissão</label>
-                       </div>
-                       <div class="text-internacao">
-                          <input type="text">
-                       </div>
-                    </div>
-                    <div class="input-leito-interna">
-                       <div>
-                          <label>Tempo</label>
-                       </div>
-                       <div class="text-interna">
-                          <input type="text">
-                       </div>
-                    </div>
+                <div class="admin-log">
+                     <div class="text-paciente">
+                          <input type="submit" value="Logar">
+                     </div>
                 </div>
-                
-                
             </div>
+            <div class="server-status">
+                <label>Server status:</label>
+                <label>Offline</label>
+            </div>
+            
         </div>
     </div>
 </div>
 </div>
-<script type="text/javascript" src="../script/credential.js"></script> 
+<script type="text/javascript" src="../script/database.js"></script>
 </body>
 </html>

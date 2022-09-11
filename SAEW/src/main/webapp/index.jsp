@@ -5,40 +5,40 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/indexa.css">
 </head>
 <body>
     <div class="parent">
-         <form action="LoginServelet" method="POST">
+         <form action="login" method="POST"> <!-- jsp/menu.jsp -->
             <div class="child-login">
               <div class="login-logo">
                  <img alt="" src="img/sae_logo.jpeg">
               </div>
               <div class="login-usuario">
-                  <div class="login-label">
+                  <!-- <div class="login-label">
                      <label>Usuário</label>
-                  </div>
+                  </div> -->
                   <div class="login-input">
-                     <input type="text" name="usuario">
+                     <input type="text" name="usuario" placeholder="Usuário">
                   </div>
               </div>
               <div class="login-senha">
-                  <div class="login-label">
+                  <!-- <div class="login-label">
                      <label>Senha</label>
-                  </div>
+                  </div> -->
                   <div class="login-input">
-                     <input type="password" name="senha">
+                     <input type="password" name="senha" placeholder="Senha">
                   </div>
               </div>
               <div class="login-link">
                   <div>
                      <a href="">Esqueceu senha?</a>
                   </div>
-                  <div class="login-admin">
+                  <!-- <div class="login-admin">
                      <p>Já tem conta?
                         <a href="">Criar conta</a>
                      </p>
-                  </div>
+                  </div> -->
               </div>
               <div class="login-submit">
                   <div>
@@ -48,6 +48,7 @@
               <div class="login-copy">
                   <div>
                      <p>&copy;2022. Todos direitos reservados | <a href="">Suporte técnico</a></p>
+                     <p>Developed by <a>Dalin Academy</a></p>
                   </div>
               </div>
          </div>

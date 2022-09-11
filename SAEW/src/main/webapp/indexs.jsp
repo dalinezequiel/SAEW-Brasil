@@ -5,40 +5,40 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="css/indexa.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="parent">
-         <form action="login" method="POST"> <!-- jsp/menu.jsp -->
+         <form action="LoginServelet" method="POST">
             <div class="child-login">
               <div class="login-logo">
                  <img alt="" src="img/sae_logo.jpeg">
               </div>
               <div class="login-usuario">
-                  <!-- <div class="login-label">
+                  <div class="login-label">
                      <label>Usuário</label>
-                  </div> -->
+                  </div>
                   <div class="login-input">
-                     <input type="text" name="usuario" placeholder="Usuário">
+                     <input type="text" name="usuario">
                   </div>
               </div>
               <div class="login-senha">
-                  <!-- <div class="login-label">
+                  <div class="login-label">
                      <label>Senha</label>
-                  </div> -->
+                  </div>
                   <div class="login-input">
-                     <input type="password" name="senha" placeholder="Senha">
+                     <input type="password" name="senha">
                   </div>
               </div>
               <div class="login-link">
                   <div>
                      <a href="">Esqueceu senha?</a>
                   </div>
-                  <!-- <div class="login-admin">
+                  <div class="login-admin">
                      <p>Já tem conta?
                         <a href="">Criar conta</a>
                      </p>
-                  </div> -->
+                  </div>
               </div>
               <div class="login-submit">
                   <div>

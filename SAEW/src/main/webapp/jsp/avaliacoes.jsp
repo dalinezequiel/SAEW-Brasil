@@ -11,12 +11,13 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+<div class="cortina-parent">
 <div class="cortina">
         <div class="cortina-sub">
             <div class="cortina-item">
-                <div>
+                <!-- <div>
                     <div class="image"></div>
-                </div>
+                </div> -->
                 <div class="info">
                     <label><strong>Manuela Miranda</strong></label>
                     <label class="perfil">Téc. Enfermagem</label>
@@ -50,14 +51,14 @@
                 </div>
             </div>
                
-            <div class="cortina-down">
+            <!-- <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-solid fa-gear"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Parâmetros gerais</a>
                 </div>
-            </div>
+            </div> -->
                
             <div class="cortina-down">
                 <div class="image-item">
@@ -83,23 +84,23 @@
                 </div>
             </div>
                
-            <div class="cortina-down">
+            <!-- <div class="cortina-down">
                 <div class="image-item">
                     <i class="fa-solid fa-list-ul"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Prontoário</a>
                 </div>
-            </div>
+            </div> -->
                
-            <div class="cortina-down">
+            <!-- <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-solid fa-hospital-user"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Buscar Paciente</a>
                 </div>
-            </div>
+            </div> -->
                
             <div class="cortina-down">
                 <div class="image-item">
@@ -128,16 +129,17 @@
                 </div>
             </div>
             
-            <div class="cortina-down">
+            <!-- <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-solid fa-chart-line"></i>
                 </div>
                 <div class="cortina-item-02">
                      <a href="">Estatística das Avaliações</a>
                 </div>
-            </div>
+            </div> -->
             
         </div>
+</div>
 </div>
 <div class="parent">
 <nav>

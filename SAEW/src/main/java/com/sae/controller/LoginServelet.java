@@ -39,7 +39,7 @@ public class LoginServelet extends HttpServlet {
 		if(usuario.equals("admin@hospital.com.br") && senha.equals("admin")) {
 			response.sendRedirect("jsp/menu.jsp");
 		}else {
-			response.sendRedirect("indexa.jsp");
+			response.sendRedirect("index.jsp");
 		}
 	}
 
