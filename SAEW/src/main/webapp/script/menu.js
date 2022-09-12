@@ -67,4 +67,3 @@ enfermagem.addEventListener('mouseover', function(){
 	cortina.style.transition = "0.9s";
 });
 
-window.alert("arquivo acionado");

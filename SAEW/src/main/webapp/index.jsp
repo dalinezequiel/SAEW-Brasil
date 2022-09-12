@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="css/indexa.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="parent">

@@ -21,7 +21,7 @@
                     <i class="fa-solid fa-user"></i>
                 </div>
                 <div class="info">
-                    <label><strong>Manuela Miranda</strong></label>
+                    <label><strong>User 0001</strong></label>
                     <label class="perfil">Téc. Enfermagem</label>
                 </div>
             </div>
@@ -116,10 +116,12 @@
       </div>
       <div class="nav-item">
           <ul>
-               <li><a>Enfermagem</a>
+               <li class="enfermagem">
+                   <a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <li><a>Sistema</a>
+               <li class="sistema">
+                   <a>Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
           </ul>
