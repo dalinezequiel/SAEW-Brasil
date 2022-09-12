@@ -15,9 +15,9 @@
 <div class="cortina">
         <div class="cortina-sub">
             <div class="cortina-item">
-                <!-- <div>
-                    <div class="image"></div>
-                </div> -->
+                <div class="imagi-cont">
+                    <i class="fa-solid fa-user"></i>
+                </div>
                 <div class="info">
                     <label><strong>Manuela Miranda</strong></label>
                     <label class="perfil">Téc. Enfermagem</label>
@@ -51,15 +51,6 @@
                 </div>
             </div>
                
-            <!-- <div class="cortina-down">
-                <div class="image-item">
-                     <i class="fa-solid fa-gear"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Parâmetros gerais</a>
-                </div>
-            </div> -->
-               
             <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
@@ -83,25 +74,7 @@
                      <a href="">Nova avaliação</a>
                 </div>
             </div>
-               
-            <!-- <div class="cortina-down">
-                <div class="image-item">
-                    <i class="fa-solid fa-list-ul"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Prontoário</a>
-                </div>
-            </div> -->
-               
-            <!-- <div class="cortina-down">
-                <div class="image-item">
-                     <i class="fa-solid fa-hospital-user"></i>
-                </div>
-                <div class="cortina-item-02">
-                     <a href="">Buscar Paciente</a>
-                </div>
-            </div> -->
-               
+                              
             <div class="cortina-down">
                 <div class="image-item">
                      <i class="fa-sharp fa-solid fa-stethoscope"></i>
@@ -149,13 +122,15 @@
       </div>
       <div class="nav-item">
           <ul>
-               <li><a class="enfermagem">Enfermagem</a>
+               <li class="enfermagem">
+                   <a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
                <!-- <li><a class="utilitario">Utilitários</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li> -->
-               <li><a class="sistema">Sistema</a>
+               <li class="sistema">
+                   <a >Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
           </ul>

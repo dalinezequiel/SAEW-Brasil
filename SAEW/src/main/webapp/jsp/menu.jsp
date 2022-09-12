@@ -11,6 +11,103 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+
+
+<div class="cortina-parent">
+<div class="cortina">
+        <div class="cortina-sub">
+            <div class="cortina-item">
+                <div class="imagi-cont">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="info">
+                    <label><strong>Manuela Miranda</strong></label>
+                    <label class="perfil">Téc. Enfermagem</label>
+                </div>
+            </div>
+               <div class="cortina-barra"></div>
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="credential.jsp">Atribuição de credênciais</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                    <i class="fa-solid fa-list-ul"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="">Histórico</a>
+                </div>
+            </div>
+            
+            <div class="cortina-down">
+                <div class="image-item">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="database.jsp">Banco de dados</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="../index.jsp">Logout</a>
+                </div>
+            </div>
+            
+        </div>
+</div>
+
+<div class="cortina-03">
+        <div class="cortina-sub-03">
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-file-circle-plus"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="avaliacao.jsp">Nova avaliação</a>
+                </div>
+            </div>
+                              
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-sharp fa-solid fa-stethoscope"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="diagnostico.jsp">Diagnóstico de Enfermagem</a>
+                </div>
+            </div>
+            
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-briefcase-medical"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="intervencoes.jsp">Intervenções de Enfermagem</a>
+                </div>
+            </div>
+               
+            <div class="cortina-down">
+                <div class="image-item">
+                     <i class="fa-solid fa-microscope"></i>
+                </div>
+                <div class="cortina-item-02">
+                     <a href="intervecoeslia.jsp">Avaliação das Intervenções</a>
+                </div>
+            </div>
+            
+        </div>
+</div>
+</div>
+
+
 <div class="parent">
 <nav>
    <div class="nav-menu">
@@ -19,13 +116,10 @@
       </div>
       <div class="nav-item">
           <ul>
-               <li><a href="">Enfermagem</a>
+               <li><a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li><a href="">Utilitários</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
-               <li><a href="">Sistema</a>
+               <li><a>Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
           </ul>
@@ -234,5 +328,6 @@
     </div>
 </div>
 </div>
+<script type="text/javascript" src="../script/menu.js"></script>
 </body>
 </html>
