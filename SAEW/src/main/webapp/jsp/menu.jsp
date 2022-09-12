@@ -40,7 +40,7 @@
                     <i class="fa-solid fa-list-ul"></i>
                 </div>
                 <div class="cortina-item-02">
-                     <a href="">Histórico</a>
+                     <a href="historico.jsp">Histórico</a>
                 </div>
             </div>
             

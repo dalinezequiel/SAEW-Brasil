@@ -11,8 +11,8 @@
 }
 
 body{
-	background-image:url("../img/sae_fundo.png");
-	background-size:cover;
+	/*background-image:url("../img/sae_fundo.png");
+	background-size:cover;*/
 	background-color:#5d6d7e;
 }
 
@@ -45,20 +45,16 @@ form{
 }
 
 .login-logo{
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
 	margin-bottom:30px;
 }
 
-.login-logo img{
-	width:120px; /*105*/
-	height:auto;
+.login-logo h2{
+	color:#5d6d7e;
 }
 
 .login-usuario input, .login-senha input{
 	outline:none;
-	font-size:16.5px;
+	font-size:15px;
 	padding:9px;
 	width:100%;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -72,6 +68,10 @@ form{
 
 .login-usuario{
 	margin-bottom:15px;
+}
+
+.login-usuario strong{
+	color:#636363;
 }
 
 .login-senha{
@@ -98,19 +98,29 @@ form{
 	flex-direction:row;
 }
 
-.login-submit input{
+.login-submit input, .login-submit a{
 	width:100%;
 	background-color:#5d6d7e;
-	/*background-color:#5D6D7E;
-	border:1px solid #5D6D7E;*/
 	padding:15px 0px;
 	border:none;
 	font-weight:700;
-	font-size:18px;
+	font-size:16px;
 	color:white;
 	cursor:pointer;
 	border-radius:3px;
 	transition:1s;
+}
+
+.login-submit a:first-child{
+	margin-right:10px;
+	background-color:#d54a4a;
+	border:1px solid #d54a4a;
+	text-align:center;
+}
+
+.login-submit a:first-child:hover{
+	background-color:#e44848;
+	border:1px solid #e44848;
 }
 
 .login-submit input:hover{
@@ -133,4 +143,25 @@ form{
 
 .login-copy a:hover{
 	text-decoration:underline;
+}
+
+/**/
+.descricao{
+	padding:20px 0px;
+}
+
+.descricao .t-area{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	width:100%;
+}
+
+.descricao .t-area textarea{
+	height:110px;
+	padding:10px;
+	outline:none;
+	border:1px solid #3B81C7;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size:15px;
 }

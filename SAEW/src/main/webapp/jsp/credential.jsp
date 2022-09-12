@@ -94,9 +94,17 @@
                   <div class="avaliacao-titulo">
                       <h3>Atribuição de credênciais</h3>
                   </div>
-                  <!--<div class="pesquisa">
-                      <input type="submit">
-                  </div>-->
+                  <div class="pesquisa">
+                       <div class="filter-icon">
+                            <i class="fa-solid fa-filter"></i>
+                       </div>
+                       <div>
+                            <input type="text" placeholder="Código">
+                       </div>
+                       <div class="pacient">
+                            <input type="text" placeholder="Paciente">
+                       </div>
+                  </div>
                </div>
                <div class="componente-item">
                    <div class="dir">
