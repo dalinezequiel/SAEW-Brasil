@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="parent">
-         <form action="login" method="POST">
+         <form action="LoginServelet" method="POST">
             <div class="child-login">
               <div class="login-logo">
                  <img alt="" src="img/sae_logo.jpeg">

@@ -63,6 +63,14 @@
                           <p>Buscar Paciente</p>
                       </div>
                   </a>
+                  <a href="" class="butao">
+                      <div class="butao-ico">
+                          <i class="fa-solid fa-list"></i>
+                      </div>
+                      <div class="text">
+                          <p>Lista Avaliação</p>
+                      </div>
+                  </a>
               </div>
            </div>
       <div>

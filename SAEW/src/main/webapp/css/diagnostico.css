@@ -69,7 +69,7 @@ body{
 }
 
 .avaliargem{
-	height:300px;
+	height:auto; /*300px*/
 	display:flex;
 	flex-direction:column;
 	/*justify-content:space-between;*/

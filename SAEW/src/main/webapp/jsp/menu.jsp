@@ -11,8 +11,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-
-
+<%
+   if(session.getAttribute("usuario") == null){
+	   response.sendRedirect("../index.jsp");
+   }
+%>
 <div class="cortina-parent">
 <div class="cortina">
         <div class="cortina-sub">
@@ -120,10 +123,10 @@
                    <a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <li class="sistema">
+               <!-- <li class="sistema">
                    <a>Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
-               </li>
+               </li> -->
           </ul>
       </div>
    </div>

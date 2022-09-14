@@ -25,9 +25,9 @@
                <!-- <li><a href="">Utilitários</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li> -->
-               <li><a href="">Sistema</a>
+               <!-- <li><a href="">Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
-               </li>
+               </li> -->
           </ul>
       </div>
    </div>
@@ -55,12 +55,28 @@
                           <p>Salvar Diagnóst.</p>
                       </div>
                   </a>
+                  <!-- <a href="" class="butao">
+                      <div class="butao-ico">
+                          <i class="fa-solid fa-repeat"></i>
+                      </div>
+                      <div class="text">
+                          <p>Actualizar Diag.</p>
+                      </div>
+                  </a> -->
                   <a href="" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
                       <div class="text">
                           <p>Buscar Paciente</p>
+                      </div>
+                  </a>
+                  <a href="diagnostico_consult.jsp" class="butao">
+                      <div class="butao-ico">
+                          <i class="fa-solid fa-list"></i>
+                      </div>
+                      <div class="text">
+                          <p>Lista Diagnóst.</p>
                       </div>
                   </a>
               </div>

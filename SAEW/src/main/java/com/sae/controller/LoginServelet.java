@@ -5,6 +5,8 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 
 /**
@@ -36,9 +38,13 @@ public class LoginServelet extends HttpServlet {
 		String usuario = request.getParameter("usuario");
 		String senha = request.getParameter("senha");
 		
-		if(usuario.equals("admin@hospital.com.br") && senha.equals("admin")) {
+		if(usuario.equals("admin") && senha.equals("sa")) {
+			HttpSession session = request.getSession();
+			session.setAttribute("usuario", usuario);
 			response.sendRedirect("jsp/menu.jsp");
-		}else {
+		}
+		else 
+		{
 			response.sendRedirect("index.jsp");
 		}
 	}
