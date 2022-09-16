@@ -368,24 +368,30 @@ table thead td{
 	font-weight:500;
 }
 
-table thead td:nth-child(5){
-	width:100px;
-}
-
 table thead td:nth-child(6), table thead td:nth-child(7){
 	padding:10px 6px;
+	width:130px;
+}
+
+table thead td:nth-child(8), table thead td:nth-child(9){
+	padding:10px 6px;
+	width:58px;
+}
+
+table tbody td{
+	max-width:175px;
 }
 
 table tbody td:nth-child(3){
-	width:430px;
+	width:150px;
 }
 
-table tbody td:nth-child(6) i:nth-child(1){
+table tbody td:nth-child(8) i:nth-child(1){
 	color:#5d6d7e; 
 	font-size:18px;
 }
 
-table tbody td:nth-child(7) i:nth-child(1){
+table tbody td:nth-child(9) i:nth-child(1){
 	color:#e44848; 
 	font-size:18px;
 }
@@ -393,7 +399,6 @@ table tbody td:nth-child(7) i:nth-child(1){
 .avaliacao-cont tbody tr:hover{
 	background-color:#f7f7f7;
 }
-
 
 /*FILTRO*/
 .filtro{
@@ -419,7 +424,7 @@ table tbody td:nth-child(7) i:nth-child(1){
 }
 
 .pesquisa div:nth-child(2){
-	width:350px;
+	width:300px;
 }
 
 .pesquisa input{

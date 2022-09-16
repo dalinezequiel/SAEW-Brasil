@@ -15,19 +15,13 @@
 <nav>
    <div class="nav-menu">
       <div class="nav-logo">
-         <h1>SAE</h1>
+         <h1><a href="menu.jsp" style="color:black;">SAE</a></h1>
       </div>
       <div class="nav-item">
           <ul>
                <li><a href="">Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li><a href="">Utilitários</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
-               <!-- <li><a href="">Sistema</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
           </ul>
       </div>
    </div>
@@ -38,7 +32,7 @@
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-avaliacao">
-                  <a href="#" class="butao">
+                  <a href="" class="butao">
                       <div class="butao-ico">
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
@@ -47,25 +41,14 @@
                       </div>
                   </a>
               </div>
+              <div>
+                  <button>
+                     <i class="fa-solid fa-floppy-disk"></i>
+                     Salvar Diagnóst.
+                  </button>
+              </div>
               <div class="btn-enfermagem">
-                  <a href="#" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-solid fa-floppy-disk"></i>
-                      </div>
-                      <div class="text">
-                          <p>Salvar Diagnóst.</p>
-                      </div>
-                  </a>
-                 
-                  <!-- <a href="" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-solid fa-repeat"></i>
-                      </div>
-                      <div class="text">
-                          <p>Actualizar Diag.</p>
-                      </div>
-                  </a> -->
-                  <a href="" class="butao">
+                  <a href="paciente_consult.jsp" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
@@ -112,9 +95,7 @@
                   <div class="avaliacao-titulo">
                       <h3>Diagnósticos de Enfermagem</h3>
                   </div>
-                  <!--<div class="pesquisa">
-                      <input type="submit">
-                  </div>-->
+
                </div>
                <div class="componente-item">
                    <div class="dir">
@@ -222,8 +203,7 @@
                                  <textarea rows="" cols=""></textarea>
                              </div>
                           </div>
-                          <input id="sb" type="submit" value="teste" 
-                          >
+                          
                       <!-- </form> -->
                    </div>
                </div>
@@ -245,7 +225,7 @@
                           <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
-                          <input type="text" name="cod_pacnt">
+                          <input type="text" name="cod_pacnt" required>
                        </div>
                     </div>
                 </div>
@@ -254,7 +234,7 @@
                           <label>Paciente</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text" name="paciente">
+                          <input type="text" name="paciente" required>
                      </div>
                 </div>
                 <div class="input-paciente">
@@ -262,7 +242,7 @@
                           <label>Queixa Principal</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text" name="queixa_principal">
+                          <input type="text" name="queixa_principal" required>
                      </div>
                 </div>
                 <div class="interna">
@@ -271,7 +251,7 @@
                           <label>Data de Internação</label>
                        </div>
                        <div class="text-internacao">
-                          <input type="date" name="data_internacao">
+                          <input type="date" name="data_internacao" required>
                        </div>
                     </div>
                     <div class="input-leito-interna">
@@ -279,7 +259,7 @@
                           <label>Leito</label>
                        </div>
                        <div class="text-interna">
-                          <input type="text" name="leito">
+                          <input type="text" name="leito" required>
                        </div>
                     </div>
                 </div>
@@ -289,7 +269,7 @@
                           <label>Data de Nascimento</label>
                        </div>
                        <div class="text-nascimento">
-                          <input type="date" name="data_nascimento">
+                          <input type="date" name="data_nascimento" required>
                        </div>
                     </div>
                     <div class="input-leito-nasc">
@@ -314,12 +294,26 @@
                               </div>
                     </div>
                 </div>
+                
+                <div class="periodo">
+                    <div class="check-item">
+                              <div>
+                                  <label>Cadastre o paciente</label>
+                              </div>
+                              <div class="comboBox">
+                                  <select>
+                                      <option>Sim</option>
+                                      <option>Não</option>
+                                  </select>
+                              </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     </form>
 </div>
 </div>
-<script type="text/javascript" src="../script/diagnostico.js"></script>
+<!-- <script type="text/javascript" src="../script/diagnostico.js"></script> -->
 </body>
 </html>

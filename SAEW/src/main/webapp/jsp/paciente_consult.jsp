@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SAE - Sistematização de Assistência de Enfermagem</title>
-<link rel="stylesheet" href="../css/diagnostico_consult.css">
+<link rel="stylesheet" href="../css/paciente_consult.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
     crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -28,10 +28,6 @@
                    <a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li class="sistema">
-                   <a>Sistema</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
           </ul>
       </div>
    </div>
@@ -73,29 +69,11 @@
        </div>
        </div>
         <div class="avaliacao-cont">
-            <!-- <div class="filtro">
-                <div class="avaliacao-titulo">
-                   <h3>Lista de diagnósticos</h3>
-                </div>
-                <div class="pesquisa">
-                   <div class="filter-icon">
-                       <i class="fa-solid fa-filter"></i>
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Queixa Principal">
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Código">
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Paciente">
-                   </div>
-                </div>
-            </div> -->
+            
             <div class="avaliacao-head">
                <div class="filtro">
                 <div class="avaliacao-titulo">
-                   <h3>Lista de diagnósticos</h3>
+                   <h3>Lista de pacientes</h3>
                 </div>
                 <div class="pesquisa">
                    <div class="filter-icon">
@@ -116,11 +94,13 @@
                 <table>
                    <thead>
                      <tr>
-                         <td>Código.</td>
+                         <td>Código</td>
                          <td>Paciente</td>
-                         <td>Diagnóstico</td>
-                         <td>Resposta</td>
-                         <td>Data Registo</td>
+                         <td>Data Nasimento</td>
+                         <td>Leito</td>
+                         <td>Queixa Principal</td>
+                         <td>Data Internaç.</td>
+                         <td>Data Regist.</td>
                          <td>Opção</td>
                          <td>Opção</td>
                      </tr>
@@ -131,11 +111,13 @@
                         for(int i=0; i<listPac.size(); i++){%>
                         <tr>
                             <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
                             <td><%out.print(listPac.get(i).getPaciente()); %></td>
+                            <td><%out.print(listPac.get(i).getDataNascimento()); %></td>
+                            <td><%out.print(listPac.get(i).getLeito()); %></td>
+                            <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
                             <td><%out.print(listPac.get(i).getDataInternacao()); %></td>
-                            <td><a href="diagnostico_edit.jsp"><i class="fa-solid fa-edit"></i>
+                            <td><%out.print(listPac.get(i).getDataRegisto()); %></td>
+                            <td><a href="#"><i class="fa-solid fa-edit"></i>
                                 </a></td>
                             <td><a href=""><i class="fa-solid fa-trash"></i>
                                 </a></td>
