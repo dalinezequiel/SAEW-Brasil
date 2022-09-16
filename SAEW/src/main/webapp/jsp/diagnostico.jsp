@@ -33,6 +33,7 @@
    </div>
 </nav>
 <div class="corp">
+  <form action="../PacienteServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
@@ -47,7 +48,7 @@
                   </a>
               </div>
               <div class="btn-enfermagem">
-                  <a href="" class="butao">
+                  <a href="#" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-floppy-disk"></i>
                       </div>
@@ -55,6 +56,7 @@
                           <p>Salvar Diagnóst.</p>
                       </div>
                   </a>
+                 
                   <!-- <a href="" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-repeat"></i>
@@ -116,13 +118,14 @@
                </div>
                <div class="componente-item">
                    <div class="dir">
-                      <form>
+                      <!-- <form> -->
                           <div class="check-item">
                               <div>
                                   <label>Perfusão tíssular</label>
                               </div>
                               <div class="comboBox">
                                   <select>
+                                      <option selected disabled>Escolha uma das opções</option>
                                       <option>Renal</option>
                                       <option>Cardíopulmonar</option>
                                       <option>Cerebral</option>
@@ -176,10 +179,10 @@
                           <div class="check-item">
                              <input id="checkbox-15" type="checkbox"> <label for="checkbox-15">Medo</label>
                           </div>
-                      </form>
+                      <!-- </form> -->
                    </div>
                    <div class="esq">
-                       <form>
+                       <!-- <form> -->
                           <div class="check-item">
                              <input id="checkbox-16" type="checkbox"> <label for="checkbox-16">Menbrana mucosa prejudicada</label>
                           </div>
@@ -219,7 +222,9 @@
                                  <textarea rows="" cols=""></textarea>
                              </div>
                           </div>
-                      </form>
+                          <input id="sb" type="submit" value="teste" 
+                          >
+                      <!-- </form> -->
                    </div>
                </div>
             </div>
@@ -229,18 +234,18 @@
                 <div class="codito">
                     <div class="input-codigo">
                        <div>
-                          <label>Código</label>
+                          <label>Cod. Diagt.</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" name="cod_diagt">
                        </div>
                     </div>
                     <div class="input-leito">
                        <div>
-                          <label>Leito</label>
+                          <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" name="cod_pacnt">
                        </div>
                     </div>
                 </div>
@@ -249,7 +254,7 @@
                           <label>Paciente</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" name="paciente">
                      </div>
                 </div>
                 <div class="input-paciente">
@@ -257,7 +262,7 @@
                           <label>Queixa Principal</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" name="queixa_principal">
                      </div>
                 </div>
                 <div class="interna">
@@ -266,7 +271,7 @@
                           <label>Data de Internação</label>
                        </div>
                        <div class="text-internacao">
-                          <input type="text">
+                          <input type="date" name="data_internacao">
                        </div>
                     </div>
                     <div class="input-leito-interna">
@@ -274,7 +279,7 @@
                           <label>Leito</label>
                        </div>
                        <div class="text-interna">
-                          <input type="text">
+                          <input type="text" name="leito">
                        </div>
                     </div>
                 </div>
@@ -284,7 +289,7 @@
                           <label>Data de Nascimento</label>
                        </div>
                        <div class="text-nascimento">
-                          <input type="text">
+                          <input type="date" name="data_nascimento">
                        </div>
                     </div>
                     <div class="input-leito-nasc">
@@ -312,6 +317,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 </div>
 <script type="text/javascript" src="../script/diagnostico.js"></script>

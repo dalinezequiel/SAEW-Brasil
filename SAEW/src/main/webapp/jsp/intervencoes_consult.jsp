@@ -1,10 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%@page
-    import="java.util.ArrayList"
-    import="com.sae.model.PacienteModel, com.sae.dao.PacienteDAO"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,10 +23,6 @@
                    <a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li class="sistema">
-                   <a>Sistema</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
           </ul>
       </div>
    </div>
@@ -61,7 +52,7 @@
            </div>
       <div>
            <div class="btn-sair">
-               <a href="diagnostico.jsp" class="butao">
+               <a href="intervencoes.jsp" class="butao">
                   <div class="butao-ico">
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                   </div>
@@ -73,29 +64,11 @@
        </div>
        </div>
         <div class="avaliacao-cont">
-            <!-- <div class="filtro">
-                <div class="avaliacao-titulo">
-                   <h3>Lista de diagnósticos</h3>
-                </div>
-                <div class="pesquisa">
-                   <div class="filter-icon">
-                       <i class="fa-solid fa-filter"></i>
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Queixa Principal">
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Código">
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Paciente">
-                   </div>
-                </div>
-            </div> -->
+           
             <div class="avaliacao-head">
                <div class="filtro">
                 <div class="avaliacao-titulo">
-                   <h3>Lista de diagnósticos</h3>
+                   <h3>Lista de Intervençãoes</h3>
                 </div>
                 <div class="pesquisa">
                    <div class="filter-icon">
@@ -116,9 +89,9 @@
                 <table>
                    <thead>
                      <tr>
-                         <td>Diagnóst.</td>
+                         <td>Intervenç.</td>
                          <td>Paciente</td>
-                         <td>Diagnóstico</td>
+                         <td>Intervenção</td>
                          <td>Resposta</td>
                          <td>Data Registo</td>
                          <td>Opção</td>
@@ -127,21 +100,21 @@
                    </thead>
                    <tbody>
                      <%
-                        ArrayList<PacienteModel> listPac = PacienteDAO.listaPaciente();
-                        for(int i=0; i<listPac.size(); i++){%>
+                        for(int i=0; i<=400; i++){%>
                         <tr>
-                            <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
-                            <td><%out.print(listPac.get(i).getPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getDataInternacao()); %></td>
-                            <td><a href="diagnostico_edit.jsp"><i class="fa-solid fa-edit"></i>
+                            <td>210104</td>
+                            <td>575054</td>
+                            <td>Intervenção <%out.print(i);%></td>
+                            <td>Sim</td>
+                            <td>15-04-2022 12:23:45 PM</td>
+                            <td><a href=""><i class="fa-solid fa-edit"></i>
                                 </a></td>
                             <td><a href=""><i class="fa-solid fa-trash"></i>
                                 </a></td>
                         </tr>
-                       <%}
+                        <% }
                      %>
+                     
                    </tbody>
                 </table>
             </div>
@@ -152,7 +125,7 @@
                       <label>Total:</label>
                    </div>
                    <div>
-                      <label><%out.print(listPac.size()); %></label>
+                      <label>04</label>
                    </div>
                 </div>
                 <div class="ordem-mostra">

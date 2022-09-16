@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
   <display-name>SAEW</display-name>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  <!-- <servlet>
-    <description></description>
-    <display-name>LoginServelet</display-name>
+  <servlet>
     <servlet-name>LoginServelet</servlet-name>
     <servlet-class>com.sae.controller.LoginServelet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServelet</servlet-name>
     <url-pattern>/LoginServelet</url-pattern>
-  </servlet-mapping> -->
+  </servlet-mapping>
   <servlet>
-     <servlet-name>LoginServelet</servlet-name>
-     <servlet-class>com.sae.controller.LoginServelet</servlet-class>
+    <description></description>
+    <display-name>DiagnosticoServlet</display-name>
+    <servlet-name>DiagnosticoServlet</servlet-name>
+    <servlet-class>com.sae.controller.DiagnosticoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-     <servlet-name>LoginServelet</servlet-name>
-     <url-pattern>/LoginServelet</url-pattern>
+    <servlet-name>DiagnosticoServlet</servlet-name>
+    <url-pattern>/DiagnosticoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PacienteServlet</display-name>
+    <servlet-name>PacienteServlet</servlet-name>
+    <servlet-class>com.sae.controller.PacienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PacienteServlet</servlet-name>
+    <url-pattern>/PacienteServlet</url-pattern>
   </servlet-mapping>
 </web-app>

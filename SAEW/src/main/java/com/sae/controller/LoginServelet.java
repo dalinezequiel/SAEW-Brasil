@@ -37,6 +37,11 @@ public class LoginServelet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String usuario = request.getParameter("usuario");
 		String senha = request.getParameter("senha");
+	
+		/*DiagnosticoModel dm = new DiagnosticoModel();
+		dm.setCodigo(Integer.parseInt(usuario));
+		dm.setTeste(senha);
+		DiagnosticoSQL.cadastroDiag(dm);*/
 		
 		if(usuario.equals("admin") && senha.equals("sa")) {
 			HttpSession session = request.getSession();

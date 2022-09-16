@@ -313,7 +313,7 @@ body{
 	width:100%;
 	outline:none;
 	padding:2px;
-	font-size:14px;
+	font-size:16px;
 }
 
 
@@ -326,7 +326,7 @@ body{
 .text-interna{
 	display:flex;
 	flex-direction:row;
-	width:70px;
+	width:90px;
 }
 
 .text-interna input{
@@ -356,7 +356,7 @@ body{
 .text-nasc{
 	display:flex;
 	flex-direction:row;
-	width:70px;
+	width:90px;
 }
 
 .text-nasc input{
