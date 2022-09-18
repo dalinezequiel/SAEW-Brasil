@@ -19,9 +19,9 @@ public class PacienteDAO {
 
     public static boolean cadastroDePaciente(PacienteModel pac) {
         try {
-            String SQL_INSERT = "INSERT INTO paciente(id_paciente, paciente, data_nascimento, leito, queixa_principal, data_internacao, data_registo)values(?,?,?,?,?,?,?)";
+            String SQL_INSERT_QUERY = "INSERT INTO paciente(id_paciente, paciente, data_nascimento, leito, queixa_principal, data_internacao, data_registo)values(?,?,?,?,?,?,?)";
             con = ConexaoSQL.getConnection();
-            pst = con.prepareStatement(SQL_INSERT);
+            pst = con.prepareStatement(SQL_INSERT_QUERY);
 
             pst.setInt(1, pac.getIdPaciente());
             pst.setString(2, pac.getPaciente());
@@ -42,9 +42,9 @@ public class PacienteDAO {
     public static ArrayList<PacienteModel> listaPaciente() {
     	listaPat = new ArrayList<PacienteModel>();
         try {
-            String select = "SELECT * from paciente";
+            String SQL_SELECT_QUERY = "SELECT * from paciente";
             con = ConexaoSQL.getConnection();
-            pst = con.prepareStatement(select);
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
             rs = pst.executeQuery();
 
             while (rs.next()) {
@@ -65,12 +65,12 @@ public class PacienteDAO {
     }
 
 
-    public static void deletePacienteById(int codigo) {
+    public static void deletePacienteById(int id_paciente) {
         try {
-            String deleteQuery = "DELETE FROM paciente WHERE Codigo = ?";
+            String SQL_DELETE_QUERY = "DELETE FROM paciente WHERE id_paciente = ?";
             con = ConexaoSQL.getConnection();
-            pst = con.prepareStatement(deleteQuery);
-            pst.setInt(1, codigo);
+            pst = con.prepareStatement(SQL_DELETE_QUERY);
+            pst.setInt(1, id_paciente);
             pst.executeUpdate();
 
         } catch (SQLException e) {
@@ -80,9 +80,9 @@ public class PacienteDAO {
 
     public static void actualizaPaciente(PacienteModel pat) {
         try {
-            String updateQuery = "UPDATE paciente SET paciente = ?, data_nascimento = ?, leito = ?, queixa_principal, data_internacao = ? WHERE codigo = ?";
+            String SQL_UPDATE_QUERY = "UPDATE paciente SET paciente = ?, data_nascimento = ?, leito = ?, queixa_principal, data_internacao = ? WHERE codigo = ?";
             con = ConexaoSQL.getConnection();
-            pst = con.prepareStatement(updateQuery);
+            pst = con.prepareStatement(SQL_UPDATE_QUERY);
 
             pst.setInt(1, pat.getIdPaciente());
             pst.setString(2, pat.getPaciente());

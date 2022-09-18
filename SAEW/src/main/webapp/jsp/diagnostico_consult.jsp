@@ -3,7 +3,7 @@
     
 <%@page
     import="java.util.ArrayList"
-    import="com.sae.model.PacienteModel, com.sae.dao.PacienteDAO"%>
+    import="com.sae.model.DiagnosticoModel, com.sae.dao.DiagnosticoDAO"%>
 
 <!DOCTYPE html>
 <html>
@@ -116,10 +116,12 @@
                 <table>
                    <thead>
                      <tr>
-                         <td>Código.</td>
-                         <td>Paciente</td>
+                         <td>Código</td>
                          <td>Diagnóstico</td>
                          <td>Resposta</td>
+                          <td>Cód. Pacien.</td>
+                         <td>Paciente</td>
+                         <td>Última Actual.</td>
                          <td>Data Registo</td>
                          <td>Opção</td>
                          <td>Opção</td>
@@ -127,14 +129,16 @@
                    </thead>
                    <tbody>
                      <%
-                        ArrayList<PacienteModel> listPac = PacienteDAO.listaPaciente();
-                        for(int i=0; i<listPac.size(); i++){%>
+                        ArrayList<DiagnosticoModel> listDiag = DiagnosticoDAO.listaDiagnostico();
+                        for(int i=0; i<listDiag.size(); i++){%>
                         <tr>
-                            <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
-                            <td><%out.print(listPac.get(i).getPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getDataInternacao()); %></td>
+                            <td><%out.print(listDiag.get(i).getIdDiagnostico()); %></td>
+                            <td><%out.print(listDiag.get(i).getDiagnostico()); %></td>
+                            <td><%out.print(listDiag.get(i).getResposta()); %></td>
+                            <td><%out.print(listDiag.get(i).getIdPaciente()); %></td>
+                            <td><%out.print(listDiag.get(i).getPaciente()); %></td>
+                            <td><%out.print(listDiag.get(i).getDataUltimaActualizacao()); %></td>
+                            <td><%out.print(listDiag.get(i).getDataRegisto()); %></td>
                             <td><a href="diagnostico_edit.jsp"><i class="fa-solid fa-edit"></i>
                                 </a></td>
                             <td><a href=""><i class="fa-solid fa-trash"></i>
@@ -152,7 +156,7 @@
                       <label>Total:</label>
                    </div>
                    <div>
-                      <label><%out.print(listPac.size()); %></label>
+                      <label><%out.print(listDiag.size()); %></label>
                    </div>
                 </div>
                 <div class="ordem-mostra">

@@ -105,7 +105,7 @@
                                   <label>Perfusão tíssular</label>
                               </div>
                               <div class="comboBox">
-                                  <select>
+                                  <select name="perfusao">
                                       <option selected disabled>Escolha uma das opções</option>
                                       <option>Renal</option>
                                       <option>Cardíopulmonar</option>
@@ -116,13 +116,13 @@
                               </div>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Comunicação verbal prejudicada</label>
+                             <input id="checkbox-1" type="checkbox" name="diagnostico" value="Comunicação verbal prejudicada"> <label for="checkbox-1">Comunicação verbal prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Confusão aguda</label>
+                             <input id="checkbox-2" type="checkbox" name="diagnostico" value="Confusão aguda"> <label for="checkbox-2">Confusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Constipação intestínal</label>
+                             <input id="checkbox-3" type="checkbox" name="diagnostico" value="Constipação intestínal"> <label for="checkbox-3">Constipação intestínal</label>
                           </div>
                           <div class="check-item">
                              <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">Contusão aguda</label>
@@ -200,7 +200,7 @@
                                 <label>Observações</label>
                              </div>
                              <div class="t-area">
-                                 <textarea rows="" cols=""></textarea>
+                                 <textarea rows="" cols="" name="obs"></textarea>
                              </div>
                           </div>
                           
@@ -301,13 +301,22 @@
                                   <label>Cadastre o paciente</label>
                               </div>
                               <div class="comboBox">
-                                  <select>
+                                  <select name="salva_paciente">
                                       <option>Sim</option>
                                       <option>Não</option>
                                   </select>
                               </div>
                     </div>
                 </div>
+                <!-- <div class="input-paciente">
+                     <div>
+                          <label>Enfermeiro (a)</label>
+                     </div>
+                     <div class="text-paciente">
+                          <input type="text" name="queixa_principal" required>
+                     </div>
+                </div> -->
+                
             </div>
         </div>
     </div>
