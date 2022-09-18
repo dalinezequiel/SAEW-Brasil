@@ -108,9 +108,9 @@
                                   <select name="perfusao">
                                       <option selected disabled>Escolha uma das opções</option>
                                       <option>Renal</option>
-                                      <option>Cardíopulmonar</option>
+                                      <option>Cardiopulmonar</option>
                                       <option>Cerebral</option>
-                                      <option>Gastrinstestínal</option>
+                                      <option>Gastrintestínal</option>
                                       <option>Periférica</option>
                                   </select>
                               </div>
