@@ -63,6 +63,32 @@ public class PacienteDAO {
         }
         return listaPat;
     }
+    
+    public static ArrayList<PacienteModel> listaPacienteById(int id_paciente) {
+    	listaPat = new ArrayList<PacienteModel>();
+        try {
+            String SQL_SELECT_QUERY = "SELECT * from paciente WHERE id_paciente = ?";
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            pst.setInt(1, id_paciente);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+            	patModel = new PacienteModel();
+            	patModel.setIdPaciente(rs.getInt("id_paciente"));
+            	patModel.setPaciente(rs.getString("paciente"));
+            	patModel.setDataNascimento(rs.getDate("data_nascimento"));
+            	patModel.setLeito(rs.getInt("leito"));
+            	patModel.setQueixaPrincipal(rs.getString("queixa_principal"));
+            	patModel.setDataInternacao(rs.getDate("data_internacao"));
+            	patModel.setDataRegisto(rs.getDate("data_registo"));
+            	listaPat.add(patModel);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaPat;
+    }
 
 
     public static void deletePacienteById(int id_paciente) {

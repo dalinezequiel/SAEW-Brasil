@@ -108,21 +108,23 @@
                    <tbody>
                      <%
                         ArrayList<PacienteModel> listPac = PacienteDAO.listaPaciente();
-                        for(int i=0; i<listPac.size(); i++){%>
-                        <tr>
-                            <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getPaciente()); %></td>
-                            <td><%out.print(listPac.get(i).getDataNascimento()); %></td>
-                            <td><%out.print(listPac.get(i).getLeito()); %></td>
-                            <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
-                            <td><%out.print(listPac.get(i).getDataInternacao()); %></td>
-                            <td><%out.print(listPac.get(i).getDataRegisto()); %></td>
-                            <td><a href="#"><i class="fa-solid fa-edit"></i>
-                                </a></td>
-                            <td><a href=""><i class="fa-solid fa-trash"></i>
-                                </a></td>
-                        </tr>
-                       <%}
+                        if(listPac != null){
+                        	for(int i=0; i<listPac.size(); i++){%>
+                            <tr>
+                                <td><%out.print(listPac.get(i).getIdPaciente()); %></td>
+                                <td><%out.print(listPac.get(i).getPaciente()); %></td>
+                                <td><%out.print(listPac.get(i).getDataNascimento()); %></td>
+                                <td><%out.print(listPac.get(i).getLeito()); %></td>
+                                <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
+                                <td><%out.print(listPac.get(i).getDataInternacao()); %></td>
+                                <td><%out.print(listPac.get(i).getDataRegisto()); %></td>
+                                <td><a href="#"><i class="fa-solid fa-edit"></i>
+                                    </a></td>
+                                <td><a href=""><i class="fa-solid fa-trash"></i>
+                                    </a></td>
+                            </tr>
+                           <%}
+                        }
                      %>
                    </tbody>
                 </table>

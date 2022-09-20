@@ -65,6 +65,33 @@ public class DiagnosticoDAO {
         }
         return listaDiag;
     }
+    
+    public static ArrayList<DiagnosticoModel> listaDiagnosticoById(int id_diagnostico) {
+    	listaDiag = new ArrayList<DiagnosticoModel>();
+        try {
+            String SQL_SELECT_QUERY = "SELECT * from diagnostico WHERE id_diagnostico = ?";
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            pst.setInt(1, id_diagnostico);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+            	diagModel = new DiagnosticoModel();
+            	diagModel.setIdDiagnostico(rs.getInt("id_diagnostico"));
+            	diagModel.setDiagnostico(rs.getString("diagnostico"));
+            	diagModel.setResposta(rs.getString("resposta"));
+            	diagModel.setObservacao(rs.getString("obs"));
+            	diagModel.setDataUltimaActualizacao(rs.getDate("ultima_actualizacao"));
+            	diagModel.setDataRegisto(rs.getDate("data_registo"));
+            	diagModel.setIdPaciente(rs.getInt("id_paciente"));
+            	diagModel.setPaciente(rs.getString("paciente"));
+            	listaDiag.add(diagModel);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaDiag;
+    }
 
 
     public static void deleteDiagnosticoById(int id_diagnostico) {

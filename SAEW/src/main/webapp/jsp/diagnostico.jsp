@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page
+    import="com.sae.controller.GeradorDeCodigo"%>
+ <%
+    GeradorDeCodigo gerador = new GeradorDeCodigo();
+ %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +39,7 @@
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-avaliacao">
-                  <a href="" class="butao">
+                  <a href="#" class="butao">
                       <div class="butao-ico">
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
@@ -125,16 +132,16 @@
                              <input id="checkbox-3" type="checkbox" name="diagnostico" value="Constipação intestínal"> <label for="checkbox-3">Constipação intestínal</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">Contusão aguda</label>
+                             <input id="checkbox-4" type="checkbox" name="diagnostico" value="Contusão aguda"> <label for="checkbox-4">Contusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-5" type="checkbox"> <label for="checkbox-5">Deambulação prejudicada</label>
+                             <input id="checkbox-5" type="checkbox" name="diagnostico" value="Deambulação prejudicada"> <label for="checkbox-5">Deambulação prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Débito cardíaco diminuído</label>
+                             <input id="checkbox-6" type="checkbox" name="diagnostico" value="Débito cardíaco diminuído"> <label for="checkbox-6">Débito cardíaco diminuído</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-7" type="checkbox"> <label for="checkbox-7">Déficit de auto cuidado</label>
+                             <input id="checkbox-7" type="checkbox" name="diagnostico" value="Déficit de auto cuidado"> <label for="checkbox-7">Déficit de auto cuidado</label>
                           </div>
                           <div class="check-item">
                              <input id="checkbox-8" type="checkbox"> <label for="checkbox-8">Deglutição prejudicada</label>
@@ -217,7 +224,7 @@
                           <label>Cod. Diagt.</label>
                        </div>
                        <div class="text">
-                          <input type="text" name="cod_diagt">
+                          <input type="text" name="cod_diagt" value=<%=gerador.gerandoCodigo()%> required readonly>
                        </div>
                     </div>
                     <div class="input-leito">
@@ -225,7 +232,7 @@
                           <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
-                          <input type="text" name="cod_pacnt" required>
+                          <input type="text" name="cod_pacnt" value=<%=gerador.gerandoCodigo()%> required readonly>
                        </div>
                     </div>
                 </div>
@@ -272,14 +279,7 @@
                           <input type="date" name="data_nascimento" required>
                        </div>
                     </div>
-                    <div class="input-leito-nasc">
-                       <div>
-                          <label>Idade</label>
-                       </div>
-                       <div class="text-nasc">
-                          <input type="text">
-                       </div>
-                    </div>
+                    
                 </div>
                 <div class="periodo">
                     <div class="check-item">
@@ -308,21 +308,13 @@
                               </div>
                     </div>
                 </div>
-                <!-- <div class="input-paciente">
-                     <div>
-                          <label>Enfermeiro (a)</label>
-                     </div>
-                     <div class="text-paciente">
-                          <input type="text" name="queixa_principal" required>
-                     </div>
-                </div> -->
-                
+               
             </div>
         </div>
     </div>
     </form>
 </div>
 </div>
-<!-- <script type="text/javascript" src="../script/diagnostico.js"></script> -->
+<script type="text/javascript" src="../script/diagnostico.js"></script>
 </body>
 </html>

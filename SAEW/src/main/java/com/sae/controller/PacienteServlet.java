@@ -25,6 +25,7 @@ public class PacienteServlet extends HttpServlet {
 	private ArrayList<String> lista = null;
 	private PerfusaoTissularModel ptModel = null;
 	private ArrayList<PerfusaoTissularModel> listaPt = null;
+	private AtributoModel atr = null;
 
 	public PacienteServlet() {
 		super();
@@ -33,27 +34,27 @@ public class PacienteServlet extends HttpServlet {
 		ptModel = new PerfusaoTissularModel();
 		diag = new DiagnosticoModel();
 		lista = new ArrayList<String>();
+		atr = new AtributoModel();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String[] checkbox = request.getParameterValues("diagnostico");
-		String salva_paciente = request.getParameter("salva_paciente");
-		String perfusao = request.getParameter("perfusao");
+		atr.setAnyArrayString(request.getParameterValues("diagnostico"));
+		atr.setVarString(request.getParameter("salva_paciente"));
 
-		if (checkbox != null) {
-			for (int i = 0; i < checkbox.length; i++) {
-				lista.add(checkbox[i]);
+		if (atr.getAnyArrayString() != null) {
+			for (int i = 0; i < atr.getAnyArrayString().length; i++) {
+				lista.add(atr.getAnyArrayString()[i]);
 			}
 		}
 
-		if (perfusao != null) {
-			lista.add(perfusao);
+		if (request.getParameter("perfusao") != null) {
+			lista.add(request.getParameter("perfusao"));
 		}
 
 		if (!lista.isEmpty()) {
-			if (salva_paciente.equals("Sim")) {
+			if (atr.getVarString().equals("Sim")) {
 				tratamentoDoPossivelErro(this.dado_paciente(diag, pat, request, response), request, response);
 				lista.clear();
 
@@ -72,7 +73,7 @@ public class PacienteServlet extends HttpServlet {
 		ptModel.setNomeModel("Perfusão tíssular");
 		for (int i = 0; i < lista.size(); i++) {
 
-			diag.setIdDiagnostico(Integer.parseInt(request.getParameter("cod_diagt")));
+			diag.setIdDiagnostico(Integer.parseInt(request.getParameter("cod_diagt").trim()));
 
 			if (lista.get(i).equals(listaPt.get(0).getPerfusaoTissular())) {
 				diag.setDiagnostico(ptModel.getNomeModel());
@@ -102,7 +103,7 @@ public class PacienteServlet extends HttpServlet {
 			diag.setObservacao(request.getParameter("obs"));
 			diag.setDataUltimaActualizacao(Date.valueOf(LocalDate.now()));
 			diag.setDataRegisto(Date.valueOf(LocalDate.now()));
-			diag.setIdPaciente(Integer.parseInt(request.getParameter("cod_pacnt")));
+			diag.setIdPaciente(Integer.parseInt(request.getParameter("cod_pacnt").trim()));
 			diag.setPaciente(request.getParameter("paciente"));
 
 			rsp = DiagnosticoDAO.cadastroDeDiagnostico(diag);
@@ -115,7 +116,7 @@ public class PacienteServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 
 		boolean rsp = false;
-		pat.setIdPaciente(Integer.parseInt(request.getParameter("cod_pacnt")));
+		pat.setIdPaciente(Integer.parseInt(request.getParameter("cod_pacnt").trim()));
 		pat.setPaciente(request.getParameter("paciente"));
 		pat.setDataNascimento(Date.valueOf(request.getParameter("data_nascimento")));
 		pat.setLeito(Integer.parseInt(request.getParameter("leito")));

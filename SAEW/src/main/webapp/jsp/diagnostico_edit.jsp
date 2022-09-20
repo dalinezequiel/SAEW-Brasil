@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page
+    import="java.util.*"
+    import="com.sae.controller.*"
+    import="com.sae.dao.*"
+    import="com.sae.model.*"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,17 +29,12 @@
                <li><a href="">Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li><a href="">Utilitários</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
-               <!-- <li><a href="">Sistema</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
           </ul>
       </div>
    </div>
 </nav>
 <div class="corp">
+<form action="PacientServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
@@ -61,7 +63,7 @@
       <div>
            
            <div class="btn-sair">
-               <a href="diagnostico.jsp" class="butao">
+               <a href="diagnostico_consult.jsp" class="butao">
                   <div class="butao-ico">
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                   </div>
@@ -85,6 +87,13 @@
                <div class="componente-item">
                    <div class="dir">
                       <form>
+                         <%
+                              ArrayList<PacienteModel> listPat = PacienteDAO.listaPacienteById(
+                		      Integer.parseInt(request.getParameter("idPaciente").trim()));
+                         
+                              ArrayList<DiagnosticoModel> listDiag = DiagnosticoDAO.listaDiagnosticoById(
+                              Integer.parseInt(request.getParameter("idDiagnostico").trim()));
+                          %>
                           <div class="check-item">
                               <div>
                                   <label>Perfusão tíssular</label>
@@ -101,25 +110,25 @@
                               </div>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-1" type="checkbox"> <label for="checkbox-1">Comunicação verbal prejudicada</label>
+                             <input id="checkbox-1" type="checkbox" name="diagnostico" value="Comunicação verbal prejudicada" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Comunicação verbal prejudicada")){%> checked <%}%>> <label class="diagnost" for="checkbox-1">Comunicação verbal prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Confusão aguda</label>
+                             <input id="checkbox-2" type="checkbox" name="diagnostico" value="Confusão aguda" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Confusão aguda")){%> checked <%}%>> <label class="diagnost" for="checkbox-2">Confusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Constipação intestínal</label>
+                             <input id="checkbox-3" type="checkbox" name="diagnostico" value="Constipação intestínal" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Constipação intestínal")){%> checked <%}%>> <label class="diagnost" for="checkbox-3">Constipação intestínal</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">Contusão aguda</label>
+                             <input id="checkbox-4" type="checkbox" name="diagnostico" value="Contusão aguda" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Contusão aguda")){%> checked <%}%>> <label class="diagnost" for="checkbox-4">Contusão aguda</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-5" type="checkbox"> <label for="checkbox-5">Deambulação prejudicada</label>
+                             <input id="checkbox-5" type="checkbox" name="diagnostico" value="Deambulação prejudicada" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Deambulação prejudicada")){%> checked <%}%>> <label class="diagnost" for="checkbox-5">Deambulação prejudicada</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-6" type="checkbox"> <label for="checkbox-6">Débito cardíaco diminuído</label>
+                             <input id="checkbox-6" type="checkbox" name="diagnostico" value="Débito cardíaco diminuído" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Débito cardíaco diminuído")){%> checked <%}%>> <label class="diagnost" for="checkbox-6">Débito cardíaco diminuído</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-7" type="checkbox"> <label for="checkbox-7">Déficit de auto cuidado</label>
+                             <input id="checkbox-7" type="checkbox" name="diagnostico" value="Déficit de auto cuidado" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Déficit de auto cuidado")){%> checked <%}%>> <label class="diagnost" for="checkbox-7">Déficit de auto cuidado</label>
                           </div>
                           <div class="check-item">
                              <input id="checkbox-8" type="checkbox"> <label for="checkbox-8">Deglutição prejudicada</label>
@@ -188,6 +197,7 @@
                                  <textarea rows="" cols=""></textarea>
                              </div>
                           </div>
+                          
                       </form>
                    </div>
                </div>
@@ -201,7 +211,8 @@
                           <label>Cod. Diagt.</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+
+                          <input type="text" name="cod_diagt" value="<%= request.getParameter("idDiagnostico")%>">
                        </div>
                     </div>
                     <div class="input-leito">
@@ -209,7 +220,7 @@
                           <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" value="<%= request.getParameter("idPaciente")%>">
                        </div>
                     </div>
                 </div>
@@ -218,7 +229,7 @@
                           <label>Paciente</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" value="<%=listPat.get(0).getPaciente() %>">
                      </div>
                 </div>
                 <div class="input-paciente">
@@ -226,7 +237,7 @@
                           <label>Queixa Principal</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" value="<%=listPat.get(0).getQueixaPrincipal() %>">
                      </div>
                 </div>
                 <div class="interna">
@@ -235,7 +246,7 @@
                           <label>Data de Internação</label>
                        </div>
                        <div class="text-internacao">
-                          <input type="date">
+                          <input type="date" value="<%=listPat.get(0).getDataInternacao() %>">
                        </div>
                     </div>
                     <div class="input-leito-interna">
@@ -243,7 +254,7 @@
                           <label>Leito</label>
                        </div>
                        <div class="text-interna">
-                          <input type="text">
+                          <input type="text" value="<%=listPat.get(0).getLeito() %>">
                        </div>
                     </div>
                 </div>
@@ -253,7 +264,7 @@
                           <label>Data de Nascimento</label>
                        </div>
                        <div class="text-nascimento">
-                          <input type="date">
+                          <input type="date" value="<%=listPat.get(0).getDataNascimento() %>">
                        </div>
                     </div>
                     <div class="input-leito-nasc">
@@ -261,7 +272,7 @@
                           <label>Idade</label>
                        </div>
                        <div class="text-nasc">
-                          <input type="text">
+                          <input type="text" value="<%= new Data().getIdadeProcessada(String.valueOf(listPat.get(0).getDataNascimento())) %>">
                        </div>
                     </div>
                 </div>
@@ -278,11 +289,13 @@
                               </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
+    </form>
 </div>
 </div>
-<!-- <script type="text/javascript" src="../script/diagnostico.js"></script> -->
+<script type="text/javascript" src="../script/diagnostico_edit.js"></script>
 </body>
 </html>

@@ -6,7 +6,9 @@
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
-    font-family: OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    /*font-family: OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    */
+    font-family:Poppins;
     box-sizing: border-box;
 }
 
@@ -350,7 +352,7 @@ body{
 /*TABELA*/
 .avaliacao-cont table{
 	border-collapse:collapse;
-	border:1px solid #ffffff;
+	border:1px solid #fbfbfb;
 	width:100%;/**/
 }
 
@@ -384,6 +386,10 @@ table tbody td{
 table tbody td:nth-child(2){
 	width:350px;
 }
+
+/*table tbody td:nth-child(7){
+	width:130px;
+}*/
 
 table tbody td:nth-child(5){
 	width:160px;
@@ -425,10 +431,15 @@ table tbody td:nth-child(9) i:nth-child(1){
 
 .pesquisa div:nth-child(3){
 	margin:0px 20px;
+	width:100px;
 }
 
 .pesquisa div:nth-child(2){
 	width:350px;
+}
+
+.pesquisa div:nth-child(4){
+	width:250px;
 }
 
 .pesquisa input{

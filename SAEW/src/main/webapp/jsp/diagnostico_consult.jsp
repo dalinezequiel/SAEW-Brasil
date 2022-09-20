@@ -28,15 +28,12 @@
                    <a>Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li class="sistema">
-                   <a>Sistema</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
           </ul>
       </div>
    </div>
 </nav>
 <div class="corp">
+    <form action="diagnostico_edit.jsp" method="post">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
@@ -73,25 +70,7 @@
        </div>
        </div>
         <div class="avaliacao-cont">
-            <!-- <div class="filtro">
-                <div class="avaliacao-titulo">
-                   <h3>Lista de diagnósticos</h3>
-                </div>
-                <div class="pesquisa">
-                   <div class="filter-icon">
-                       <i class="fa-solid fa-filter"></i>
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Queixa Principal">
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Código">
-                   </div>
-                   <div>
-                       <input type="text" placeholder="Paciente">
-                   </div>
-                </div>
-            </div> -->
+           
             <div class="avaliacao-head">
                <div class="filtro">
                 <div class="avaliacao-titulo">
@@ -119,7 +98,7 @@
                          <td>Código</td>
                          <td>Diagnóstico</td>
                          <td>Resposta</td>
-                          <td>Cód. Pacien.</td>
+                         <td>Pacient.</td>
                          <td>Paciente</td>
                          <td>Última Actual.</td>
                          <td>Data Registo</td>
@@ -130,21 +109,23 @@
                    <tbody>
                      <%
                         ArrayList<DiagnosticoModel> listDiag = DiagnosticoDAO.listaDiagnostico();
-                        for(int i=0; i<listDiag.size(); i++){%>
-                        <tr>
-                            <td><%out.print(listDiag.get(i).getIdDiagnostico()); %></td>
-                            <td><%out.print(listDiag.get(i).getDiagnostico()); %></td>
-                            <td><%out.print(listDiag.get(i).getResposta()); %></td>
-                            <td><%out.print(listDiag.get(i).getIdPaciente()); %></td>
-                            <td><%out.print(listDiag.get(i).getPaciente()); %></td>
-                            <td><%out.print(listDiag.get(i).getDataUltimaActualizacao()); %></td>
-                            <td><%out.print(listDiag.get(i).getDataRegisto()); %></td>
-                            <td><a href="diagnostico_edit.jsp"><i class="fa-solid fa-edit"></i>
-                                </a></td>
-                            <td><a href=""><i class="fa-solid fa-trash"></i>
-                                </a></td>
-                        </tr>
-                       <%}
+                        if(listDiag != null){
+                        	 for(int i=0; i<listDiag.size(); i++){%>
+                             <tr>
+                                 <td><%out.print(listDiag.get(i).getIdDiagnostico()); %></td>
+                                 <td><%out.print(listDiag.get(i).getDiagnostico()); %></td>
+                                 <td><%out.print(listDiag.get(i).getResposta()); %></td>
+                                 <td><%out.print(listDiag.get(i).getIdPaciente()); %></td>
+                                 <td><%out.print(listDiag.get(i).getPaciente()); %></td>
+                                 <td><%out.print(listDiag.get(i).getDataUltimaActualizacao()); %></td>
+                                 <td><%out.print(listDiag.get(i).getDataRegisto()); %></td>
+                                 <td><a href="diagnostico_edit.jsp?idDiagnostico= <%=listDiag.get(i).getIdDiagnostico() %> &idPaciente= <%=listDiag.get(i).getIdPaciente() %>"><i class="fa-solid fa-edit"></i>
+                                     </a></td>
+                                 <td><a href=""><i class="fa-solid fa-trash"></i>
+                                     </a></td>
+                             </tr>
+                            <%}
+                        }
                      %>
                    </tbody>
                 </table>
@@ -191,6 +172,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 </div>
 <script type="text/javascript" src="../script/menu.js"></script>

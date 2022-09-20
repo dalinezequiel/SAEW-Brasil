@@ -32,9 +32,7 @@ for(var i=0; i<button.length; i++){
         };
         
         for(var i=0; i<text_input.length; i++){
-	        //if(i > 1){
-		        text_input[i].disabled = false;
-	        //}
+	        text_input[i].disabled = false;
         };
         
         for(var i=0; i<text_area.length; i++){
