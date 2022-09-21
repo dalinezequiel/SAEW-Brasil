@@ -17,140 +17,6 @@ body{
 	position:relative;
 }
 
-
-/*CORTINA*/
-.cortina-parent{
-	display:flex;
-	flex-direction:row;
-	justify-content:end;
-}
-.cortina{
-	position:absolute;
-	top:42px;
-	right:50px;
-	height:0px;
-	transition:0.9s;
-	overflow:hidden;
-	box-shadow:0px 5px 8px #eeeeee;
-	display:flex;
-}
-
-.cortina-sub{
-	width:245px;
-	height:240px;
-	padding:15px;
-	background-color:#fbfbfb;
-    border-top:2px solid #5d6d7e;
-}
-
-.cortina-item{
-	display:flex;
-	flex-direction:row;
-}
-
-.imagi-cont i{
-	margin-top: 5px;
-	margin-left: 4px;
-	margin-right: 10px;
-}
-
-.cortina-item .image{
-	width:40px;
-	height:40px;
-	background-color:#f4f4f4;
-	border-radius:50%;
-}
-
-.cortina-item .info{
-	display:flex;
-	flex-direction:column;
-	margin-left:10px;
-}
-
-.info .perfil{
-	font-size:15px;
-}
-
-.info{
-	margin-bottom:12px;
-}
-
-.info label{
-	color:#5D6D7E;
-}
-
-.cortina-barra{
-	height:1px;
-	background-color:#e4e4e4;
-	margin:5px 0px;
-	margin-bottom:12px;
-}
-
-.cortina-down{
-	display:flex;
-	flex-direction:row;
-	margin-bottom:10px;
-	align-items:center;
-}
-
-.cortina-down i{
-	font-size:18px;
-	padding:3px;
-	color:#3f444a;
-}
-
-
-.cortina-item-02{
-	width:100%;
-}
-
-.cortina-item-02 a{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	cursor:pointer;
-	font-weight:500;
-	font-size:15px;
-	color:#5D6D7E;
-}
-
-.cortina-item-02 a:hover{
-	color:#b4bdc8;
-	cursor:pointer;
-}
-
-
-.image-item{
-	display:flex;
-	flex-direction:row;
-	width:45px;
-}
-
-
-/*CORTINA-03*/
-.cortina-03{
-	position:absolute;
-	top:42px;
-	right:160px;
-	height:0px;
-	transition:0.9s;
-	overflow:hidden;
-	box-shadow:0px 5px 8px #eeeeee;
-	display:flex;
-}
-
-.cortina-sub-03{
-	width:270px;
-	height:170px;
-	padding:15px;
-	background-color:#fbfbfb;
-	border-top:2px solid #5d6d7e;
-}
-
-/*FIM CORTINA*/
-
-
-
 /*ESTILIZANDO O MENU*/
 .parent nav{
 	background-color:#5D6D7E;
@@ -186,9 +52,6 @@ body{
 	padding-left:4px;
 }
 
-/*.nav-item i{
-	color:#ffffff;
-}*/
 
 /*ESTILIZANDO CORPO*/
 .componente{
@@ -290,38 +153,6 @@ body{
 	color:white;
 }
 
-
-/*BOTAO DE RELATORIO*/
-.btn-relatorio a{
-	display:flex;
-	flex-direction:row;
-	padding:20px 17px;
-	margin:5px 0px;
-	background-color:#5D6D7E;
-	border:1px solid #5D6D7E;
-}
-
-.btn-relatorio{
-	margin-bottom:5px;
-}
-
-.btn-relatorio a:hover, .btn-enfermagem a:hover{
-	background-color:#70849a;
-	border:1px solid #70849a;
-}
-
-.btn-relatorio i{
-	color:#eeeeee;
-	font-size:22px;
-}
-
-.btn-relatorio .text{
-	display:flex;
-	width:500px;
-	text-align:center;
-	color:white;
-}
-
 /*BOTAO LOGOUT*/
 .btn-sair a{
 	display:flex;
@@ -407,87 +238,20 @@ table tbody td:nth-child(9) i:nth-child(1){
 }
 
 
-/*FILTRO*/
-.filtro{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	height:50px;
-	align-items:center;
-	padding-bottom:10px;
-	box-shadow:0px 1px 3px #eeeeee;
-	/*border-bottom:0.3px solid #eeeeee;*/
-}
-
-.pesquisa{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-	align-items:center;
-}
-
-.pesquisa div:nth-child(3){
-	margin:0px 20px;
-	width:100px;
-}
-
-.pesquisa div:nth-child(2){
-	width:350px;
-}
-
-.pesquisa div:nth-child(4){
-	width:250px;
-}
-
-.pesquisa input{
-	font-size:14px;
-	outline:none;
-	padding:5px;
-	width:100%;
-}
-
-.filter-icon {
-	margin-right:10px;
-}
-
-.filter-icon i{
-	font-size:21px;
-}
-
-/**/
-.total-item, .ordem-item, .mostra-item{
+.questao{
+	padding-bottom:40px;
 	display:flex;
 	flex-direction:row;
 }
 
-.afasta{
-	padding-right:5px;
+.questao i{
+	background-color:gray;
+	padding:10px 16px;
+    color:white;
+    font-size:30px;
+    border-radius:50%;
 }
 
-.avaliacao-footer{
-	height:50px;
-	align-items:center;
-	border-top:0.5px solid #eeeeee;
-}
-
-.avaliacao-footer, .ordem-mostra{
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
-}
-
-.ordem-mostra select{
-	padding:3px;
-	outline:none;
-}
-
-.ordem-item{
-	padding-right:20px;
-}
-
-.estatistica-footer{
-	width:250px;
-	display:flex;
-	flex-direction:row;
-	justify-content:space-between;
+.questao div:nth-child(1){
+	margin-right:20px;
 }

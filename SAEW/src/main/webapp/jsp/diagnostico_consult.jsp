@@ -81,13 +81,13 @@
                        <i class="fa-solid fa-filter"></i>
                    </div>
                    <div>
-                       <input type="text" placeholder="Queixa Principal">
+                       <input type="text" placeholder="Queixa Principal" name="queixa_psq">
                    </div>
                    <div>
-                       <input type="text" placeholder="Código">
+                       <input type="text" placeholder="Código" name="codigo_psq">
                    </div>
                    <div>
-                       <input type="text" placeholder="Paciente">
+                       <input type="text" placeholder="Paciente" name="codigo_psq">
                    </div>
                 </div>
                </div>
@@ -121,7 +121,7 @@
                                  <td><%out.print(listDiag.get(i).getDataRegisto()); %></td>
                                  <td><a href="diagnostico_edit.jsp?idDiagnostico= <%=listDiag.get(i).getIdDiagnostico() %> &idPaciente= <%=listDiag.get(i).getIdPaciente() %>"><i class="fa-solid fa-edit"></i>
                                      </a></td>
-                                 <td><a href=""><i class="fa-solid fa-trash"></i>
+                                 <td><a href="exclusao.jsp?idDiagnostico= <%=listDiag.get(i).getIdDiagnostico() %> &paciente= <%=listDiag.get(i).getPaciente() %>"><i class="fa-solid fa-trash"></i>
                                      </a></td>
                              </tr>
                             <%}
@@ -132,6 +132,7 @@
             </div>
             </div>
             <div class="avaliacao-footer">
+                <div class="estatistica-footer">
                 <div class="total-item">
                    <div class="afasta">
                       <label>Total:</label>
@@ -139,6 +140,15 @@
                    <div>
                       <label><%out.print(listDiag.size()); %></label>
                    </div>
+                </div>
+                <div class="total-item">
+                   <div class="afasta">
+                      <label>Diagnóstico:</label>
+                   </div>
+                   <div>
+                      <label><%out.print(DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal()); %></label>
+                   </div>
+                </div>
                 </div>
                 <div class="ordem-mostra">
                    <div class="ordem-item">

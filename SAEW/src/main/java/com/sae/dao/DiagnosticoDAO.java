@@ -16,7 +16,8 @@ public class DiagnosticoDAO {
     
     private static ArrayList<DiagnosticoModel> listaDiag = null;
     private static DiagnosticoModel diagModel = null;
-
+    
+    //CADASTRO DE DIAGNÓSTICOS
     public static boolean cadastroDeDiagnostico(DiagnosticoModel diag) {
         try {
             String SQL_INSERT_QUERY = "INSERT INTO diagnostico(id_diagnostico, diagnostico, resposta, obs, ultima_actualizacao,  data_registo, id_paciente, paciente)values(?,?,?,?,?,?,?,?)";
@@ -40,6 +41,7 @@ public class DiagnosticoDAO {
         return false;
     }
     
+    //LISTAGEM DE TODOS DE DIAGNÓSTICOS
     public static ArrayList<DiagnosticoModel> listaDiagnostico() {
     	listaDiag = new ArrayList<DiagnosticoModel>();
         try {
@@ -66,6 +68,7 @@ public class DiagnosticoDAO {
         return listaDiag;
     }
     
+  //LISTAGEM DE TODOS DE DIAGNÓSTICOS PELO CÓDIGO
     public static ArrayList<DiagnosticoModel> listaDiagnosticoById(int id_diagnostico) {
     	listaDiag = new ArrayList<DiagnosticoModel>();
         try {
@@ -92,7 +95,26 @@ public class DiagnosticoDAO {
         }
         return listaDiag;
     }
+    
+    //RETORNAR O TOTAL DE TODOS DE DIAGNÓSTICOS
+    public static ArrayList<DiagnosticoModel> getTotalDiagnosticoWithDistinct() {
+    	listaDiag = new ArrayList<DiagnosticoModel>();
+        try {
+            String SQL_SELECT_QUERY = "SELECT count(distinct(id_diagnostico)) as total from diagnostico;";
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            rs = pst.executeQuery();
 
+            while (rs.next()) {
+            	diagModel = new DiagnosticoModel();
+            	diagModel.setTotal(rs.getInt("total"));
+            	listaDiag.add(diagModel);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listaDiag;
+    }
 
     public static void deleteDiagnosticoById(int id_diagnostico) {
         try {
@@ -130,5 +152,7 @@ public class DiagnosticoDAO {
         	e.printStackTrace();
         }
     }
- 
+ public static void main(String[]args) {
+	 System.out.println(DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal());
+ }
 }

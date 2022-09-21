@@ -34,7 +34,7 @@ public class PacienteDAO {
             pst.execute();
             return true;
         } catch (SQLException e) {
-        	e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return false;
     }
@@ -59,7 +59,7 @@ public class PacienteDAO {
             	listaPat.add(patModel);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return listaPat;
     }
@@ -85,7 +85,7 @@ public class PacienteDAO {
             	listaPat.add(patModel);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return listaPat;
     }
@@ -100,7 +100,7 @@ public class PacienteDAO {
             pst.executeUpdate();
 
         } catch (SQLException e) {
-        	e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
     }
 
@@ -123,7 +123,7 @@ public class PacienteDAO {
             con.close();
 
         } catch (SQLException e) {
-        	e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
     }
  

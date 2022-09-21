@@ -1,0 +1,408 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,400;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+    font-family: Poppins,OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+	background-color:#eeeeee;
+}
+
+
+/*ESTILIZANDO O MENU*/
+.parent nav{
+	background-color:#5D6D7E;
+	padding: 0px 50px;
+}
+
+.nav-menu{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.nav-item ul{
+	display:flex;
+	flex-direction:row;
+}
+
+.nav-item ul li{
+	padding: 10px 0px;
+	padding-left:40px;
+	display:flex;
+	align-items:center;
+	cursor:pointer;
+}
+
+.nav-item ul li a{
+	color:black;
+	font-weight:500;
+}
+
+.nav-item ul li i{
+	padding-left:4px;
+}
+
+/*ESTILIZANDO CORPO*/
+.componente{
+	display:flex;
+	flex-direction:row;
+	padding:20px 50px;
+}
+
+/*AVALIACAO-HEAD*/
+
+.butao-cont{
+	width:14.5%;
+	height:600px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	margin-right:20px;
+}
+
+.avaliargem{
+	height:auto; /*300px*/
+	display:flex;
+	flex-direction:column;
+	/*justify-content:space-between;*/
+}
+
+.avaliacao-cont{
+	width:60%;
+	height:600px;
+	background-color:#ffffff;
+	padding:10px;
+	
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	/*border:0.5px solid #5D6D7E;*/
+}
+
+.avaliacao-titulo{
+	padding-left:20px;
+}
+
+.butao-cont div{
+	display:flex;
+	flex-direction:column;
+	width:100%;
+}
+
+.btn-avaliacao .butao, 
+.btn-enfermagem .butao, 
+.btn-relatorio .butao, 
+.btn-sair .butao{
+	border-radius:5px;
+	cursor:pointer;
+	color:#eeeeee;
+	font-size:14px;
+}
+
+/**/
+button{
+	padding:20px 17px;
+	margin:5px 0px;
+	background-color:#5D6D7E;
+	border:1px solid #5D6D7E;
+	display:flex;
+	flex-direction:row;
+	border-radius:5px;
+	cursor:pointer;
+	color:#eeeeee;
+	font-size:14px;
+}
+
+button i{
+	color:#eeeeee;
+	font-size:22px;
+	margin-right:0px; 
+}
+
+button:hover{
+	background-color:#70849a;
+	border:1px solid #70849a;
+}
+
+/**/
+
+/*BOTAO NOVA AVALIACAO*/
+.btn-avaliacao a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
+	margin-bottom:5px;
+	background-color:#26bd70;
+	border:1px solid #26bd70;
+}
+
+.btn-avaliacao a:hover{
+	background-color:#32cd7e;
+	border:1px solid #32cd7e;
+}
+
+.btn-avaliacao i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-avaliacao a .text{
+	display:flex;
+	width:508px;
+	text-align:center;
+	color:white;
+}
+
+/*BOTAO DE ENFERMAGEM*/
+.btn-enfermagem a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
+	margin:5px 0px;
+	background-color:#5D6D7E;
+	border:1px solid #5D6D7E;
+}
+
+.btn-enfermagem i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-enfermagem a .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
+}
+
+
+/*BOTAO DE RELATORIO*/
+.btn-relatorio a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
+	margin:5px 0px;
+	background-color:#5D6D7E;
+	border:1px solid #5D6D7E;
+}
+
+.btn-relatorio{
+	margin-bottom:5px;
+}
+
+.btn-relatorio a:hover, .btn-enfermagem a:hover{
+	background-color:#70849a;
+	border:1px solid #70849a;
+}
+
+.btn-relatorio i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-relatorio .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
+}
+
+/*BOTAO LOGOUT*/
+.btn-sair a{
+	display:flex;
+	flex-direction:row;
+	padding:20px 17px;
+	/*margin:5px 0px;*/
+	background-color:#d54a4a;
+	border:1px solid #d54a4a;
+}
+
+.btn-sair a:hover{
+	background-color:#e44848;
+	border:1px solid #e44848;
+}
+
+.btn-sair i{
+	color:#eeeeee;
+	font-size:22px;
+}
+
+.btn-sair .text{
+	display:flex;
+	width:500px;
+	text-align:center;
+	color:white;
+}
+
+.check-item input{
+	margin:7px 0px;
+	cursor:pointer;
+	background-color:#5D6D7E;
+}
+
+.check-item label{
+	cursor:pointer;
+}
+
+.comboBox select{
+	padding:5px;
+	outline:none;
+	margin-bottom:10px;
+	font-size:15px;
+	display:flex;
+	flex-direction:row;
+	width:100%;
+}
+
+.comboBox select option{
+	font-size:15px;
+}
+
+.componente-item{
+	padding:20px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.dir, .esq{
+	width:50%;
+}
+
+.esq{
+	padding-left:40px;
+	padding-top:15px;
+}
+
+/**/
+.observacao{
+	padding:20px 0px;
+}
+
+.observacao .t-area{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	width:100%;
+}
+
+.observacao .t-area textarea{
+	height:90px;
+	padding:10px;
+	outline:none;
+}
+
+/*PACIENTE*/
+.paciente{
+	width:25%;
+	background-color:#ffffff;
+	margin-left:20px;
+	padding:15px;
+}
+
+
+/**/
+.codito{
+	display:flex;
+	flex-direction:row;
+}
+
+.text{
+	display:flex;
+	flex-direction:row;
+}
+
+.text input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.input-leito{
+	margin-left:90px;
+}
+
+
+.input-paciente{
+	display:flex;
+	flex-direction:column;
+}
+
+.input-paciente input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:16px;
+}
+
+
+.interna{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.text-interna{
+	display:flex;
+	flex-direction:row;
+	width:100px;
+}
+
+.text-interna input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.text-internacao{
+	margin-right:10px;
+}
+
+.text-internacao input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+
+.nascimento{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.text-nasc{
+	display:flex;
+	flex-direction:row;
+	width:100px;
+}
+
+.text-nasc input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.text-nascimento{
+	margin-right:10px;
+}
+
+.text-nasc input, .text-nascimento input{
+	width:100%;
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.codito, .input-paciente, .interna, .nascimento, .perido{
+	margin-bottom:4px;
+}

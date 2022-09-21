@@ -13,13 +13,15 @@ public class DiagnosticoModel {
 	private String observacao;
 	private Date dataUltimaActualizacao;
 	private Date dataRegisto;
+	private int total;
 
 	public DiagnosticoModel() {
 		super();
 	}
 
 	public DiagnosticoModel(int idDiagnostico, String diagnostico, String resposta, int idPaciente, String paciente,
-			int idEnfermeiro, String enfermeiro, String observacao, Date dataUltimaActualizacao, Date dataRegisto) {
+			int idEnfermeiro, String enfermeiro, String observacao, Date dataUltimaActualizacao, Date dataRegisto,
+			int total) {
 		super();
 		this.idDiagnostico = idDiagnostico;
 		this.diagnostico = diagnostico;
@@ -31,6 +33,7 @@ public class DiagnosticoModel {
 		this.observacao = observacao;
 		this.dataUltimaActualizacao = dataUltimaActualizacao;
 		this.dataRegisto = dataRegisto;
+		this.total = total;
 	}
 
 	public int getIdDiagnostico() {
@@ -113,4 +116,11 @@ public class DiagnosticoModel {
 		this.dataRegisto = dataRegisto;
 	}
 
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
 }
