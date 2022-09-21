@@ -34,22 +34,14 @@
    </div>
 </nav>
 <div class="corp">
-<form action="#" method="POST">
+<form action="../DiagnosticoActualizacaoServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-enfermagem">
-                  <!-- <a href="" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-solid fa-repeat"></i>
-                      </div>
-                      <div class="text">
-                          <p>Actualizar Diag.</p>
-                      </div>
-                  </a> -->
                   <button>
                      <i class="fa-solid fa-repeat"></i>
-                     Actualizar Dia.
+                     Actualizar Diag.
                   </button><!--  Diag. -->
                   
               </div>
@@ -84,13 +76,10 @@
                   <div class="avaliacao-titulo">
                       <h3>Actualizar diagnósticos de Enfermagem</h3>
                   </div>
-                  <!--<div class="pesquisa">
-                      <input type="submit">
-                  </div>-->
                </div>
                <div class="componente-item">
                    <div class="dir">
-                      <form>
+                      <!-- <form> -->
                          <%
                               ArrayList<PacienteModel> listPat = PacienteDAO.listaPacienteById(
                 		      Integer.parseInt(request.getParameter("idPaciente").trim()));
@@ -103,13 +92,13 @@
                                   <label>Perfusão tíssular</label>
                               </div>
                               <div class="comboBox">
-                                  <select>
+                                  <select name="perfusao">
                                       <option selected disabled>Escolha uma das opções</option>
-                                      <option>Renal</option>
-                                      <option>Cardíopulmonar</option>
-                                      <option>Cerebral</option>
-                                      <option>Gastrinstestínal</option>
-                                      <option>Periférica</option>
+                                      <option <% if(VerificacaoJSP.verificaComboBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Renal")){%> selected <%}%>>Renal</option>
+                                      <option <% if(VerificacaoJSP.verificaComboBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Cardiopulmonar")){%> selected <%}%>>Cardiopulmonar</option>
+                                      <option <% if(VerificacaoJSP.verificaComboBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Cerebral")){%> selected <%}%>>Cerebral</option>
+                                      <option <% if(VerificacaoJSP.verificaComboBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Gastrintestínal")){%> selected <%}%>>Gastrintestínal</option>
+                                      <option <% if(VerificacaoJSP.verificaComboBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Periférica")){%> selected <%}%>>Periférica</option>
                                   </select>
                               </div>
                           </div>
@@ -158,7 +147,7 @@
                           <div class="check-item">
                              <input id="checkbox-15" type="checkbox" name="diagnostico" value="Medo" <% if(VerificacaoJSP.verificaCheckBox(Integer.parseInt(request.getParameter("idDiagnostico").trim() ),"Medo")){%> checked <%}%>> <label for="checkbox-15">Medo</label>
                           </div>
-                      </form>
+                      <!-- </form> -->
                    </div>
                    <div class="esq">
                        <form>
@@ -198,7 +187,7 @@
                                 <label>Observações</label>
                              </div>
                              <div class="t-area">
-                                 <textarea rows="" cols=""><%=listDiag.get(0).getObservacao() %></textarea>
+                                 <textarea rows="" cols="" name="obs"><%=listDiag.get(0).getObservacao() %></textarea>
                              </div>
                           </div>
                           
@@ -224,7 +213,7 @@
                           <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
-                          <input type="text" value="<%= request.getParameter("idPaciente")%>">
+                          <input type="text" name="cod_pacnt" value="<%= request.getParameter("idPaciente")%>">
                        </div>
                     </div>
                 </div>
@@ -233,7 +222,7 @@
                           <label>Paciente</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text" value="<%=listPat.get(0).getPaciente() %>">
+                          <input type="text" name="paciente" value="<%=listPat.get(0).getPaciente() %>">
                      </div>
                 </div>
                 <div class="input-paciente">
@@ -241,7 +230,7 @@
                           <label>Queixa Principal</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text" value="<%=listPat.get(0).getQueixaPrincipal() %>">
+                          <input type="text" name="queixa_principal" value="<%=listPat.get(0).getQueixaPrincipal() %>">
                      </div>
                 </div>
                 <div class="interna">

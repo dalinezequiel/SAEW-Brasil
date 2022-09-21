@@ -32,4 +32,34 @@
     <servlet-name>PacienteServlet</servlet-name>
     <url-pattern>/PacienteServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DiagnosticoExclusao</display-name>
+    <servlet-name>DiagnosticoExclusao</servlet-name>
+    <servlet-class>com.sae.controller.servelett.DiagnosticoExclusao</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiagnosticoExclusao</servlet-name>
+    <url-pattern>/DiagnosticoExclusao</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DiagnosticoExclusaoServlet</display-name>
+    <servlet-name>DiagnosticoExclusaoServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.DiagnosticoExclusaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiagnosticoExclusaoServlet</servlet-name>
+    <url-pattern>/DiagnosticoExclusaoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DiagnosticoActualizacaoServlet</display-name>
+    <servlet-name>DiagnosticoActualizacaoServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.DiagnosticoActualizacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DiagnosticoActualizacaoServlet</servlet-name>
+    <url-pattern>/DiagnosticoActualizacaoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

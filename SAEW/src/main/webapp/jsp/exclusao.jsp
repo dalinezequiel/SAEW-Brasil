@@ -32,19 +32,15 @@
    </div>
 </nav>
 <div class="corp">
-<form action="PacientServlet" method="POST">
+<form action="../DiagnosticoExclusaoServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-enfermagem">
-                  <a href="" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-solid fa-trash-can"></i>
-                      </div>
-                      <div class="text">
-                          <p>Confirmar</p>
-                      </div>
-                  </a>
+                   <button name="exclusao" value="<%= request.getParameter("idDiagnostico") +"%"+ request.getParameter("idPaciente")%>">
+                     <i class="fa-solid fa-trash-can"></i>
+                     Confirmar
+                  </button>
                   
               </div>
            </div>
@@ -75,7 +71,7 @@
                        <div class="avaliacao-titulo">
                             <h4 style="font-weight:350;">Tem a certeza que deseja <span style="color:red; font-weight:bold;">excluír</span>
                              o diagnóstico número [<span style="color:#5d6d7e; font-weight:bold;"><%out.print(request.getParameter("idDiagnostico").trim()); %></span>]
-                            <br>da paciente <span style="color:#5d6d7e; font-weight:bold;"><%out.print(request.getParameter("paciente")); %></span>?</h4>
+                            <br>do paciente <span style="color:#5d6d7e; font-weight:bold;"><%out.print(request.getParameter("paciente")); %></span>?</h4>
                        </div>
                   </div>
                   <div class="dir">

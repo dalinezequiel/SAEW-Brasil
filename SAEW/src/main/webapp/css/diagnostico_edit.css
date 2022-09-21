@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
-    font-family: Poppins,OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-family: Poppins;
     box-sizing: border-box;
 }
 
@@ -78,13 +78,14 @@ body{
 .avaliacao-cont{
 	width:60%;
 	height:600px;
-	background-color:#ffffff;
+	/*background-color:#ffffff;*/
 	padding:10px;
 	
 	display:flex;
 	flex-direction:column;
 	justify-content:space-between;
 	/*border:0.5px solid #5D6D7E;*/
+	background-color:#fcfcfc;
 }
 
 .avaliacao-titulo{
@@ -124,7 +125,7 @@ button{
 button i{
 	color:#eeeeee;
 	font-size:22px;
-	margin-right:0px; 
+	margin-right:10px; 
 }
 
 button:hover{
@@ -298,16 +299,16 @@ button:hover{
 	height:90px;
 	padding:10px;
 	outline:none;
+	font-size:15px;
 }
 
 /*PACIENTE*/
 .paciente{
 	width:25%;
-	background-color:#ffffff;
+	background-color:#fcfcfc;
 	margin-left:20px;
 	padding:15px;
 }
-
 
 /**/
 .codito{

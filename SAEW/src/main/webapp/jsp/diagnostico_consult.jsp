@@ -121,7 +121,7 @@
                                  <td><%out.print(listDiag.get(i).getDataRegisto()); %></td>
                                  <td><a href="diagnostico_edit.jsp?idDiagnostico= <%=listDiag.get(i).getIdDiagnostico() %> &idPaciente= <%=listDiag.get(i).getIdPaciente() %>"><i class="fa-solid fa-edit"></i>
                                      </a></td>
-                                 <td><a href="exclusao.jsp?idDiagnostico= <%=listDiag.get(i).getIdDiagnostico() %> &paciente= <%=listDiag.get(i).getPaciente() %>"><i class="fa-solid fa-trash"></i>
+                                 <td><a href="exclusao.jsp?idDiagnostico= <%=listDiag.get(i).getIdDiagnostico() %> &paciente= <%=listDiag.get(i).getPaciente() %> &idPaciente= <%=listDiag.get(i).getIdPaciente() %>"><i class="fa-solid fa-trash"></i>
                                      </a></td>
                              </tr>
                             <%}

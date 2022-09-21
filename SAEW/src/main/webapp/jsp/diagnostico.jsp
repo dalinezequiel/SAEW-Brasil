@@ -44,14 +44,14 @@
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
                       <div class="text">
-                         <p>Novo Diagnóstico</p>
+                         <p>Novo Diagnóst.</p>
                       </div>
                   </a>
               </div>
               <div>
-                  <button>
+                  <button name="salvar_diagnostico" value="Salvar Diagnostico">
                      <i class="fa-solid fa-floppy-disk"></i>
-                     Salvar Diagnóst.
+                     Salvar Diagnós.
                   </button>
               </div>
               <div class="btn-enfermagem">
@@ -60,7 +60,7 @@
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
                       <div class="text">
-                          <p>Buscar Paciente</p>
+                          <p>Buscar Pacient.</p>
                       </div>
                   </a>
                   <a href="diagnostico_consult.jsp" class="butao">
@@ -80,7 +80,7 @@
                      <i class="fa-solid fa-trash-can"></i>
                  </div>
                  <div class="text">
-                   <p>Resetar Diagnóst.</p>
+                   <p>Resetar Diagnó.</p>
                  </div>
               </a>
            </div>

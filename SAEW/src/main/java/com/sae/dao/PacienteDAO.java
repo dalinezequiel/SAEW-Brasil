@@ -89,19 +89,40 @@ public class PacienteDAO {
         }
         return listaPat;
     }
+    
+    public static boolean getExistenciaDoPacienteById(int id_paciente) {
+    	listaPat = new ArrayList<PacienteModel>();
+        try {
+            String SQL_SELECT_QUERY = "SELECT * from paciente WHERE id_paciente = ?";
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            pst.setInt(1, id_paciente);
+            rs = pst.executeQuery();
+
+            if(rs.next()) {
+            	return true;
+            }
+
+        } catch (SQLException e) {
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
+        }
+        return false;
+    }
 
 
-    public static void deletePacienteById(int id_paciente) {
+    public static boolean deletePacienteById(int id_paciente) {
         try {
             String SQL_DELETE_QUERY = "DELETE FROM paciente WHERE id_paciente = ?";
             con = ConexaoSQL.getConnection();
             pst = con.prepareStatement(SQL_DELETE_QUERY);
             pst.setInt(1, id_paciente);
             pst.executeUpdate();
+            return true;
 
         } catch (SQLException e) {
         	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
+        return false;
     }
 
     public static void actualizaPaciente(PacienteModel pat) {
@@ -126,5 +147,4 @@ public class PacienteDAO {
         	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
     }
- 
 }

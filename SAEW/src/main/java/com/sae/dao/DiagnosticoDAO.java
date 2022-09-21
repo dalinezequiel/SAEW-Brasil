@@ -36,7 +36,7 @@ public class DiagnosticoDAO {
             pst.execute();
             return true;
         } catch (SQLException e) {
-        	e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return false;
     }
@@ -63,7 +63,7 @@ public class DiagnosticoDAO {
             	listaDiag.add(diagModel);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return listaDiag;
     }
@@ -91,7 +91,7 @@ public class DiagnosticoDAO {
             	listaDiag.add(diagModel);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return listaDiag;
     }
@@ -111,25 +111,29 @@ public class DiagnosticoDAO {
             	listaDiag.add(diagModel);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return listaDiag;
     }
-
-    public static void deleteDiagnosticoById(int id_diagnostico) {
+    
+    //EXCLUÍ O DIAGNÓSTICO PELO ID DO DIAGNÓSTICO
+    public static boolean deleteDiagnosticoById(int id_diagnostico) {
         try {
             String SQL_DELETE_QUERY = "DELETE FROM diagnostico WHERE id_diagnostico = ?";
             con = ConexaoSQL.getConnection();
             pst = con.prepareStatement(SQL_DELETE_QUERY);
             pst.setInt(1, id_diagnostico);
             pst.executeUpdate();
-
+            pst.close();
+            
+            return true;
         } catch (SQLException e) {
-        	e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
+        return false;
     }
 
-    public static void actualizaDiagnostico(DiagnosticoModel diag) {
+    public static boolean actualizaDiagnostico(DiagnosticoModel diag) {
         try {
             String SQL_UPDATE_QUERY = "UPDATE paciente SET diagnostico = ?, resposta = ?, obs = ?, ultima_actualizacao, data_registo = ? WHERE id_diagnostico = ?";
             con = ConexaoSQL.getConnection();
@@ -147,12 +151,12 @@ public class DiagnosticoDAO {
             pst.executeUpdate();
             pst.close();
             con.close();
+            
+            return true;
 
         } catch (SQLException e) {
-        	e.printStackTrace();
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
+        return false;
     }
- public static void main(String[]args) {
-	 System.out.println(DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal());
- }
 }

@@ -381,7 +381,7 @@ table thead td:nth-child(8), table thead td:nth-child(9){
 
 table tbody td{
 	max-width:175px;
-	font-weight:350;
+	/*font-weight:350;*/
 }
 
 table tbody td:nth-child(2){
