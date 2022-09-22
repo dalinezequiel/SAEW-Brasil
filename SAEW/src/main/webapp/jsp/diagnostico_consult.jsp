@@ -3,7 +3,7 @@
     
 <%@page
     import="java.util.ArrayList"
-    import="com.sae.model.DiagnosticoModel, com.sae.dao.DiagnosticoDAO"%>
+    import="com.sae.model.DiagnosticoModel, com.sae.dao.DiagnosticoDAO, com.sae.controller.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@
    </div>
 </nav>
 <div class="corp">
-    <form action="" method="post"> <!-- diagnostico_edit.jsp -->
+    <form action="" method="post">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
@@ -104,28 +104,9 @@
                    </thead>
                    <tbody>
                      <%
+                        DiagnosticoModel diagModel = new DiagnosticoModel();
                         ArrayList<DiagnosticoModel> listDiag = null;
-                        int total = DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal();
-                     /*if( request.getParameter("codigo_psq") == null && request.getParameter("paciente_psq") == null && request.getParameter("queixa_psq") == null){
-                        	listDiag = DiagnosticoDAO.listaDiagnostico();
-
-                        }else if(request.getParameter("codigo_psq").equals("") && (!request.getParameter("paciente_psq").equals("") || !request.getParameter("queixa_psq").equals("")) ){
-                        	listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
-                        			Integer.parseInt("0"), 
-                        			request.getParameter("paciente_psq").trim(), 
-                        			request.getParameter("queixa_psq").trim());
-                        }else{
-                        	if(request.getParameter("codigo_psq").equals("") || request.getParameter("paciente_psq").equals("") || request.getParameter("queixa_psq").equals("") ){
-                        		listDiag = DiagnosticoDAO.listaDiagnostico();
-                        		
-                        	}else{
-                        		listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
-                            			Integer.parseInt(request.getParameter("codigo_psq")), 
-                            			request.getParameter("paciente_psq").trim(), 
-                            			request.getParameter("queixa_psq").trim());
-                        	}
-                        }*/
-
+                        diagModel.setTotal(DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal());
                         if( request.getParameter("codigo_psq") == null && request.getParameter("paciente_psq") == null && request.getParameter("queixa_psq") == null){
                         	listDiag = DiagnosticoDAO.listaDiagnostico();
 
@@ -137,16 +118,21 @@
                         			Integer.parseInt("0"), 
                         			request.getParameter("paciente_psq").trim(), 
                         			request.getParameter("queixa_psq").trim());
-                        	        total = DiagnosticoDAO.getTotalDiagnosticoWithDistinct(0, request.getParameter("paciente_psq"), request.getParameter("queixa_psq"));
+                        	        diagModel.setTotal(DiagnosticoDAO.getTotalDiagnosticoWithDistinct(0, request.getParameter("paciente_psq"), request.getParameter("queixa_psq")));
                         }else{
-                        	listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
-                			        Integer.parseInt(request.getParameter("codigo_psq")), 
-                			        request.getParameter("paciente_psq").trim(), 
-                			        request.getParameter("queixa_psq").trim());
-                        	        total = DiagnosticoDAO.getTotalDiagnosticoWithDistinct(listDiag.get(0).getIdDiagnostico(), listDiag.get(0).getPaciente(), request.getParameter("queixa_psq"));
+                        	        
+                        	if(VerificacaoJSP.verificarSeRealmenteEInt(request.getParameter("codigo_psq"))){
+                        		listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
+                    			        Integer.parseInt(request.getParameter("codigo_psq")), 
+                    			        request.getParameter("paciente_psq").trim(), 
+                    			        request.getParameter("queixa_psq").trim());
+                        		diagModel.setTotal(DiagnosticoDAO.getTotalDiagnosticoWithDistinct(listDiag.get(0).getIdDiagnostico(), request.getParameter("paciente_psq"), request.getParameter("queixa_psq")));
+                        	
+                        	}else{
+                        		diagModel.setTotal(0);
+                        	}
                         }
-                     
-                        /*ArrayList<DiagnosticoModel> listDiag = DiagnosticoDAO.listaDiagnostico();*/
+
                         if(listDiag != null){
                         	 for(int i=0; i<listDiag.size(); i++){%>
                              <tr>
@@ -184,7 +170,7 @@
                       <label>Diagnóstico:</label>
                    </div>
                    <div>
-                      <label><%out.print(total); %> de <%out.print(listDiag.size()); %></label>
+                      <label><%out.print(diagModel.getTotal()); %> de <%if(listDiag != null){out.print(listDiag.size());}else{out.print(0);} %></label>
                    </div>
                 </div>
                 </div>

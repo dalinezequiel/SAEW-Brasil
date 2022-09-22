@@ -26,4 +26,15 @@ public class VerificacaoJSP {
 		}
 		return false;
 	}
+	
+	public static boolean verificarSeRealmenteEInt(String texto) {
+		try {
+			Integer.parseInt(texto);
+			return true;
+		}catch(Exception ex) {
+			System.out.println(ex.getMessage());
+		}
+		
+		return false;
+	}
 }
