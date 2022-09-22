@@ -240,6 +240,32 @@ body{
 	font-size:14px;
 }
 
+/**/
+button{
+	padding:20px 17px;
+	background-color:#5D6D7E;
+	border:1px solid #5D6D7E;
+	display:flex;
+	flex-direction:row;
+	border-radius:5px;
+	cursor:pointer;
+	color:#eeeeee;
+	font-size:14px;
+}
+
+button i{
+	color:#eeeeee;
+	font-size:22px;
+	margin-right:13px; 
+}
+
+button:hover{
+	background-color:#70849a;
+	border:1px solid #70849a;
+}
+
+/**/
+
 /*BOTAO NOVA AVALIACAO*/
 .btn-avaliacao a{
 	display:flex;

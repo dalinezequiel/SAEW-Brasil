@@ -62,4 +62,14 @@
     <servlet-name>DiagnosticoActualizacaoServlet</servlet-name>
     <url-pattern>/DiagnosticoActualizacaoServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PacienteRelatorioServlet</display-name>
+    <servlet-name>PacienteRelatorioServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.PacienteRelatorioServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PacienteRelatorioServlet</servlet-name>
+    <url-pattern>/PacienteRelatorioServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

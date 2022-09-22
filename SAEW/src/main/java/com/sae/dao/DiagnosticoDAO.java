@@ -96,6 +96,68 @@ public class DiagnosticoDAO {
         return listaDiag;
     }
     
+  //LISTAGEM DE TODOS DE DIAGNÓSTICOS PELO CÓDIGO
+    public static ArrayList<DiagnosticoModel> listaDiagnosticoByMultipleParameters(int id_diagnostico, String paciente, String queixa_principal) {
+    	listaDiag = new ArrayList<DiagnosticoModel>();
+        try {
+            String SQL_SELECT_QUERY = "SELECT d.id_diagnostico, d.diagnostico, d.resposta, \r\n"
+            		+ "d.id_paciente, d.paciente, d.ultima_actualizacao, d.data_registo \r\n"
+            		+ "from diagnostico as d\r\n"
+            		+ "where  d.id_diagnostico = ? or d.paciente = ?\r\n"
+            		+ "or d.id_paciente = (\r\n"
+            		+ "	select paciente.id_paciente from paciente where queixa_principal = ?\r\n"
+            		+ ");";
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            pst.setInt(1, id_diagnostico);
+            pst.setString(2, paciente);
+            pst.setString(3, queixa_principal);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+            	diagModel = new DiagnosticoModel();
+            	diagModel.setIdDiagnostico(rs.getInt("id_diagnostico"));
+            	diagModel.setDiagnostico(rs.getString("diagnostico"));
+            	diagModel.setResposta(rs.getString("resposta"));
+            	diagModel.setIdPaciente(rs.getInt("id_paciente"));
+            	diagModel.setPaciente(rs.getString("paciente"));
+            	diagModel.setDataUltimaActualizacao(rs.getDate("ultima_actualizacao"));
+            	diagModel.setDataRegisto(rs.getDate("data_registo"));
+            	listaDiag.add(diagModel);
+            }
+        } catch (SQLException e) {
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
+        }
+        return listaDiag;
+    }
+    
+    
+    public static boolean getExistenciaDoDiagnosticoById(int id_diagnostico, String paciente, String queixa_principal) {
+    	listaDiag = new ArrayList<DiagnosticoModel>();
+        try {
+        	String SQL_SELECT_QUERY = "SELECT * from diagnostico \r\n"
+        			+ "WHERE id_diagnostico = ? or paciente = ?\r\n"
+        			+ "or id_paciente = (\r\n"
+        			+ "	select paciente.id_paciente from paciente where queixa_principal = ?\r\n"
+        			+ ")";
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            pst.setInt(1, id_diagnostico);
+            pst.setString(2, paciente);
+            pst.setString(3, queixa_principal);
+            rs = pst.executeQuery();
+
+            if(rs.next()) {
+            	return true;
+            }
+
+        } catch (SQLException e) {
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
+        }
+        return false;
+    }
+    
+    
     //RETORNAR O TOTAL DE TODOS DE DIAGNÓSTICOS
     public static ArrayList<DiagnosticoModel> getTotalDiagnosticoWithDistinct() {
     	listaDiag = new ArrayList<DiagnosticoModel>();
@@ -114,6 +176,40 @@ public class DiagnosticoDAO {
         	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return listaDiag;
+    }
+    
+  //RETORNAR O TOTAL DE TODOS DE DIAGNÓSTICOS USANDO VÁRIOS PARÂMETROS
+    public static int getTotalDiagnosticoWithDistinct(int id_diagnostico, String paciente, String queixa_principal) {
+    	listaDiag = new ArrayList<DiagnosticoModel>();
+        try {
+            String SQL_SELECT_QUERY = "select count(distinct(id_diagnostico)) as total\r\n"
+            		+ "from diagnostico\r\n"
+            		+ "where id_diagnostico = ? or paciente = ?\r\n"
+            		+ "or  paciente = (\r\n"
+            		+ "	select paciente from paciente where queixa_principal = ?\r\n"
+            		+ ");";
+            /*            String SQL_SELECT_QUERY = "SELECT count(distinct(id_diagnostico)) from diagnostico where id_diagnostico = ("
+            		+ "select diagnostico.id_paciente from diagnostico where id_diagnostico = ?) "
+            		+ "or id_paciente = ("
+            		+ "select diagnostico.id_paciente from diagnostico where paciente = ?) "
+            		+ "or id_paciente = ("
+            		+ "select paciente.id_paciente from paciente where queixa_principal = ?);";*/
+            con = ConexaoSQL.getConnection();
+            pst = con.prepareStatement(SQL_SELECT_QUERY);
+            pst.setInt(1, id_diagnostico);
+            pst.setString(2, paciente);
+            pst.setString(3, queixa_principal);
+            rs = pst.executeQuery();
+
+            while (rs.next()) {
+            	diagModel = new DiagnosticoModel();
+            	diagModel.setTotal(rs.getInt("total"));
+            	listaDiag.add(diagModel);
+            }
+        } catch (SQLException e) {
+        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
+        }
+        return listaDiag.get(0).getTotal();
     }
     
     //EXCLUÍ O DIAGNÓSTICO PELO ID DO DIAGNÓSTICO
@@ -158,5 +254,14 @@ public class DiagnosticoDAO {
         	System.out.println("Ocorreu um erro!\n" + e.getMessage());
         }
         return false;
+    }
+    public static void main(String [] args) {
+    	/*boolean rs = DiagnosticoDAO.getExistenciaDoDiagnosticoById(0, "", "Dores na garganta");
+    	if(rs) {
+    		System.out.println(DiagnosticoDAO.listaDiagnosticoByMultipleParameters(0, "", "Dores na garganta").get(0).getPaciente());
+    	}else {
+    		System.out.println(rs);
+    	}*/
+    	System.out.println(DiagnosticoDAO.getTotalDiagnosticoWithDistinct(0, "", ""));
     }
 }

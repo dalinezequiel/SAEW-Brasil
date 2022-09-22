@@ -33,19 +33,15 @@
    </div>
 </nav>
 <div class="corp">
-    <form action="diagnostico_edit.jsp" method="post">
+    <form action="" method="post"> <!-- diagnostico_edit.jsp -->
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-enfermagem">
-                  <a href="#" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-sharp fa-solid fa-print"></i>
-                      </div>
-                      <div class="text">
-                          <p>Gerar Relatório</p>
-                      </div>
-                  </a>
+                  <button>
+                     <i class="fa-sharp fa-solid fa-print"></i>
+                     Gerar Relatório
+                  </button>
                   <a href="#" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-trash-can"></i>
@@ -84,10 +80,10 @@
                        <input type="text" placeholder="Queixa Principal" name="queixa_psq">
                    </div>
                    <div>
-                       <input type="text" placeholder="Código" name="codigo_psq">
+                       <input type="text" placeholder="Código diag" name="codigo_psq">
                    </div>
                    <div>
-                       <input type="text" placeholder="Paciente" name="codigo_psq">
+                       <input type="text" placeholder="Paciente" name="paciente_psq">
                    </div>
                 </div>
                </div>
@@ -108,7 +104,49 @@
                    </thead>
                    <tbody>
                      <%
-                        ArrayList<DiagnosticoModel> listDiag = DiagnosticoDAO.listaDiagnostico();
+                        ArrayList<DiagnosticoModel> listDiag = null;
+                        int total = DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal();
+                     /*if( request.getParameter("codigo_psq") == null && request.getParameter("paciente_psq") == null && request.getParameter("queixa_psq") == null){
+                        	listDiag = DiagnosticoDAO.listaDiagnostico();
+
+                        }else if(request.getParameter("codigo_psq").equals("") && (!request.getParameter("paciente_psq").equals("") || !request.getParameter("queixa_psq").equals("")) ){
+                        	listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
+                        			Integer.parseInt("0"), 
+                        			request.getParameter("paciente_psq").trim(), 
+                        			request.getParameter("queixa_psq").trim());
+                        }else{
+                        	if(request.getParameter("codigo_psq").equals("") || request.getParameter("paciente_psq").equals("") || request.getParameter("queixa_psq").equals("") ){
+                        		listDiag = DiagnosticoDAO.listaDiagnostico();
+                        		
+                        	}else{
+                        		listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
+                            			Integer.parseInt(request.getParameter("codigo_psq")), 
+                            			request.getParameter("paciente_psq").trim(), 
+                            			request.getParameter("queixa_psq").trim());
+                        	}
+                        }*/
+
+                        if( request.getParameter("codigo_psq") == null && request.getParameter("paciente_psq") == null && request.getParameter("queixa_psq") == null){
+                        	listDiag = DiagnosticoDAO.listaDiagnostico();
+
+                        }else if(request.getParameter("codigo_psq").equals("") && request.getParameter("paciente_psq").equals("") && request.getParameter("queixa_psq").equals("") ){
+                        	listDiag = DiagnosticoDAO.listaDiagnostico();
+                        	
+                        }else if(request.getParameter("codigo_psq").equals("") && (!request.getParameter("paciente_psq").equals("") || !request.getParameter("queixa_psq").equals(""))){
+                        	listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
+                        			Integer.parseInt("0"), 
+                        			request.getParameter("paciente_psq").trim(), 
+                        			request.getParameter("queixa_psq").trim());
+                        	        total = DiagnosticoDAO.getTotalDiagnosticoWithDistinct(0, request.getParameter("paciente_psq"), request.getParameter("queixa_psq"));
+                        }else{
+                        	listDiag = DiagnosticoDAO.listaDiagnosticoByMultipleParameters(
+                			        Integer.parseInt(request.getParameter("codigo_psq")), 
+                			        request.getParameter("paciente_psq").trim(), 
+                			        request.getParameter("queixa_psq").trim());
+                        	        total = DiagnosticoDAO.getTotalDiagnosticoWithDistinct(listDiag.get(0).getIdDiagnostico(), listDiag.get(0).getPaciente(), request.getParameter("queixa_psq"));
+                        }
+                     
+                        /*ArrayList<DiagnosticoModel> listDiag = DiagnosticoDAO.listaDiagnostico();*/
                         if(listDiag != null){
                         	 for(int i=0; i<listDiag.size(); i++){%>
                              <tr>
@@ -138,7 +176,7 @@
                       <label>Total:</label>
                    </div>
                    <div>
-                      <label><%out.print(listDiag.size()); %></label>
+                      <label><%out.print(DiagnosticoDAO.listaDiagnostico().size()); %></label>
                    </div>
                 </div>
                 <div class="total-item">
@@ -146,7 +184,7 @@
                       <label>Diagnóstico:</label>
                    </div>
                    <div>
-                      <label><%out.print(DiagnosticoDAO.getTotalDiagnosticoWithDistinct().get(0).getTotal()); %></label>
+                      <label><%out.print(total); %> de <%out.print(listDiag.size()); %></label>
                    </div>
                 </div>
                 </div>

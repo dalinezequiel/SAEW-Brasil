@@ -33,18 +33,15 @@
    </div>
 </nav>
 <div class="corp">
+    <form action="" method="post">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
               <div class="btn-enfermagem">
-                  <a href="#" class="butao">
-                      <div class="butao-ico">
-                          <i class="fa-sharp fa-solid fa-print"></i>
-                      </div>
-                      <div class="text">
-                          <p>Gerar Relatório</p>
-                      </div>
-                  </a>
+                  <button>
+                     <i class="fa-sharp fa-solid fa-print"></i>
+                     Gerar Relatório
+                  </button>
                   <a href="#" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-trash-can"></i>
@@ -118,7 +115,7 @@
                                 <td><%out.print(listPac.get(i).getQueixaPrincipal()); %></td>
                                 <td><%out.print(listPac.get(i).getDataInternacao()); %></td>
                                 <td><%out.print(listPac.get(i).getDataRegisto()); %></td>
-                                <td><a href="#"><i class="fa-solid fa-edit"></i>
+                                <td><a href="#"><i class="fa-solid fa-share"></i>
                                     </a></td>
                                 <td><a href=""><i class="fa-solid fa-trash"></i>
                                     </a></td>
@@ -171,6 +168,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 </div>
 <script type="text/javascript" src="../script/menu.js"></script>
