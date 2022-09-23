@@ -7,6 +7,10 @@ public class IntervencaoModel {
 	private String intervencao;
 	private String resposta;
 	private String realizarCurativo;
+	private String verificarHgt;
+	private String verificarSaturacaoOxigenio;
+	private String auxiliarBanhoLeito;
+	private String aspiracaoOrotraqueal;
 	private String observacao;
 	private Date dataUltimaActualizacao;
 	private Date dataRegisto;
@@ -16,16 +20,26 @@ public class IntervencaoModel {
 
 	public IntervencaoModel() {
 		super();
+		realizarCurativo = "Realizar curativo";
+		verificarHgt = "Verificar HGT";
+		verificarSaturacaoOxigenio = "Verificar a saturação de oxigênio";
+		auxiliarBanhoLeito = "Realizar/ auxiliar banho no leito";
+		aspiracaoOrotraqueal = "Realizar aspiração orotraqueal";
 	}
 
 	public IntervencaoModel(int idIntervencao, String intervencao, String resposta, String realizarCurativo,
-			String observacao, Date dataUltimaActualizacao, Date dataRegisto, int idPaciente, String paciente,
-			int total) {
+			String verificarHgt, String verificarSaturacaoOxigenio, String auxiliarBanhoLeito,
+			String aspiracaoOrotraqueal, String observacao, Date dataUltimaActualizacao, Date dataRegisto,
+			int idPaciente, String paciente, int total) {
 		super();
 		this.idIntervencao = idIntervencao;
 		this.intervencao = intervencao;
 		this.resposta = resposta;
 		this.realizarCurativo = realizarCurativo;
+		this.verificarHgt = verificarHgt;
+		this.verificarSaturacaoOxigenio = verificarSaturacaoOxigenio;
+		this.auxiliarBanhoLeito = auxiliarBanhoLeito;
+		this.aspiracaoOrotraqueal = aspiracaoOrotraqueal;
 		this.observacao = observacao;
 		this.dataUltimaActualizacao = dataUltimaActualizacao;
 		this.dataRegisto = dataRegisto;
@@ -64,6 +78,38 @@ public class IntervencaoModel {
 
 	public void setRealizarCurativo(String realizarCurativo) {
 		this.realizarCurativo = realizarCurativo;
+	}
+
+	public String getVerificarHgt() {
+		return verificarHgt;
+	}
+
+	public void setVerificarHgt(String verificarHgt) {
+		this.verificarHgt = verificarHgt;
+	}
+
+	public String getVerificarSaturacaoOxigenio() {
+		return verificarSaturacaoOxigenio;
+	}
+
+	public void setVerificarSaturacaoOxigenio(String verificarSaturacaoOxigenio) {
+		this.verificarSaturacaoOxigenio = verificarSaturacaoOxigenio;
+	}
+
+	public String getAuxiliarBanhoLeito() {
+		return auxiliarBanhoLeito;
+	}
+
+	public void setAuxiliarBanhoLeito(String auxiliarBanhoLeito) {
+		this.auxiliarBanhoLeito = auxiliarBanhoLeito;
+	}
+
+	public String getAspiracaoOrotraqueal() {
+		return aspiracaoOrotraqueal;
+	}
+
+	public void setAspiracaoOrotraqueal(String aspiracaoOrotraqueal) {
+		this.aspiracaoOrotraqueal = aspiracaoOrotraqueal;
 	}
 
 	public String getObservacao() {

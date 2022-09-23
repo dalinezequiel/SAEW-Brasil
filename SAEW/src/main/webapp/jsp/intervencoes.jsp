@@ -128,11 +128,11 @@
                              <!-- <div class="input_label"> -->
                                  <div class="input-vezes">
                                     <label>N° Vezes</label>
-                                    <input type="text" placeholder="Ex: 04">
+                                    <input type="number" min="0" placeholder="Ex: 04" name="verificar_hgt_veze">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
-                                    <input type="date">
+                                    <input type="date" name="verificar_hgt_data">
                                  </div>
                             <!--  </div> -->
                           </fieldset>
@@ -141,12 +141,12 @@
                              <legend>Verificar a saturação de oxigênio</legend>
                                  <div class="input-vezes">
                                     <label>Há cada</label>
-                                    <input type="text" placeholder="Ex: 04horas">
+                                    <input type="time" placeholder="Ex: 04horas" name="verificar_o2_hacada">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
                                     <div>
-                                        <input type="date">
+                                        <input type="date" name="verificar_o2_data">
                                     </div>
                                  </div>
                           </fieldset>
@@ -156,12 +156,12 @@
                                  <!-- <div class="input_label"> -->
                                  <div class="input-vezes">
                                     <label>Há cada</label>
-                                    <input type="text" placeholder="Ex: 04horas">
+                                    <input type="time" placeholder="Ex: 04horas" name="auxilar_banho_leito_hacada">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
                                     <div>
-                                        <input type="date">
+                                        <input type="date" name="auxilar_banho_leito_data">
                                     </div>
                                  </div>
                              <!-- </div> -->
@@ -172,12 +172,12 @@
                                  <!-- <div class="input_label"> -->
                                  <div class="input-vezes">
                                     <label>Há cada</label>
-                                    <input type="text" placeholder="Ex: 04horas">
+                                    <input type="time" placeholder="Ex: 04horas" name="aspiracao_orotraqueal_hacada">
                                  </div>
                                  <div class="input-dia">
                                     <label>Data</label>
                                     <div>
-                                        <input type="date">
+                                        <input type="date" name="aspiracao_orotraqueal_data">
                                     </div>
                                  </div>
                              <!-- </div> -->
@@ -349,6 +349,6 @@
     </form>
 </div>
 </div>
-<script type="text/javascript" src="../script/intervencoes.js"></script>
+<!-- <script type="text/javascript" src="../script/intervencoes.js"></script> -->
 </body>
 </html>

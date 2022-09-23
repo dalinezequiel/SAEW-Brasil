@@ -52,6 +52,33 @@ public class IntervencaoCadastroServlet extends HttpServlet {
 		if (request.getParameter("acesso_venoso_periferico") != null) {
 			lista.add(request.getParameter("acesso_venoso_periferico"));
 		}
+		
+		/**/
+		/*realizar_curativo*/
+		if (request.getParameter("realizar_curativo") != null && !request.getParameter("realizar_curativo").isEmpty()) {
+			lista.add(inter.getRealizarCurativo());
+		}
+		
+		/*verificar_hgt*/
+		if (request.getParameter("verificar_hgt_veze") != null && (!request.getParameter("verificar_hgt_veze").isEmpty()) ) {
+			lista.add(inter.getVerificarHgt());
+		}
+
+		/*verificar_o2*/
+		if (request.getParameter("verificar_o2_hacada") != null && (!request.getParameter("verificar_o2_hacada").isEmpty()) ) {
+			lista.add(inter.getVerificarSaturacaoOxigenio());
+		}
+
+		/*auxilar_banho_leito*/
+		if (request.getParameter("auxilar_banho_leito_hacada") != null && (!request.getParameter("auxilar_banho_leito_hacada").isEmpty()) ) {
+			lista.add(inter.getAuxiliarBanhoLeito());
+		}
+
+		/*aspiracao_orotraqueal*/
+		if (request.getParameter("aspiracao_orotraqueal_hacada") != null && (!request.getParameter("aspiracao_orotraqueal_hacada").isEmpty()) ) {
+			lista.add(inter.getAspiracaoOrotraqueal());
+		}
+		/**/
 
 		if (!lista.isEmpty()) {
 			if (atr.getVarString().equals("Sim")) {
@@ -83,7 +110,27 @@ public class IntervencaoCadastroServlet extends HttpServlet {
 				inter.setIntervencao(comboBoxModel.getNomeComboBox());
 				inter.setResposta(listaComboBox.get(1).getComboBoxItem());
 
-			} else {
+			}else if(lista.get(i).equals(inter.getRealizarCurativo())) {
+				inter.setIntervencao(inter.getRealizarCurativo());
+				inter.setResposta(request.getParameter("realizar_curativo"));
+				
+			}else if(lista.get(i).equals(inter.getVerificarHgt())) {
+				inter.setIntervencao(inter.getVerificarHgt());
+				inter.setResposta(request.getParameter("verificar_hgt_veze")+ "X " +request.getParameter("verificar_hgt_data"));
+				
+			}else if(lista.get(i).equals(inter.getVerificarSaturacaoOxigenio())) {
+				inter.setIntervencao(inter.getVerificarSaturacaoOxigenio());
+				inter.setResposta(request.getParameter("verificar_o2_hacada")+ "h " +request.getParameter("verificar_o2_data"));
+				
+			}else if(lista.get(i).equals(inter.getAuxiliarBanhoLeito())) {
+				inter.setIntervencao(inter.getAuxiliarBanhoLeito());
+				inter.setResposta(request.getParameter("auxilar_banho_leito_hacada")+ "h " +request.getParameter("auxilar_banho_leito_data"));
+				
+			}else if(lista.get(i).equals(inter.getAspiracaoOrotraqueal())) {
+				inter.setIntervencao(inter.getAspiracaoOrotraqueal());
+				inter.setResposta(request.getParameter("aspiracao_orotraqueal_hacada")+ "h " +request.getParameter("aspiracao_orotraqueal_data"));
+				
+			}else {
 				inter.setIntervencao(lista.get(i));
 				inter.setResposta("Sim");
 			}
