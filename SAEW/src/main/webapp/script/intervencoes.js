@@ -1,13 +1,17 @@
+
+/*CHECKBOX DE AVALIAÇÕES*/
+window.addEventListener('load', function() {
+	for (var i = 0; i < text_input.length; i++) {
+		if (i <= 1) {
+			text_input[i].readOnly = true;
+		}
+	}
+});
+
 /*CHECKBOX DE AVALIAÇÕES*/
 const check_input = document.querySelectorAll(".check-item input");
 for(var i=0; i<check_input.length; i++){
 	check_input[i].disabled = true;
-};
-
-/*RADIO BUTTON DE AVALIACOES*/
-const radio_input = document.querySelectorAll(".radio-ite input");
-for(var i=0; i<radio_input.length; i++){
-	radio_input[i].disabled = true;
 };
 
 /*CORTINA DE INFORMAÇÕES*/
@@ -20,6 +24,12 @@ for(var i=0; i<combobox.length; i++){
 const text_input = document.querySelectorAll(".paciente input");
 for(var i=0; i<text_input.length; i++){
 	text_input[i].disabled = true;
+};
+
+/*CAMPO INPUT DO FIELDSET*/
+const fieldset_input = document.querySelectorAll(".fieldset_input input");
+for(var i=0; i<fieldset_input.length; i++){
+	fieldset_input[i].disabled = true;
 };
 
 /*CAMPO CURATIVO*/
@@ -55,7 +65,11 @@ for(var i=0; i<button.length; i++){
         };
         
         for(var i=0; i<cur_input.length; i++){
-	    cur_input[i].disabled = false;
-};
+	        cur_input[i].disabled = false;
+        };
+        
+        for(var i=0; i<fieldset_input.length; i++){
+	        fieldset_input[i].disabled = false;
+        };
 	})
 };

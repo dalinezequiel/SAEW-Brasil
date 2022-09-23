@@ -34,16 +34,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>DiagnosticoExclusao</display-name>
-    <servlet-name>DiagnosticoExclusao</servlet-name>
-    <servlet-class>com.sae.controller.servelett.DiagnosticoExclusao</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DiagnosticoExclusao</servlet-name>
-    <url-pattern>/DiagnosticoExclusao</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>DiagnosticoExclusaoServlet</display-name>
     <servlet-name>DiagnosticoExclusaoServlet</servlet-name>
     <servlet-class>com.sae.controller.servelett.DiagnosticoExclusaoServlet</servlet-class>
@@ -71,5 +61,25 @@
   <servlet-mapping>
     <servlet-name>PacienteRelatorioServlet</servlet-name>
     <url-pattern>/PacienteRelatorioServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IntervencaoCadastroServlet</display-name>
+    <servlet-name>IntervencaoCadastroServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.IntervencaoCadastroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IntervencaoCadastroServlet</servlet-name>
+    <url-pattern>/IntervencaoCadastroServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AvaliacaoDeIntervencaoCadastroServlet</display-name>
+    <servlet-name>AvaliacaoDeIntervencaoCadastroServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.AvaliacaoDeIntervencaoCadastroServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AvaliacaoDeIntervencaoCadastroServlet</servlet-name>
+    <url-pattern>/AvaliacaoDeIntervencaoCadastroServlet</url-pattern>
   </servlet-mapping>
 </web-app>

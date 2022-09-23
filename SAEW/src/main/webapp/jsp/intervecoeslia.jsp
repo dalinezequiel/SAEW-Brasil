@@ -33,6 +33,7 @@
    </div>
 </nav>
 <div class="corp">
+    <form action="../AvaliacaoDeIntervencaoCadastroServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
@@ -46,15 +47,21 @@
                       </div>
                   </a>
               </div>
+              <div>
+                  <button>
+                     <i class="fa-solid fa-floppy-disk"></i>
+                     Salvar Avaliação
+                  </button>
+              </div>
               <div class="btn-enfermagem">
-                  <a href="" class="butao">
+                  <!-- <a href="" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-floppy-disk"></i>
                       </div>
                       <div class="text">
                           <p>Salvar Avaliação</p>
                       </div>
-                  </a>
+                  </a> -->
                   <a href="" class="butao">
                       <div class="butao-ico">
                           <i class="fa-solid fa-user-doctor"></i>
@@ -108,7 +115,7 @@
                </div>
                <div class="componente-item">
                    <div class="dir">
-                      <form>
+                      <!-- <form> -->
                           
                           <div class="check-item">
                              <label>1. Saturação de O2 acima de 94%</label>
@@ -154,10 +161,10 @@
                                  <textarea rows="" cols=""></textarea>
                              </div>
                           </div>
-                      </form>
+                      <!-- </form> -->
                    </div>
                    <div class="esq">
-                       <form>
+                       <!-- <form> -->
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
@@ -376,7 +383,7 @@
                              </div>
                           </div>
                           
-                      </form>
+                      <!-- </form> -->
                    </div>
                </div>
             </div>
@@ -469,6 +476,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 </div>
 <script type="text/javascript" src="../script/intervencoeslia.js"></script>

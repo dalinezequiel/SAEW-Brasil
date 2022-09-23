@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
-    font-family: OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-family: Poppins,OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     box-sizing: border-box;
 }
 
@@ -77,8 +77,8 @@ body{
 
 .avaliacao-cont{
 	width:60%;
-	height:600px;
-	background-color:#ffffff;
+	height:auto; /*600px*/
+	background-color:#fcfcfc;
 	padding:10px;
 	
 	display:flex;
@@ -105,6 +105,33 @@ body{
 	color:#eeeeee;
 	font-size:14px;
 }
+
+/**/
+button{
+	padding:20px 17px;
+	margin:5px 0px;
+	background-color:#5D6D7E;
+	border:1px solid #5D6D7E;
+	display:flex;
+	flex-direction:row;
+	border-radius:5px;
+	cursor:pointer;
+	color:#eeeeee;
+	font-size:14px;
+}
+
+button i{
+	color:#eeeeee;
+	font-size:22px;
+	margin-right:15px;
+}
+
+button:hover{
+	background-color:#70849a;
+	border:1px solid #70849a;
+}
+
+/**/
 
 /*BOTAO NOVA AVALIACAO*/
 .btn-avaliacao a{
@@ -228,7 +255,7 @@ body{
 .comboBox select{
 	padding:5px;
 	outline:none;
-	margin-bottom:10px;
+	margin-bottom:2px;
 	font-size:15px;
 	display:flex;
 	flex-direction:row;
@@ -236,7 +263,7 @@ body{
 }
 
 .comboBox select option{
-	font-size:15px;
+	font-size:14px;
 }
 
 .componente-item{
@@ -250,19 +277,10 @@ body{
 	width:50%;
 }
 
-/**/
-.input_label{
-	display:flex;
-	flex-direction:row;
-	border:1px solid #969696;
-	margin-bottom:20px;
-	border-radius:2px;
-}
-
 .input-vezes, .input-dia{
 	display:flex;
 	flex-direction:column;
-	padding:15px;
+	padding:3px 15px 15px 15px;
 }
 
 .input-vezes input, .input-dia input{
@@ -297,7 +315,7 @@ body{
 }
 
 .observacao .t-area textarea{
-	height:66px;
+	height:70px;
 	padding:10px;
 	outline:none;
 }
@@ -305,7 +323,7 @@ body{
 /*PACIENTE*/
 .paciente{
 	width:25%;
-	background-color:#ffffff;
+	background-color:#fcfcfc;
 	margin-left:20px;
 	padding:15px;
 }
@@ -366,6 +384,7 @@ body{
 
 .text-internacao{
 	margin-right:10px;
+	width:165px;
 }
 
 .text-internacao input{
@@ -385,7 +404,6 @@ body{
 .text-nasc{
 	display:flex;
 	flex-direction:row;
-	width:70px;
 }
 
 .text-nasc input{
@@ -396,6 +414,7 @@ body{
 
 .text-nascimento{
 	margin-right:10px;
+	width:165px;
 }
 
 .text-nasc input, .text-nascimento input{
@@ -423,4 +442,12 @@ body{
 	outline:none;
 	padding:5px 3px;
 	font-size:14px;
+}
+
+fieldset{
+	display:flex;
+	flex-direction:row;
+	border:1px solid #969696;
+	margin-bottom:5px;
+	border-radius:2px;
 }
