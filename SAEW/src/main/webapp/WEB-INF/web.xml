@@ -92,4 +92,14 @@
     <servlet-name>IntervencaoExclusaoServlet</servlet-name>
     <url-pattern>/IntervencaoExclusaoServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IntervencaoActualizacaoServlet</display-name>
+    <servlet-name>IntervencaoActualizacaoServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.IntervencaoActualizacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IntervencaoActualizacaoServlet</servlet-name>
+    <url-pattern>/IntervencaoActualizacaoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

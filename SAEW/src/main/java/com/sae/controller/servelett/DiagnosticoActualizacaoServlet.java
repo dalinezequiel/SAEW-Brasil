@@ -20,26 +20,26 @@ import com.sae.model.PerfusaoTissularModel;
  */
 public class DiagnosticoActualizacaoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+
 	private DiagnosticoModel diag = null;
 	private ArrayList<String> lista = null;
 	private PerfusaoTissularModel ptModel = null;
 	private ArrayList<PerfusaoTissularModel> listaPt = null;
 	private AtributoModel atr = null;
-	
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DiagnosticoActualizacaoServlet() {
-        super();
-        listaPt = PerfusaoTissularDAO.listaPerfusaoTissular();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public DiagnosticoActualizacaoServlet() {
+		super();
+		listaPt = PerfusaoTissularDAO.listaPerfusaoTissular();
 		ptModel = new PerfusaoTissularModel();
 		diag = new DiagnosticoModel();
 		lista = new ArrayList<String>();
-        atr = new AtributoModel();
-    }
+		atr = new AtributoModel();
+	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		atr.setAnyArrayString(request.getParameterValues("diagnostico"));
@@ -53,66 +53,64 @@ public class DiagnosticoActualizacaoServlet extends HttpServlet {
 		if (request.getParameter("perfusao") != null) {
 			lista.add(request.getParameter("perfusao"));
 		}
-		
-		if(lista != null) {
+
+		if (lista != null) {
 			this.tratamentoDoPossivelErro(this.dado_diagnostico(diag, request, response), request, response);
 		}
 	}
-	
+
 	// DADDOS DO DIAGNÓSTCO
-		public boolean dado_diagnostico(DiagnosticoModel diag, HttpServletRequest request, HttpServletResponse response) {
-			boolean rsp = false;
-			ptModel.setNomeModel("Perfusão tíssular");
-			DiagnosticoDAO.deleteDiagnosticoById(Integer.parseInt(request.getParameter("cod_diagt").trim()));
-			for (int i = 0; i < lista.size(); i++) {
+	public boolean dado_diagnostico(DiagnosticoModel diag, HttpServletRequest request, HttpServletResponse response) {
+		boolean rsp = false;
+		ptModel.setNomeModel("Perfusão tíssular");
+		DiagnosticoDAO.deleteDiagnosticoById(Integer.parseInt(request.getParameter("cod_diagt").trim()));
+		for (int i = 0; i < lista.size(); i++) {
 
-				diag.setIdDiagnostico(Integer.parseInt(request.getParameter("cod_diagt").trim()));
+			diag.setIdDiagnostico(Integer.parseInt(request.getParameter("cod_diagt").trim()));
 
-				if (lista.get(i).equals(listaPt.get(0).getPerfusaoTissular())) {
-					diag.setDiagnostico(ptModel.getNomeModel());
-					diag.setResposta(listaPt.get(0).getPerfusaoTissular());
+			if (lista.get(i).equals(listaPt.get(0).getPerfusaoTissular())) {
+				diag.setDiagnostico(ptModel.getNomeModel());
+				diag.setResposta(listaPt.get(0).getPerfusaoTissular());
 
-				} else if (lista.get(i).equals(listaPt.get(1).getPerfusaoTissular())) {
-					diag.setDiagnostico(ptModel.getNomeModel());
-					diag.setResposta(listaPt.get(1).getPerfusaoTissular());
+			} else if (lista.get(i).equals(listaPt.get(1).getPerfusaoTissular())) {
+				diag.setDiagnostico(ptModel.getNomeModel());
+				diag.setResposta(listaPt.get(1).getPerfusaoTissular());
 
-				} else if (lista.get(i).equals(listaPt.get(2).getPerfusaoTissular())) {
-					diag.setDiagnostico(ptModel.getNomeModel());
-					diag.setResposta(listaPt.get(2).getPerfusaoTissular());
+			} else if (lista.get(i).equals(listaPt.get(2).getPerfusaoTissular())) {
+				diag.setDiagnostico(ptModel.getNomeModel());
+				diag.setResposta(listaPt.get(2).getPerfusaoTissular());
 
-				} else if (lista.get(i).equals(listaPt.get(3).getPerfusaoTissular())) {
-					diag.setDiagnostico(ptModel.getNomeModel());
-					diag.setResposta(listaPt.get(3).getPerfusaoTissular());
+			} else if (lista.get(i).equals(listaPt.get(3).getPerfusaoTissular())) {
+				diag.setDiagnostico(ptModel.getNomeModel());
+				diag.setResposta(listaPt.get(3).getPerfusaoTissular());
 
-				} else if (lista.get(i).equals(listaPt.get(4).getPerfusaoTissular())) {
-					diag.setDiagnostico(ptModel.getNomeModel());
-					diag.setResposta(listaPt.get(4).getPerfusaoTissular());
+			} else if (lista.get(i).equals(listaPt.get(4).getPerfusaoTissular())) {
+				diag.setDiagnostico(ptModel.getNomeModel());
+				diag.setResposta(listaPt.get(4).getPerfusaoTissular());
 
-				} else {
-					diag.setDiagnostico(lista.get(i));
-					diag.setResposta("Sim");
-				}
-
-				diag.setObservacao(request.getParameter("obs"));
-				diag.setDataUltimaActualizacao(Date.valueOf(LocalDate.now()));
-				diag.setDataRegisto(Date.valueOf(LocalDate.now()));
-				diag.setIdPaciente(Integer.parseInt(request.getParameter("cod_pacnt").trim()));
-				diag.setPaciente(request.getParameter("paciente"));
-
-				//if(DiagnosticoDAO.deleteDiagnosticoById(diag.getIdDiagnostico())) {
-					rsp = DiagnosticoDAO.cadastroDeDiagnostico(diag);
-				//}
-			}
-			return rsp;
-		}
-	
-	// TRATAMENTO DO ERRO AO ACTUALIZAR DIAGNÓSTICO DO PACIENTE
-		protected void tratamentoDoPossivelErro(boolean rsp, HttpServletRequest request, HttpServletResponse response)
-				throws ServletException, IOException {
-			if (rsp) {
-				response.sendRedirect("jsp/diagnostico_consult.jsp");
 			} else {
-				response.sendRedirect("index.jsp");
+				diag.setDiagnostico(lista.get(i));
+				diag.setResposta("Sim");
 			}
+
+			diag.setObservacao(request.getParameter("obs"));
+			diag.setDataUltimaActualizacao(Date.valueOf(LocalDate.now()));
+			diag.setDataRegisto(Date.valueOf(LocalDate.now()));
+			diag.setIdPaciente(Integer.parseInt(request.getParameter("cod_pacnt").trim()));
+			diag.setPaciente(request.getParameter("paciente"));
+
+			rsp = DiagnosticoDAO.cadastroDeDiagnostico(diag);
 		}
+		return rsp;
+	}
+
+	// TRATAMENTO DO ERRO AO ACTUALIZAR DIAGNÓSTICO DO PACIENTE
+	protected void tratamentoDoPossivelErro(boolean rsp, HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		if (rsp) {
+			response.sendRedirect("jsp/diagnostico_consult.jsp");
+		} else {
+			response.sendRedirect("index.jsp");
+		}
+	}
 }

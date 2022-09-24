@@ -40,7 +40,7 @@
    </div>
 </nav>
 <div class="corp">
-    <form action="../IntervencaoCadastroServlet" method="POST">
+    <form action="../IntervencaoActualizacaoServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
