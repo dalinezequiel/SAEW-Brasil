@@ -120,7 +120,7 @@ public class IntervencaoDAO {
 				interModel.setIdIntervencao(rs.getInt("id_intervencao"));
 				interModel.setIntervencao(rs.getString("intervencao"));
 				interModel.setResposta(rs.getString("resposta"));
-				//interModel.setObservacao(rs.getString("obs"));
+				// interModel.setObservacao(rs.getString("obs"));
 				interModel.setDataUltimaActualizacao(rs.getDate("ultima_actualizacao"));
 				interModel.setDataRegisto(rs.getDate("data_registo"));
 				interModel.setIdPaciente(rs.getInt("id_paciente"));
@@ -132,54 +132,52 @@ public class IntervencaoDAO {
 		}
 		return listaInter;
 	}
-	
-	//RETORNAR O TOTAL DE TODAS INTERVENÇÕES
-    public static ArrayList<IntervencaoModel> getTotalIntervencaoWithDistinct() {
-    	listaInter = new ArrayList<IntervencaoModel>();
-        try {
-            String SQL_SELECT_QUERY = "SELECT count(distinct(id_intervencao)) as total from intervencao;";
-            con = ConexaoSQL.getConnection();
-            pst = con.prepareStatement(SQL_SELECT_QUERY);
-            rs = pst.executeQuery();
 
-            while (rs.next()) {
-            	interModel = new IntervencaoModel();
-            	interModel.setTotal(rs.getInt("total"));
-            	listaInter.add(interModel);
-            }
-        } catch (SQLException e) {
-        	System.out.println("Ocorreu um erro!\n" + e.getMessage());
-        }
-        return listaInter;
-    }
-    
- // RETORNAR O TOTAL DE TODAS INTERVENÇÕES USANDO VÁRIOS PARÂMETROS
- 	public static int getTotalIntervencaoWithDistinct(int id_intervencao, String paciente, String queixa_principal) {
- 		listaInter = new ArrayList<IntervencaoModel>();
- 		try {
- 			String SQL_SELECT_QUERY = "select count(distinct(id_intervencao)) as total\r\n" + "from intervencao\r\n"
- 					+ "where id_intervencao = ? or paciente = ?\r\n" + "or  paciente = (\r\n"
- 					+ "	select paciente from paciente where queixa_principal = ?\r\n" + ");";
+	// RETORNAR O TOTAL DE TODAS INTERVENÇÕES
+	public static ArrayList<IntervencaoModel> getTotalIntervencaoWithDistinct() {
+		listaInter = new ArrayList<IntervencaoModel>();
+		try {
+			String SQL_SELECT_QUERY = "SELECT count(distinct(id_intervencao)) as total from intervencao;";
+			con = ConexaoSQL.getConnection();
+			pst = con.prepareStatement(SQL_SELECT_QUERY);
+			rs = pst.executeQuery();
 
- 			con = ConexaoSQL.getConnection();
- 			pst = con.prepareStatement(SQL_SELECT_QUERY);
- 			pst.setInt(1, id_intervencao);
- 			pst.setString(2, paciente);
- 			pst.setString(3, queixa_principal);
- 			rs = pst.executeQuery();
+			while (rs.next()) {
+				interModel = new IntervencaoModel();
+				interModel.setTotal(rs.getInt("total"));
+				listaInter.add(interModel);
+			}
+		} catch (SQLException e) {
+			System.out.println("Ocorreu um erro!\n" + e.getMessage());
+		}
+		return listaInter;
+	}
 
- 			while (rs.next()) {
- 				interModel = new IntervencaoModel();
- 				interModel.setTotal(rs.getInt("total"));
- 				listaInter.add(interModel);
- 			}
- 		} catch (SQLException e) {
- 			System.out.println("Ocorreu um erro!\n" + e.getMessage());
- 		}
- 		return listaInter.get(0).getTotal();
- 	}
-    
-	
+	// RETORNAR O TOTAL DE TODAS INTERVENÇÕES USANDO VÁRIOS PARÂMETROS
+	public static int getTotalIntervencaoWithDistinct(int id_intervencao, String paciente, String queixa_principal) {
+		listaInter = new ArrayList<IntervencaoModel>();
+		try {
+			String SQL_SELECT_QUERY = "select count(distinct(id_intervencao)) as total\r\n" + "from intervencao\r\n"
+					+ "where id_intervencao = ? or paciente = ?\r\n" + "or  paciente = (\r\n"
+					+ "	select paciente from paciente where queixa_principal = ?\r\n" + ");";
+
+			con = ConexaoSQL.getConnection();
+			pst = con.prepareStatement(SQL_SELECT_QUERY);
+			pst.setInt(1, id_intervencao);
+			pst.setString(2, paciente);
+			pst.setString(3, queixa_principal);
+			rs = pst.executeQuery();
+
+			while (rs.next()) {
+				interModel = new IntervencaoModel();
+				interModel.setTotal(rs.getInt("total"));
+				listaInter.add(interModel);
+			}
+		} catch (SQLException e) {
+			System.out.println("Ocorreu um erro!\n" + e.getMessage());
+		}
+		return listaInter.get(0).getTotal();
+	}
 
 	// LISTAGEM DE ACESSO VENOSO PERIFÉRICO
 	public static ArrayList<ComboBoxModel> listaAcessoVenosoPeriferico() {
@@ -200,5 +198,22 @@ public class IntervencaoDAO {
 			e.printStackTrace();
 		}
 		return listaComboBox;
+	}
+
+	// EXCLUÍ O INTERVENÇÃO PELO CÓDIGO
+	public static boolean deleteIntervencaoById(int id_intervencao) {
+		try {
+			String SQL_DELETE_QUERY = "DELETE FROM intervencao WHERE id_intervencao = ?";
+			con = ConexaoSQL.getConnection();
+			pst = con.prepareStatement(SQL_DELETE_QUERY);
+			pst.setInt(1, id_intervencao);
+			pst.executeUpdate();
+			pst.close();
+
+			return true;
+		} catch (SQLException e) {
+			System.out.println("Ocorreu um erro!\n" + e.getMessage());
+		}
+		return false;
 	}
 }

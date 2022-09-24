@@ -10,7 +10,8 @@ public class VerificacaoJSP {
 	public VerificacaoJSP() {
 		super();
 	}
-
+	
+	//DIAGNÓSTICOS
 	public static boolean verificaCheckBox(String diagnostico, ArrayList<DiagnosticoModel> listDiag) {
 		for (int i = 0; i < listDiag.size(); i++) {
 			if (listDiag.get(i).getDiagnostico().equals(diagnostico)) {
@@ -127,14 +128,5 @@ public class VerificacaoJSP {
 			}
 		}
 		return atr.getVarString();
-	}
-
-
-	public static void main(String[] args) {
-		/*String m = VerificacaoJSP.devolveDivisaoDoItemDoInput(VerificacaoJSP.verificaIgualidadeNoInput(
-				"Realizar/ auxiliar banho no leito", IntervencaoDAO.listaIntervencaoById(114465)), 0);
-		System.out.println(m);
-		System.out.println(VerificacaoJSP.devolveAHora(m));*/
-		System.out.println(VerificacaoJSP.devolveDivisaoDoItemDoInput("Fabiana Maria", 0));
 	}
 }

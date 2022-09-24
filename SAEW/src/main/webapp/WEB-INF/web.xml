@@ -82,4 +82,14 @@
     <servlet-name>AvaliacaoDeIntervencaoCadastroServlet</servlet-name>
     <url-pattern>/AvaliacaoDeIntervencaoCadastroServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>IntervencaoExclusaoServlet</display-name>
+    <servlet-name>IntervencaoExclusaoServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.IntervencaoExclusaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IntervencaoExclusaoServlet</servlet-name>
+    <url-pattern>/IntervencaoExclusaoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

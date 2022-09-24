@@ -188,7 +188,7 @@
                              <input id="checkbox-3" type="checkbox" name="intervencao" value="Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06" <% if(VerificacaoJSP.verificaCheckBoxInter("Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06", listInter)){%> checked <%}%>> <label for="checkbox-3">Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-4" type="checkbox" name="intervencao" value="Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06" <% if(VerificacaoJSP.verificaCheckBoxInter("Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06", listInter)){%> checked <%}%>> <label for="checkbox-4">Avaliar e anotar eliminações vesícais e intestínais</label>
+                             <input id="checkbox-4" type="checkbox" name="intervencao" value="Avaliar e anotar eliminações vesícais e intestínais" <% if(VerificacaoJSP.verificaCheckBoxInter("Avaliar e anotar eliminações vesícais e intestínais", listInter)){%> checked <%}%>> <label for="checkbox-4">Avaliar e anotar eliminações vesícais e intestínais</label>
                           </div>
                           <div class="check-item">
                              <input id="checkbox-5" type="checkbox" name="intervencao" value="Manter a cabeceira elevada a 45graus" <% if(VerificacaoJSP.verificaCheckBoxInter("Manter a cabeceira elevada a 45graus", listInter)){%> checked <%}%>> <label for="checkbox-5">Manter a cabeceira elevada a 45graus</label>
@@ -327,6 +327,6 @@
     </form>
 </div>
 </div>
-<!-- <script type="text/javascript" src="../script/intervencoes.js"></script> -->
+<script type="text/javascript" src="../script/diagnostico_edit.js"></script>
 </body>
 </html>

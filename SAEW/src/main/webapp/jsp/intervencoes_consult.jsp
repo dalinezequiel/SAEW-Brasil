@@ -146,7 +146,7 @@
                                  <td><%out.print(listInter.get(i).getDataRegisto()); %></td>
                                  <td><a href="intervencao_edit.jsp?idIntervencao= <%=listInter.get(i).getIdIntervencao() %> &idPaciente= <%=listInter.get(i).getIdPaciente() %>"><i class="fa-solid fa-edit"></i>
                                      </a></td>
-                                 <td><a href="exclusao.jsp?idIntervencao= <%=listInter.get(i).getIdIntervencao() %> &paciente= <%=listInter.get(i).getPaciente() %> &idPaciente= <%=listInter.get(i).getIdPaciente() %>"><i class="fa-solid fa-trash"></i>
+                                 <td><a href="intervencao_exclusao.jsp?idIntervencao= <%=listInter.get(i).getIdIntervencao() %> &paciente= <%=listInter.get(i).getPaciente() %> &idPaciente= <%=listInter.get(i).getIdPaciente() %>"><i class="fa-solid fa-trash"></i>
                                      </a></td>
                              </tr>
                             <%}
