@@ -50,14 +50,14 @@
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
                       <div class="text">
-                         <p>Nova Intervenção</p>
+                         <p>Nova Interven.</p>
                       </div>
                   </a>
               </div>
               <div>
                   <button>
                      <i class="fa-solid fa-floppy-disk"></i>
-                     Salvar Intervenç.
+                     Salvar Interven.
                   </button>
               </div>
               <div class="btn-enfermagem">
@@ -66,7 +66,7 @@
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
                       <div class="text">
-                          <p>Buscar Paciente</p>
+                          <p>Buscar Pacient.</p>
                       </div>
                   </a>
                   <a href="intervencoes_consult.jsp" class="butao">
@@ -74,7 +74,7 @@
                           <i class="fa-solid fa-list"></i>
                       </div>
                       <div class="text">
-                          <p>Lista Intervenç.</p>
+                          <p>Lista Interven.</p>
                       </div>
                   </a>
               </div>
@@ -86,7 +86,7 @@
                      <i class="fa-solid fa-trash-can"></i>
                  </div>
                  <div class="text">
-                   <p>Resetar Intervenç.</p>
+                   <p>Resetar Interv.</p>
                  </div>
               </a>
            </div>
@@ -194,7 +194,7 @@
                              <input id="checkbox-2" type="checkbox" name="intervencao" value="Verificar sinais vitais de 08 em 08 horas 14 22 06"> <label for="checkbox-2">Verificar sinais vitais de 08 em 08 horas 14 22 06</label>
                           </div>
                           <div class="check-item">
-                             <input id="checkbox-3" type="checkbox" name="intervencao"> <label for="checkbox-3">Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06</label>
+                             <input id="checkbox-3" type="checkbox" name="intervencao" value="Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06"> <label for="checkbox-3">Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06</label>
                           </div>
                           <div class="check-item">
                              <input id="checkbox-4" type="checkbox" name="intervencao" value="Realizar mudança de decúbito de 2/2horas 08 10 12 14 16 18 20 22 24 02 04 06"> <label for="checkbox-4">Avaliar e anotar eliminações vesícais e intestínais</label>
@@ -349,6 +349,6 @@
     </form>
 </div>
 </div>
-<!-- <script type="text/javascript" src="../script/intervencoes.js"></script> -->
+<script type="text/javascript" src="../script/intervencoes.js"></script>
 </body>
 </html>

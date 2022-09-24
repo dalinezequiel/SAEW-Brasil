@@ -6,7 +6,7 @@
     list-style: none;
     text-decoration: none;
     overflow-x: hidden;
-    font-family: OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
+    font-family: Poppins,OpenSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     box-sizing: border-box;
 }
 
@@ -77,8 +77,8 @@ body{
 
 .avaliacao-cont{
 	width:60%;
-	height:600px;
-	background-color:#ffffff;
+	height:auto; /*600px*/
+	background-color:#fcfcfc;
 	padding:10px;
 	
 	display:flex;
@@ -130,6 +130,8 @@ button:hover{
 	background-color:#70849a;
 	border:1px solid #70849a;
 }
+
+/**/
 
 /*BOTAO NOVA AVALIACAO*/
 .btn-avaliacao a{
@@ -243,42 +245,17 @@ button:hover{
 	padding:4px 0px;
 }
 
-.esq .check-item label{
+.check-item input[type="checkbox"], .esq .check-item label{
 	cursor:pointer;
 }
 
-/*RADIO*/
-.radio-cont{
-	display:flex;
-	flex-direction:row;
-	justify-content:end;
-}
-
-.radio-item{
-	margin:0px 15px;
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	justify-content:center;
-}
-
-.radio-lista{
-	display:flex;
-	flex-direction:row;
-	justify-content:end;
-}
-
-.radio-item input{
-	margin:0px 2px;
-	cursor:pointer;
-}
 
 /**/
 
 .comboBox select{
 	padding:5px;
 	outline:none;
-	margin-bottom:10px;
+	margin-bottom:2px;
 	font-size:15px;
 	display:flex;
 	flex-direction:row;
@@ -286,7 +263,7 @@ button:hover{
 }
 
 .comboBox select option{
-	font-size:15px;
+	font-size:14px;
 }
 
 .componente-item{
@@ -300,13 +277,34 @@ button:hover{
 	width:50%;
 }
 
+.input-vezes, .input-dia{
+	display:flex;
+	flex-direction:column;
+	padding:3px 15px 15px 15px;
+}
+
+.input-vezes input, .input-dia input{
+	outline:none;
+	padding:2px;
+	font-size:14px;
+}
+
+.input-dia input{
+	width:100%;
+}
+
+.input-vezes input{
+	width:100px;
+}
+/**/
+
 .esq{
 	padding-left:40px;
 }
 
 /**/
 .observacao{
-	padding:20px 0px;
+	padding:5px 0px;
 }
 
 .observacao .t-area{
@@ -317,39 +315,15 @@ button:hover{
 }
 
 .observacao .t-area textarea{
-	height:95px;
+	height:70px;
 	padding:10px;
 	outline:none;
-}
-
-.legenda-cont{
-	padding-top:20px;
-}
-
-.legenda{
-	padding:10px;
-	border:1px solid #a4a4a4;
-	border-radius:2px;
-}
-
-.leg-01{
-	display:flex;
-	flex-direction:row;
-	margin-bottom:5px;
-}
-
-.leg-inaltera{
-	margin-right:15px;
-}
-
-.leg-02{
-	margin-bottom:5px;
 }
 
 /*PACIENTE*/
 .paciente{
 	width:25%;
-	background-color:#ffffff;
+	background-color:#fcfcfc;
 	margin-left:20px;
 	padding:15px;
 }
@@ -410,6 +384,7 @@ button:hover{
 
 .text-internacao{
 	margin-right:10px;
+	width:165px;
 }
 
 .text-internacao input{
@@ -440,6 +415,7 @@ button:hover{
 
 .text-nascimento{
 	margin-right:10px;
+	width:165px;
 }
 
 .text-nasc input, .text-nascimento input{
@@ -451,4 +427,28 @@ button:hover{
 
 .codito, .input-paciente, .interna, .nascimento, .perido{
 	margin-bottom:4px;
+}
+
+.curativo-item{
+	padding-top:4px;
+}
+
+.input-curativo{
+	display:flex;
+	flex-direction:row;
+}
+
+.input-curativo input{
+	width:100%;
+	outline:none;
+	padding:5px 3px;
+	font-size:14px;
+}
+
+fieldset{
+	display:flex;
+	flex-direction:row;
+	border:1px solid #969696;
+	margin-bottom:5px;
+	border-radius:2px;
 }
