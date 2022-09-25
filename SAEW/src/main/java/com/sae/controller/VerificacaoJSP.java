@@ -10,8 +10,8 @@ public class VerificacaoJSP {
 	public VerificacaoJSP() {
 		super();
 	}
-	
-	//DIAGNÓSTICOS
+
+	// DIAGNÓSTICOS
 	public static boolean verificaCheckBox(String diagnostico, ArrayList<DiagnosticoModel> listDiag) {
 		for (int i = 0; i < listDiag.size(); i++) {
 			if (listDiag.get(i).getDiagnostico().equals(diagnostico)) {
@@ -29,7 +29,7 @@ public class VerificacaoJSP {
 		}
 		return false;
 	}
-	
+
 	public static boolean verificarSeRealmenteEInt(String texto) {
 		try {
 			Integer.parseInt(texto);
@@ -40,8 +40,8 @@ public class VerificacaoJSP {
 
 		return false;
 	}
-	
-	//INTERVENÇÕES
+
+	// INTERVENÇÕES
 	public static boolean verificaCheckBoxInter(String intervencao, ArrayList<IntervencaoModel> listInter) {
 		for (int i = 0; i < listInter.size(); i++) {
 			if (listInter.get(i).getIntervencao().equals(intervencao)) {
@@ -51,7 +51,6 @@ public class VerificacaoJSP {
 		return false;
 	}
 
-	
 	public static boolean verificaComboBoxInter(String intervencao, ArrayList<IntervencaoModel> listInter) {
 		for (int i = 0; i < listInter.size(); i++) {
 			if (listInter.get(i).getResposta().equals(intervencao)) {
@@ -80,7 +79,7 @@ public class VerificacaoJSP {
 		}
 		return null;
 	}
-	
+
 	public static String devolveDivisaoDoItemDoInputParaData(String intervencao, int posicaoDoItem) {
 		if (intervencao != null && (!intervencao.isEmpty()) && (posicaoDoItem == 0) || posicaoDoItem == 1) {
 			atr = new AtributoModel();
@@ -107,7 +106,7 @@ public class VerificacaoJSP {
 		}
 		return 0;
 	}
-	
+
 	public static String devolveAHora(String intervencao) {
 		if (intervencao != null && (!intervencao.isEmpty())) {
 			atr = new AtributoModel();
@@ -118,7 +117,7 @@ public class VerificacaoJSP {
 		}
 		return null;
 	}
-	
+
 	public static String verificaEDevolveResposta(String intervencao, ArrayList<IntervencaoModel> listInter) {
 		atr = new AtributoModel();
 		atr.setVarString("");
@@ -129,8 +128,8 @@ public class VerificacaoJSP {
 		}
 		return atr.getVarString();
 	}
-	
-	public static String [] anyArraydevolveDivisaoDoItemPorDois(String caracter, String texto) {
+
+	public static String[] anyArraydevolveDivisaoDoItemPorDois(String caracter, String texto) {
 		if ((texto != null) && (!texto.isEmpty())) {
 			atr = new AtributoModel();
 			atr.setVarString(String.valueOf(texto));
@@ -139,5 +138,17 @@ public class VerificacaoJSP {
 			return atr.getAnyArrayString();
 		}
 		return null;
+	}
+
+	// AVALIAÇÕES
+	public static boolean verificaRadioButton(String avaliacao, String resposta,
+			ArrayList<AvaliacaoDeIntervencaoModel> listAvalia) {
+		for (int i = 0; i < listAvalia.size(); i++) {
+			if ((listAvalia.get(i).getAvaliacao().equals(avaliacao))
+					&& (listAvalia.get(i).getResposta().equals(resposta))) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

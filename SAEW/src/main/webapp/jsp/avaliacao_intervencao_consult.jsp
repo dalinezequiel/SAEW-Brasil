@@ -3,7 +3,7 @@
     
 <%@page
     import="java.util.ArrayList"
-    import="com.sae.model.*, com.sae.dao.IntervencaoDAO, com.sae.controller.*"%>
+    import="com.sae.model.*, com.sae.dao.AvaliacaoDeIntervencaoDAO, com.sae.controller.*"%>
 
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@
            </div>
       <div>
            <div class="btn-sair">
-               <a href="intervencoes.jsp" class="butao">
+               <a href="intervecoeslia.jsp" class="butao">
                   <div class="butao-ico">
                      <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
                   </div>
@@ -70,7 +70,7 @@
             <div class="avaliacao-head">
                <div class="filtro">
                 <div class="avaliacao-titulo">
-                   <h3>Lista de intervenções</h3>
+                   <h3>Lista das avaliações</h3>
                 </div>
                 <div class="pesquisa">
                    <div class="filter-icon">
@@ -80,7 +80,7 @@
                        <input type="text" placeholder="Queixa Principal" name="queixa_psq">
                    </div>
                    <div>
-                       <input type="text" placeholder="Código interv" name="codigo_psq">
+                       <input type="text" placeholder="Código avalia" name="codigo_psq">
                    </div>
                    <div>
                        <input type="text" placeholder="Paciente" name="paciente_psq">
@@ -92,7 +92,7 @@
                    <thead>
                      <tr>
                          <td>Código</td>
-                         <td>Intervenção</td>
+                         <td>Avaliação</td>
                          <td>Resposta</td>
                          <td>Pacient.</td>
                          <td>Paciente</td>
@@ -104,48 +104,48 @@
                    </thead>
                    <tbody>
                      <%
-                        IntervencaoModel interModel = new IntervencaoModel();
-                        ArrayList<IntervencaoModel> listInter = null;
-                        interModel.setTotal(IntervencaoDAO.getTotalIntervencaoWithDistinct().get(0).getTotal());
+                        AvaliacaoDeIntervencaoModel avaliaModel = new AvaliacaoDeIntervencaoModel();
+                        ArrayList<AvaliacaoDeIntervencaoModel> listAvalia = null;
+                        avaliaModel.setTotal(AvaliacaoDeIntervencaoDAO.getTotalAvaliacaoDeIntervencaoWithDistinct().get(0).getTotal());
                         if( request.getParameter("codigo_psq") == null && request.getParameter("paciente_psq") == null && request.getParameter("queixa_psq") == null){
-                        	listInter = IntervencaoDAO.listaIntervencao();
+                        	listAvalia = AvaliacaoDeIntervencaoDAO.listaAvaliacaoDeIntervencao();
 
                         }else if(request.getParameter("codigo_psq").equals("") && request.getParameter("paciente_psq").equals("") && request.getParameter("queixa_psq").equals("") ){
-                        	listInter = IntervencaoDAO.listaIntervencao();
+                        	listAvalia = AvaliacaoDeIntervencaoDAO.listaAvaliacaoDeIntervencao();
                         	
                         }else if(request.getParameter("codigo_psq").equals("") && (!request.getParameter("paciente_psq").equals("") || !request.getParameter("queixa_psq").equals(""))){
-                        	listInter = IntervencaoDAO.listaIntervencaoByMultipleParameters(
+                        	listAvalia = AvaliacaoDeIntervencaoDAO.listaAvaliacaoDeIntervencaoByMultipleParameters(
                         			Integer.parseInt("0"), 
                         			request.getParameter("paciente_psq").trim(), 
                         			request.getParameter("queixa_psq").trim());
-                        	        interModel.setTotal(IntervencaoDAO.getTotalIntervencaoWithDistinct(0, request.getParameter("paciente_psq"), request.getParameter("queixa_psq")));
+                        	        avaliaModel.setTotal(AvaliacaoDeIntervencaoDAO.getTotalAvaliacaoDeIntervencaoWithDistinct(0, request.getParameter("paciente_psq"), request.getParameter("queixa_psq")));
                         }else{
                         	        
                         	if(VerificacaoJSP.verificarSeRealmenteEInt(request.getParameter("codigo_psq"))){
-                        		listInter = IntervencaoDAO.listaIntervencaoByMultipleParameters(
+                        		listAvalia = AvaliacaoDeIntervencaoDAO.listaAvaliacaoDeIntervencaoByMultipleParameters(
                     			        Integer.parseInt(request.getParameter("codigo_psq")), 
                     			        request.getParameter("paciente_psq").trim(), 
                     			        request.getParameter("queixa_psq").trim());
-                        		interModel.setTotal(IntervencaoDAO.getTotalIntervencaoWithDistinct(listInter.get(0).getIdIntervencao(), request.getParameter("paciente_psq"), request.getParameter("queixa_psq")));
+                        		avaliaModel.setTotal(AvaliacaoDeIntervencaoDAO.getTotalAvaliacaoDeIntervencaoWithDistinct(listAvalia.get(0).getIdAvaliacao(), request.getParameter("paciente_psq"), request.getParameter("queixa_psq")));
                         	
                         	}else{
-                        		interModel.setTotal(0);
+                        		avaliaModel.setTotal(0);
                         	}
                         }
 
-                        if(listInter != null){
-                        	 for(int i=0; i<listInter.size(); i++){%>
+                        if(listAvalia != null){
+                        	 for(int i=0; i<listAvalia.size(); i++){%>
                              <tr>
-                                 <td><%out.print(listInter.get(i).getIdIntervencao()); %></td>
-                                 <td><%out.print(listInter.get(i).getIntervencao()); %></td>
-                                 <td><%out.print(listInter.get(i).getResposta()); %></td>
-                                 <td><%out.print(listInter.get(i).getIdPaciente()); %></td>
-                                 <td><%out.print(listInter.get(i).getPaciente()); %></td>
-                                 <td><%out.print(listInter.get(i).getDataUltimaActualizacao()); %></td>
-                                 <td><%out.print(listInter.get(i).getDataRegisto()); %></td>
-                                 <td><a href="intervencao_edit.jsp?idIntervencao= <%=listInter.get(i).getIdIntervencao() %> &idPaciente= <%=listInter.get(i).getIdPaciente() %>"><i class="fa-solid fa-edit"></i>
+                                 <td><%out.print(listAvalia.get(i).getIdAvaliacao()); %></td>
+                                 <td><%out.print(listAvalia.get(i).getAvaliacao()); %></td>
+                                 <td><%out.print(listAvalia.get(i).getResposta()); %></td>
+                                 <td><%out.print(listAvalia.get(i).getIdPaciente()); %></td>
+                                 <td><%out.print(listAvalia.get(i).getPaciente()); %></td>
+                                 <td><%out.print(listAvalia.get(i).getDataUltimaActualizacao()); %></td>
+                                 <td><%out.print(listAvalia.get(i).getDataRegisto()); %></td>
+                                 <td><a href="avaliacao_intervencao_edit.jsp?idAvaliacaoIntervencao= <%=listAvalia.get(i).getIdAvaliacao() %> &paciente= <%=listAvalia.get(i).getPaciente() %> &idPaciente= <%=listAvalia.get(i).getIdPaciente() %>"><i class="fa-solid fa-edit"></i>
                                      </a></td>
-                                 <td><a href="intervencao_exclusao.jsp?idIntervencao= <%=listInter.get(i).getIdIntervencao() %> &paciente= <%=listInter.get(i).getPaciente() %> &idPaciente= <%=listInter.get(i).getIdPaciente() %>"><i class="fa-solid fa-trash"></i>
+                                 <td><a href="avaliacao_intervencao_exclusao.jsp?idAvaliacaoIntervencao= <%=listAvalia.get(i).getIdAvaliacao() %> &paciente= <%=listAvalia.get(i).getPaciente() %> &idPaciente= <%=listAvalia.get(i).getIdPaciente() %>"><i class="fa-solid fa-trash"></i>
                                      </a></td>
                              </tr>
                             <%}
@@ -162,15 +162,15 @@
                       <label>Total:</label>
                    </div>
                    <div>
-                      <label><%out.print(IntervencaoDAO.listaIntervencao().size()); %></label>
+                      <label><%out.print(AvaliacaoDeIntervencaoDAO.listaAvaliacaoDeIntervencao().size()); %></label>
                    </div>
                 </div>
                 <div class="total-item">
                    <div class="afasta">
-                      <label>Intervenção:</label>
+                      <label>Avaliação:</label>
                    </div>
                    <div>
-                      <label><%out.print(interModel.getTotal()); %> de <%if(listInter != null){out.print(listInter.size());}else{out.print(0);} %></label>
+                      <label><%out.print(avaliaModel.getTotal()); %> de <%if(listAvalia != null){out.print(listAvalia.size());}else{out.print(0);} %></label>
                    </div>
                 </div>
                 </div>

@@ -115,7 +115,7 @@ public class AvaliacaoDeIntervencaoCadastroServlet extends HttpServlet {
 				avaliacaoModel.setIdPaciente(avaliacaoDeIntervencaoModel.getIdPaciente());
 				avaliacaoModel.setPaciente(avaliacaoDeIntervencaoModel.getPaciente());
 
-				rsp = AvaliacaoDeIntervencaoDAO.cadastroDeIntervencao(avaliacaoModel);
+				rsp = AvaliacaoDeIntervencaoDAO.cadastroDeAvaliacaoDeIntervencao(avaliacaoModel);
 			}
 
 		}
