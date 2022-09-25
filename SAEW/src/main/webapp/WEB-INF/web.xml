@@ -102,4 +102,24 @@
     <servlet-name>IntervencaoActualizacaoServlet</servlet-name>
     <url-pattern>/IntervencaoActualizacaoServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AvaliacaoDeIntervencaoActualizacaoServlet</display-name>
+    <servlet-name>AvaliacaoDeIntervencaoActualizacaoServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.AvaliacaoDeIntervencaoActualizacaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AvaliacaoDeIntervencaoActualizacaoServlet</servlet-name>
+    <url-pattern>/AvaliacaoDeIntervencaoActualizacaoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AvaliacaoDeIntervencaoExclusaoServlet</display-name>
+    <servlet-name>AvaliacaoDeIntervencaoExclusaoServlet</servlet-name>
+    <servlet-class>com.sae.controller.servelett.AvaliacaoDeIntervencaoExclusaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AvaliacaoDeIntervencaoExclusaoServlet</servlet-name>
+    <url-pattern>/AvaliacaoDeIntervencaoExclusaoServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

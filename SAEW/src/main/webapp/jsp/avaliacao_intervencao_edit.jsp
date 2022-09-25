@@ -41,7 +41,7 @@
    </div>
 </nav>
 <div class="corp">
-    <form action="../AvaliacaoDeIntervencaoCadastroServlet" method="POST">
+    <form action="../AvaliacaoDeIntervencaoActualizacaoServlet" method="POST">
     <div class="componente">
         <div class="butao-cont">
            <div class="avaliargem">
@@ -473,6 +473,6 @@
     </form>
 </div>
 </div>
-<!-- <script type="text/javascript" src="../script/intervencoeslia.js"></script> -->
+<script type="text/javascript" src="../script/diagnostico_edit.js"></script>
 </body>
 </html>

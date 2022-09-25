@@ -102,8 +102,8 @@ public class AvaliacaoDeIntervencaoDAO {
 		try {
 			String SQL_SELECT_QUERY = "SELECT d.id_avaliacao_intervencao, d.avaliacao_intervencao, d.resposta, \r\n"
 					+ "d.id_paciente, d.paciente, d.ultima_actualizacao, d.data_registo \r\n"
-					+ "from avaliacao_intervencao as d\r\n" + "where  id_avaliacao_intervencao = ? or d.paciente = ?\r\n"
-					+ "or d.id_paciente = (\r\n"
+					+ "from avaliacao_intervencao as d\r\n"
+					+ "where  id_avaliacao_intervencao = ? or d.paciente = ?\r\n" + "or d.id_paciente = (\r\n"
 					+ "	select paciente.id_paciente from paciente where queixa_principal = ?\r\n" + ");";
 			con = ConexaoSQL.getConnection();
 			pst = con.prepareStatement(SQL_SELECT_QUERY);
@@ -117,7 +117,7 @@ public class AvaliacaoDeIntervencaoDAO {
 				avaliaModel.setIdAvaliacao(rs.getInt("id_avaliacao_intervencao"));
 				avaliaModel.setAvaliacao(rs.getString("avaliacao_intervencao"));
 				avaliaModel.setResposta(rs.getString("resposta"));
-				//avaliaModel.setObservacao(rs.getString("obs"));
+				// avaliaModel.setObservacao(rs.getString("obs"));
 				avaliaModel.setDataUltimaActualizacao(rs.getDate("ultima_actualizacao"));
 				avaliaModel.setDataRegisto(rs.getDate("data_registo"));
 				avaliaModel.setIdPaciente(rs.getInt("id_paciente"));
@@ -157,8 +157,7 @@ public class AvaliacaoDeIntervencaoDAO {
 		try {
 			String SQL_SELECT_QUERY = "select count(distinct(id_avaliacao_intervencao)) as total\r\n"
 					+ "from avaliacao_intervencao\r\n" + "where id_avaliacao_intervencao = ? or paciente = ?\r\n"
-					+ "or  paciente = (\r\n" + "select paciente from paciente where queixa_principal = ?\r\n"
-					+ ");";
+					+ "or  paciente = (\r\n" + "select paciente from paciente where queixa_principal = ?\r\n" + ");";
 
 			con = ConexaoSQL.getConnection();
 			pst = con.prepareStatement(SQL_SELECT_QUERY);
@@ -177,8 +176,21 @@ public class AvaliacaoDeIntervencaoDAO {
 		}
 		return listaAvaliacao.get(0).getTotal();
 	}
-	public static void main(String [] args) {
-		System.out.println(AvaliacaoDeIntervencaoDAO.listaAvaliacaoDeIntervencaoByMultipleParameters(462541, "", ""));
-	}
 
+	// EXCLUÍ A AVALIAÇÃO DE INTERVENÇÃO PELO CÓDIGO
+	public static boolean deleteAvaliacaoDeIntervencaoById(int id_avaliacao_intervencao) {
+		try {
+			String SQL_DELETE_QUERY = "DELETE FROM avaliacao_intervencao WHERE id_avaliacao_intervencao = ?";
+			con = ConexaoSQL.getConnection();
+			pst = con.prepareStatement(SQL_DELETE_QUERY);
+			pst.setInt(1, id_avaliacao_intervencao);
+			pst.executeUpdate();
+			pst.close();
+
+			return true;
+		} catch (SQLException e) {
+			System.out.println("Ocorreu um erro!\n" + e.getMessage());
+		}
+		return false;
+	}
 }
