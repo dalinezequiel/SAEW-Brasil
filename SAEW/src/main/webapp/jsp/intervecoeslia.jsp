@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@page
+    import="com.sae.controller.GeradorDeCodigo"%>
+ <%
+    GeradorDeCodigo gerador = new GeradorDeCodigo();
+ %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,9 +29,6 @@
                <li><a href="">Enfermagem</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
-               <!-- <li><a href="">Utilitários</a>
-                   <i class="fa-solid fa-caret-down"></i>
-               </li> -->
                <li><a href="">Sistema</a>
                    <i class="fa-solid fa-caret-down"></i>
                </li>
@@ -109,9 +113,6 @@
                 <div class="avaliacao-titulo">
                    <h3>Avaliação das Intervenções</h3>
                 </div>
-                <!--<div class="pesquisa">
-                   <input type="submit">
-                </div>-->
                </div>
                <div class="componente-item">
                    <div class="dir">
@@ -158,7 +159,7 @@
                                 <label>Observações</label>
                              </div>
                              <div class="t-area">
-                                 <textarea rows="" cols=""></textarea>
+                                 <textarea rows="" cols="" name="obs"></textarea>
                              </div>
                           </div>
                       <!-- </form> -->
@@ -168,192 +169,192 @@
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-01" type="radio" name="a"><label for="rd-01">I</label>
+                                       <input id="rd-01" type="radio" name="saturacao_oxigenio" value="sa_Inalterado"><label for="rd-01">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-02" type="radio" name="a"><label for="rd-02">E</label>
+                                       <input id="rd-02" type="radio" name="saturacao_oxigenio" value="sa_Estabilizado"><label for="rd-02">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-03" type="radio" name="a"><label for="rd-03">M</label>
+                                       <input id="rd-03" type="radio" name="saturacao_oxigenio" value="sa_Melhorado"><label for="rd-03">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-04" type="radio" name="a"><label for="rd-04">D</label>
-                                  </div>
-                             </div>
-                          </div>
-                          <div class="check-item">
-                             <div class="radio-cont">
-                                  <div class="radio-item">
-                                       <input id="rd-05" type="radio" name="b"><label for="rd-05">I</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-06" type="radio"  name="b"><label for="rd-06">E</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-07" type="radio"  name="b"><label for="rd-07">M</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-08" type="radio"  name="b"><label for="rd-08">D</label>
+                                       <input id="rd-04" type="radio" name="saturacao_oxigenio" value="sa_Deteriorado"><label for="rd-04">D</label>
                                   </div>
                              </div>
                           </div>
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-09" type="radio"  name="c"><label for="rd-09">I</label>
+                                       <input id="rd-05" type="radio" name="estado_fisiologico" value="ef_Inalterado"><label for="rd-05">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-10" type="radio" name="c"><label for="rd-10">E</label>
+                                       <input id="rd-06" type="radio" name="estado_fisiologico" value="ef_Estabilizado"><label for="rd-06">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-11" type="radio" name="c"><label for="rd-11">M</label>
+                                       <input id="rd-07" type="radio" name="estado_fisiologico" value="ef_Melhorado"><label for="rd-07">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-12" type="radio" name="c"><label for="rd-12">D</label>
-                                  </div>
-                             </div>
-                          </div>
-                          <div class="check-item">
-                             <div class="radio-cont">
-                                  <div class="radio-item">
-                                       <input id="rd-13" type="radio" name="d"><label for="rd-13">I</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-14" type="radio" name="d"><label for="rd-14">E</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-15" type="radio" name="d"><label for="rd-15">M</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-16" type="radio" name="d"><label for="rd-16">D</label>
+                                       <input id="rd-08" type="radio" name="estado_fisiologico" value="ef_Deteriorado"><label for="rd-08">D</label>
                                   </div>
                              </div>
                           </div>
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-17" type="radio" name="e"><label for="rd-17">I</label>
+                                       <input id="rd-09" type="radio" name="controle_aspiracao" value="ca_Inalterado"><label for="rd-09">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-18" type="radio" name="e"><label for="rd-18">E</label>
+                                       <input id="rd-10" type="radio" name="controle_aspiracao" value="ca_Estabilizado"><label for="rd-10">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-19" type="radio" name="e"><label for="rd-19">M</label>
+                                       <input id="rd-11" type="radio" name="controle_aspiracao" value="ca_Melhorado"><label for="rd-11">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-20" type="radio" name="e"><label for="rd-20">D</label>
-                                  </div>
-                             </div>
-                          </div>
-                          <div class="check-item">
-                             <div class="radio-cont">
-                                  <div class="radio-item">
-                                       <input id="rd-21" type="radio" name="f"><label for="rd-21">I</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-22" type="radio" name="f"><label for="rd-22">E</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-23" type="radio" name="f"><label for="rd-23">M</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-24" type="radio" name="f"><label for="rd-24">D</label>
+                                       <input id="rd-12" type="radio" name="controle_aspiracao" value="ca_Deteriorado"><label for="rd-12">D</label>
                                   </div>
                              </div>
                           </div>
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-25" type="radio" name="g"><label for="rd-25">I</label>
+                                       <input id="rd-13" type="radio" name="hidratacao" value="hi_Inalterado"><label for="rd-13">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-26" type="radio" name="g"><label for="rd-26">E</label>
+                                       <input id="rd-14" type="radio" name="hidratacao" value="hi_Estabilizado"><label for="rd-14">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-27" type="radio" name="g"><label for="rd-27">M</label>
+                                       <input id="rd-15" type="radio" name="hidratacao" value="hi_Melhorado"><label for="rd-15">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-28" type="radio" name="g"><label for="rd-28">D</label>
-                                  </div>
-                             </div>
-                          </div>
-                          <div class="check-item">
-                             <div class="radio-cont">
-                                  <div class="radio-item">
-                                       <input id="rd-29" type="radio" name="h"><label for="rd-29">I</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-30" type="radio" name="h"><label for="rd-30">E</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-31" type="radio" name="h"><label for="rd-31">M</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-32" type="radio" name="h"><label for="rd-32">D</label>
+                                       <input id="rd-16" type="radio" name="hidratacao" value="hi_Deteriorado"><label for="rd-16">D</label>
                                   </div>
                              </div>
                           </div>
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-33" type="radio" name="i"><label for="rd-33">I</label>
+                                       <input id="rd-17" type="radio" name="estado_coagulacao" value="ec_Inalterado"><label for="rd-17">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-34" type="radio" name="i"><label for="rd-34">E</label>
+                                       <input id="rd-18" type="radio" name="estado_coagulacao" value="ec_Estabilizado"><label for="rd-18">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-35" type="radio" name="i"><label for="rd-35">M</label>
+                                       <input id="rd-19" type="radio" name="estado_coagulacao" value="ec_Melhorado"><label for="rd-19">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-36" type="radio" name="i"><label for="rd-36">D</label>
-                                  </div>
-                             </div>
-                          </div>
-                          <div class="check-item">
-                             <div class="radio-cont">
-                                  <div class="radio-item">
-                                       <input id="rd-37" type="radio" name="j"><label for="rd-37">I</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-38" type="radio" name="j"><label for="rd-38">E</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-39" type="radio" name="j"><label for="rd-39">M</label>
-                                  </div>
-                                  <div class="radio-item">
-                                       <input id="rd-40" type="radio" name="j"><label for="rd-40">D</label>
+                                       <input id="rd-20" type="radio" name="estado_coagulacao" value="ec_Deteriorado"><label for="rd-20">D</label>
                                   </div>
                              </div>
                           </div>
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-41" type="radio" name="k"><label for="rd-41">I</label>
+                                       <input id="rd-21" type="radio" name="eliminacao_urinaria" value="eu_Inalterado"><label for="rd-21">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-42" type="radio" name="k"><label for="rd-42">E</label>
+                                       <input id="rd-22" type="radio" name="eliminacao_urinaria" value="eu_Estabilizado"><label for="rd-22">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-43" type="radio" name="k"><label for="rd-43">M</label>
+                                       <input id="rd-23" type="radio" name="eliminacao_urinaria" value="eu_Melhorado"><label for="rd-23">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-44" type="radio" name="k"><label for="rd-44">D</label>
+                                       <input id="rd-24" type="radio" name="eliminacao_urinaria" value="eu_Deteriorado"><label for="rd-24">D</label>
                                   </div>
                              </div>
                           </div>
                           <div class="check-item">
                              <div class="radio-cont">
                                   <div class="radio-item">
-                                       <input id="rd-45" type="radio" name="l"><label for="rd-45">I</label>
+                                       <input id="rd-25" type="radio" name="eliminacao_intestinal" value="ei_Inalterado"><label for="rd-25">I</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-46" type="radio" name="l"><label for="rd-46">E</label>
+                                       <input id="rd-26" type="radio" name="eliminacao_intestinal" value="ei_Estabilizado"><label for="rd-26">E</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-47" type="radio" name="l"><label for="rd-47">M</label>
+                                       <input id="rd-27" type="radio" name="eliminacao_intestinal" value="ei_Melhorado"><label for="rd-27">M</label>
                                   </div>
                                   <div class="radio-item">
-                                       <input id="rd-48" type="radio" name="l"><label for="rd-48">D</label>
+                                       <input id="rd-28" type="radio" name="eliminacao_intestinal" value="ei_Deteriorado"><label for="rd-28">D</label>
+                                  </div>
+                             </div>
+                          </div>
+                          <div class="check-item">
+                             <div class="radio-cont">
+                                  <div class="radio-item">
+                                       <input id="rd-29" type="radio" name="estado_neurologico" value="en_Inalterado"><label for="rd-29">I</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-30" type="radio" name="estado_neurologico" value="en_Estabilizado"><label for="rd-30">E</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-31" type="radio" name="estado_neurologico" value="en_Melhorado"><label for="rd-31">M</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-32" type="radio" name="estado_neurologico" value="en_Deteriorado"><label for="rd-32">D</label>
+                                  </div>
+                             </div>
+                          </div>
+                          <div class="check-item">
+                             <div class="radio-cont">
+                                  <div class="radio-item">
+                                       <input id="rd-33" type="radio" name="termorregulacao" value="te_Inalterado"><label for="rd-33">I</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-34" type="radio" name="termorregulacao" value="te_Estabilizado"><label for="rd-34">E</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-35" type="radio" name="termorregulacao" value="te_Melhorado"><label for="rd-35">M</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-36" type="radio" name="termorregulacao" value="te_Deteriorado"><label for="rd-36">D</label>
+                                  </div>
+                             </div>
+                          </div>
+                          <div class="check-item">
+                             <div class="radio-cont">
+                                  <div class="radio-item">
+                                       <input id="rd-37" type="radio" name="nivel_dor" value="nd_Inalterado"><label for="rd-37">I</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-38" type="radio" name="nivel_dor" value="nd_Estabilizado"><label for="rd-38">E</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-39" type="radio" name="nivel_dor" value="nd_Melhorado"><label for="rd-39">M</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-40" type="radio" name="nivel_dor" value="nd_Deteriorado"><label for="rd-40">D</label>
+                                  </div>
+                             </div>
+                          </div>
+                          <div class="check-item">
+                             <div class="radio-cont">
+                                  <div class="radio-item">
+                                       <input id="rd-41" type="radio" name="bem_estar_espiritual" value="be_Inalterado"><label for="rd-41">I</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-42" type="radio" name="bem_estar_espiritual" value="be_Estabilizado"><label for="rd-42">E</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-43" type="radio" name="bem_estar_espiritual" value="be_Melhorado"><label for="rd-43">M</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-44" type="radio" name="bem_estar_espiritual" value="be_Deteriorado"><label for="rd-44">D</label>
+                                  </div>
+                             </div>
+                          </div>
+                          <div class="check-item">
+                             <div class="radio-cont">
+                                  <div class="radio-item">
+                                       <input id="rd-45" type="radio" name="controle_risco"  value="cr_Inalterado"><label for="rd-45">I</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-46" type="radio" name="controle_risco" value="cr_Estabilizado"><label for="rd-46">E</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-47" type="radio" name="controle_risco" value="cr_Melhorado"><label for="rd-47">M</label>
+                                  </div>
+                                  <div class="radio-item">
+                                       <input id="rd-48" type="radio" name="controle_risco" value="cr_Deteriorado"><label for="rd-48">D</label>
                                   </div>
                              </div>
                           </div>
@@ -393,18 +394,18 @@
                 <div class="codito">
                     <div class="input-codigo">
                        <div>
-                          <label>Código</label>
+                          <label>Cod. Avaliaç.</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" name="cod_avaliac" value=<%=gerador.gerandoCodigo()%> required>
                        </div>
                     </div>
                     <div class="input-leito">
                        <div>
-                          <label>Leito</label>
+                          <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
-                          <input type="text">
+                          <input type="text" name="cod_pacnt" value=<%=gerador.gerandoCodigo()%> required>
                        </div>
                     </div>
                 </div>
@@ -413,7 +414,7 @@
                           <label>Paciente</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" name="paciente" required>
                      </div>
                 </div>
                 <div class="input-paciente">
@@ -421,7 +422,7 @@
                           <label>Queixa Principal</label>
                      </div>
                      <div class="text-paciente">
-                          <input type="text">
+                          <input type="text" name="queixa_principal" required>
                      </div>
                 </div>
                 <div class="interna">
@@ -430,7 +431,7 @@
                           <label>Data de Internação</label>
                        </div>
                        <div class="text-internacao">
-                          <input type="text">
+                          <input type="date" name="data_internacao" required>
                        </div>
                     </div>
                     <div class="input-leito-interna">
@@ -438,7 +439,7 @@
                           <label>Leito</label>
                        </div>
                        <div class="text-interna">
-                          <input type="text">
+                          <input type="number" name="leito" required>
                        </div>
                     </div>
                 </div>
@@ -448,17 +449,17 @@
                           <label>Data de Nascimento</label>
                        </div>
                        <div class="text-nascimento">
-                          <input type="text">
+                          <input type="date" name="data_nascimento" required>
                        </div>
                     </div>
-                    <div class="input-leito-nasc">
+                    <!-- <div class="input-leito-nasc">
                        <div>
                           <label>Idade</label>
                        </div>
                        <div class="text-nasc">
                           <input type="text">
                        </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="periodo">
                     <div class="check-item">
@@ -473,6 +474,20 @@
                               </div>
                     </div>
                 </div>
+                <div class="periodo">
+                    <div class="check-item">
+                              <div>
+                                  <label>Cadastre o paciente</label>
+                              </div>
+                              <div class="comboBox">
+                                  <select name="salva_paciente">
+                                      <option>Sim</option>
+                                      <option>Não</option>
+                                  </select>
+                              </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

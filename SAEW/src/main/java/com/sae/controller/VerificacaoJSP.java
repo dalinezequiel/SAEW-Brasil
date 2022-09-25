@@ -129,4 +129,15 @@ public class VerificacaoJSP {
 		}
 		return atr.getVarString();
 	}
+	
+	public static String [] anyArraydevolveDivisaoDoItemPorDois(String caracter, String texto) {
+		if ((texto != null) && (!texto.isEmpty())) {
+			atr = new AtributoModel();
+			atr.setVarString(String.valueOf(texto));
+			atr.setAnyArrayString(atr.getVarString().split(caracter, 2));
+
+			return atr.getAnyArrayString();
+		}
+		return null;
+	}
 }

@@ -63,16 +63,6 @@
            </div>
            </div>
       <div>
-           <div class="btn-relatorio">
-              <a href="" class="butao">
-                 <div class="butao-ico">
-                     <i class="fa-solid fa-trash-can"></i>
-                 </div>
-                 <div class="text">
-                   <p>Resetar Interv.</p>
-                 </div>
-              </a>
-           </div>
            <div class="btn-sair">
                <a href="intervencoes_consult.jsp" class="butao">
                   <div class="butao-ico">

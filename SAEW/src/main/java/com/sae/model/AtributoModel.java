@@ -56,7 +56,7 @@ public class AtributoModel {
 		this.varDouble = varDouble;
 	}
 
-	public boolean isVarboolean() {
+	public boolean getVarboolean() {
 		return varboolean;
 	}
 

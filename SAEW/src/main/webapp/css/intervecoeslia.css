@@ -410,6 +410,7 @@ button:hover{
 
 .text-internacao{
 	margin-right:10px;
+	width:165px;
 }
 
 .text-internacao input{
@@ -440,6 +441,7 @@ button:hover{
 
 .text-nascimento{
 	margin-right:10px;
+	width:165px;
 }
 
 .text-nasc input, .text-nascimento input{

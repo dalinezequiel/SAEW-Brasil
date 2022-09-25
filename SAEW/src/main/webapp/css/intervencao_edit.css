@@ -165,7 +165,8 @@ button:hover{
 	display:flex;
 	flex-direction:row;
 	padding:20px 17px;
-	margin:5px 0px;
+	/*margin:5px 0px;*/
+	margin-bottom:5px;
 	background-color:#5D6D7E;
 	border:1px solid #5D6D7E;
 }
@@ -318,6 +319,7 @@ button:hover{
 	height:70px;
 	padding:10px;
 	outline:none;
+	font-size:14px;
 }
 
 /*PACIENTE*/
@@ -360,7 +362,7 @@ button:hover{
 	width:100%;
 	outline:none;
 	padding:2px;
-	font-size:14px;
+	font-size:16px;
 }
 
 
