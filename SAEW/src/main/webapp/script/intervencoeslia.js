@@ -44,3 +44,14 @@ for(var i=0; i<button.length; i++){
         };
 	})
 };
+
+//RESETAR AVALIAÇÃO DE INTERVENÇÃO
+const avalia_inter =  document.querySelectorAll(".btn-relatorio a");
+const radio_button =  document.querySelectorAll(".esq input");
+for(var i=0; i<avalia_inter.length; i++){
+	avalia_inter[0].addEventListener('click', function(){
+		for(var j=0; j<radio_button.length; j++){
+			radio_button[j].checked = false;
+		}
+	})
+}

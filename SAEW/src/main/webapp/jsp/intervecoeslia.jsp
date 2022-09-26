@@ -78,7 +78,7 @@
            </div>
       <div>
            <div class="btn-relatorio">
-              <a href="" class="butao">
+              <a  class="butao">
                  <div class="butao-ico">
                      <i class="fa-solid fa-trash-can"></i>
                  </div>
@@ -465,19 +465,6 @@
                                   <select>
                                       <option>Matutino</option>
                                       <option>Noturno</option>
-                                  </select>
-                              </div>
-                    </div>
-                </div>
-                <div class="periodo">
-                    <div class="check-item">
-                              <div>
-                                  <label>Cadastre o paciente</label>
-                              </div>
-                              <div class="comboBox">
-                                  <select name="salva_paciente">
-                                      <option>Sim</option>
-                                      <option>Não</option>
                                   </select>
                               </div>
                     </div>

@@ -42,7 +42,7 @@
                          <i class="fa-solid fa-file-circle-plus"></i>
                       </div>
                       <div class="text">
-                         <p>Nova Avaliação</p>
+                         <p>Nova Avaliaç.</p>
                       </div>
                   </a>
               </div>
@@ -52,7 +52,7 @@
                           <i class="fa-solid fa-floppy-disk"></i>
                       </div>
                       <div class="text">
-                          <p>Salvar Avaliação</p>
+                          <p>Salvar Avaliaç.</p>
                       </div>
                   </a>
                   <a href="" class="butao">
@@ -60,7 +60,7 @@
                           <i class="fa-solid fa-user-doctor"></i>
                       </div>
                       <div class="text">
-                          <p>Buscar Paciente</p>
+                          <p>Buscar Pacient.</p>
                       </div>
                   </a>
                   <a href="" class="butao">
@@ -68,19 +68,19 @@
                           <i class="fa-solid fa-list"></i>
                       </div>
                       <div class="text">
-                          <p>Lista Avaliação</p>
+                          <p>Lista Avaliaç.</p>
                       </div>
                   </a>
               </div>
            </div>
       <div>
            <div class="btn-relatorio">
-              <a href="" class="butao">
+              <a class="butao">
                  <div class="butao-ico">
                      <i class="fa-solid fa-trash-can"></i>
                  </div>
                  <div class="text">
-                   <p>Resetar Avaliação</p>
+                   <p>Resetar Avalia.</p>
                  </div>
               </a>
            </div>
@@ -719,7 +719,7 @@
                                   <input id="checkbox-2" type="checkbox"> <label for="checkbox-2">Dispénico</label>
                               </div>
                               <div class="check-item">
-                                  <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Respiração espontânea</label>
+                                  <input id="checkbox-3" type="checkbox"> <label for="checkbox-3">Respiraç. espontânea</label>
                               </div>
                               <div class="check-item">
                                   <input id="checkbox-4" type="checkbox"> <label for="checkbox-4">O2 em tubo T</label>
@@ -1093,7 +1093,7 @@
                 <div class="codito">
                     <div class="input-codigo">
                        <div>
-                          <label>Código</label>
+                          <label>Cod. Avalia.</label>
                        </div>
                        <div class="text">
                           <input type="text">
@@ -1101,7 +1101,7 @@
                     </div>
                     <div class="input-leito">
                        <div>
-                          <label>Leito</label>
+                          <label>Cod. Pacnt.</label>
                        </div>
                        <div class="text">
                           <input type="text">
@@ -1130,7 +1130,7 @@
                           <label>Data de Internação</label>
                        </div>
                        <div class="text-internacao">
-                          <input type="text">
+                          <input type="date">
                        </div>
                     </div>
                     <div class="input-leito-interna">
@@ -1148,17 +1148,33 @@
                           <label>Data de Nascimento</label>
                        </div>
                        <div class="text-nascimento">
-                          <input type="text">
+                          <input type="date">
                        </div>
                     </div>
-                    <div class="input-leito-nasc">
+                    <!-- <div class="input-leito-nasc">
                        <div>
                           <label>Idade</label>
                        </div>
                        <div class="text-nasc">
                           <input type="text">
                        </div>
+                    </div> -->
+                </div>
+                <div class="input-codigo-enfermeiro">
+                       <div>
+                          <label>Cod. Enfermeir.</label>
+                       </div>
+                       <div class="text">
+                          <input type="text">
+                       </div>
                     </div>
+                <div class="input-paciente">
+                     <div>
+                          <label>Enfermeiro(a)</label>
+                     </div>
+                     <div class="text-paciente">
+                          <input type="text">
+                     </div>
                 </div>
                 <div class="periodo">
                     <div class="check-item">

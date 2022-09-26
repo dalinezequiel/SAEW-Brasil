@@ -33,16 +33,16 @@ public class AvaliacaoDeIntervencaoCadastroServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		atr.setVarString(request.getParameter("salva_paciente"));
-		if (atr.getVarString().equals("Sim")) {
+		//atr.setVarString(request.getParameter("salva_paciente"));
+		//if (atr.getVarString().equals("Sim")) {
 			// tratamentoDoPossivelErro(this.dado_paciente(inter, pat, request, response),
 			// request, response);
-			listaAvaliacaoResposta.clear();
+			//listaAvaliacaoResposta.clear();
 
-		} else {
+		//} else {
 			tratamentoDoPossivelErro(this.dado_avaliacao_intervencao(request, response), request, response);
 			listaAvaliacaoResposta.clear();
-		}
+		//}
 	}
 
 	// DADDOS DA AVALIACAO
